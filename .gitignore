@@ -1,0 +1,13 @@
+# Virtual Environments
+venv/
+.env
+
+# Data and large files
+data/
+*.nii
+*.nii.gz
+*.dcm
+
+# OS files
+.DS_Store
+*.swp
