@@ -1,0 +1,212 @@
+==================================================
+Analyzing ISBI2015 Training (/Volumes/Expansion1TB/MS/data/ISBI2015/training)
+==================================================
+Total subjects found: 5
+
+--- ORIG IMAGES ---
+[training01 - 01] Images: training01_01_flair.nii.gz: (256, 256, 35), training01_01_mprage.nii.gz: (256, 256, 120), training01_01_pd.nii.gz: (256, 256, 70), training01_01_t2.nii.gz: (256, 256, 70)
+[training01 - 02] Images: training01_02_flair.nii.gz: (256, 256, 70), training01_02_mprage.nii.gz: (256, 256, 120), training01_02_pd.nii.gz: (256, 256, 70), training01_02_t2.nii.gz: (256, 256, 70)
+[training01 - 03] Images: training01_03_flair.nii.gz: (256, 256, 70), training01_03_mprage.nii.gz: (256, 256, 120), training01_03_pd.nii.gz: (256, 256, 70), training01_03_t2.nii.gz: (256, 256, 70)
+[training01 - 04] Images: training01_04_flair.nii.gz: (256, 256, 70), training01_04_mprage.nii.gz: (256, 256, 120), training01_04_pd.nii.gz: (256, 256, 70), training01_04_t2.nii.gz: (256, 256, 70)
+[training02 - 01] Images: training02_01_flair.nii.gz: (256, 256, 70), training02_01_mprage.nii.gz: (256, 256, 120), training02_01_pd.nii.gz: (256, 256, 70), training02_01_t2.nii.gz: (256, 256, 70)
+[training02 - 02] Images: training02_02_flair.nii.gz: (256, 256, 35), training02_02_mprage.nii.gz: (256, 256, 120), training02_02_pd.nii.gz: (256, 256, 70), training02_02_t2.nii.gz: (256, 256, 70)
+[training02 - 03] Images: training02_03_flair.nii.gz: (256, 256, 35), training02_03_mprage.nii.gz: (256, 256, 120), training02_03_pd.nii.gz: (256, 256, 70), training02_03_t2.nii.gz: (256, 256, 70)
+[training02 - 04] Images: training02_04_flair.nii.gz: (256, 256, 70), training02_04_mprage.nii.gz: (256, 256, 120), training02_04_pd.nii.gz: (256, 256, 70), training02_04_t2.nii.gz: (256, 256, 70)
+[training03 - 01] Images: training03_01_flair.nii.gz: (256, 256, 35), training03_01_mprage.nii.gz: (256, 256, 120), training03_01_pd.nii.gz: (256, 256, 70), training03_01_t2.nii.gz: (256, 256, 70)
+[training03 - 02] Images: training03_02_flair.nii.gz: (256, 256, 70), training03_02_mprage.nii.gz: (256, 256, 120), training03_02_pd.nii.gz: (256, 256, 70), training03_02_t2.nii.gz: (256, 256, 70)
+[training03 - 03] Images: training03_03_flair.nii.gz: (256, 256, 70), training03_03_mprage.nii.gz: (256, 256, 120), training03_03_pd.nii.gz: (256, 256, 70), training03_03_t2.nii.gz: (256, 256, 70)
+[training03 - 04] Images: training03_04_flair.nii.gz: (256, 256, 70), training03_04_mprage.nii.gz: (256, 256, 120), training03_04_pd.nii.gz: (256, 256, 70), training03_04_t2.nii.gz: (256, 256, 70)
+[training03 - 05] Images: training03_05_flair.nii.gz: (256, 256, 70), training03_05_mprage.nii.gz: (256, 256, 120), training03_05_pd.nii.gz: (256, 256, 70), training03_05_t2.nii.gz: (256, 256, 70)
+[training04 - 01] Images: training04_01_flair.nii.gz: (256, 256, 35), training04_01_mprage.nii.gz: (256, 256, 120), training04_01_pd.nii.gz: (256, 256, 70), training04_01_t2.nii.gz: (256, 256, 70)
+[training04 - 02] Images: training04_02_flair.nii.gz: (256, 256, 70), training04_02_mprage.nii.gz: (256, 256, 120), training04_02_pd.nii.gz: (256, 256, 70), training04_02_t2.nii.gz: (256, 256, 70)
+[training04 - 03] Images: training04_03_flair.nii.gz: (256, 256, 70), training04_03_mprage.nii.gz: (256, 256, 120), training04_03_pd.nii.gz: (256, 256, 70), training04_03_t2.nii.gz: (256, 256, 70)
+[training04 - 04] Images: training04_04_flair.nii.gz: (256, 256, 70), training04_04_mprage.nii.gz: (256, 256, 120), training04_04_pd.nii.gz: (256, 256, 70), training04_04_t2.nii.gz: (256, 256, 70)
+[training05 - 01] Images: training05_01_flair.nii.gz: (256, 256, 35), training05_01_mprage.nii.gz: (256, 256, 120), training05_01_pd.nii.gz: (256, 256, 70), training05_01_t2.nii.gz: (256, 256, 70)
+[training05 - 02] Images: training05_02_flair.nii.gz: (256, 256, 70), training05_02_mprage.nii.gz: (256, 256, 120), training05_02_pd.nii.gz: (256, 256, 70), training05_02_t2.nii.gz: (256, 256, 70)
+[training05 - 03] Images: training05_03_flair.nii.gz: (256, 256, 70), training05_03_mprage.nii.gz: (256, 256, 120), training05_03_pd.nii.gz: (256, 256, 70), training05_03_t2.nii.gz: (256, 256, 70)
+[training05 - 04] Images: training05_04_flair.nii.gz: (256, 256, 70), training05_04_mprage.nii.gz: (256, 256, 120), training05_04_pd.nii.gz: (256, 256, 70), training05_04_t2.nii.gz: (256, 256, 70)
+
+Summary for Training (orig):
+Total MPRAGE (T1): 21
+Total T2: 21
+Total PD: 21
+Total FLAIR: 21
+Total Masks (Rater 1 + Rater 2): 42
+Control cases (All masks empty): 0
+Lesion cases (Some mask has lesions): 21
+
+--- PREPROCESSED IMAGES ---
+[training01 - 01] Images: training01_01_flair_pp.nii: (181, 217, 181), training01_01_mprage_pp.nii: (181, 217, 181), training01_01_pd_pp.nii: (181, 217, 181), training01_01_t2_pp.nii: (181, 217, 181)
+[training01 - 02] Images: training01_02_flair_pp.nii: (181, 217, 181), training01_02_mprage_pp.nii: (181, 217, 181), training01_02_pd_pp.nii: (181, 217, 181), training01_02_t2_pp.nii: (181, 217, 181)
+[training01 - 03] Images: training01_03_flair_pp.nii: (181, 217, 181), training01_03_mprage_pp.nii: (181, 217, 181), training01_03_pd_pp.nii: (181, 217, 181), training01_03_t2_pp.nii: (181, 217, 181)
+[training01 - 04] Images: training01_04_flair_pp.nii: (181, 217, 181), training01_04_mprage_pp.nii: (181, 217, 181), training01_04_pd_pp.nii: (181, 217, 181), training01_04_t2_pp.nii: (181, 217, 181)
+[training02 - 01] Images: training02_01_flair_pp.nii: (181, 217, 181), training02_01_mprage_pp.nii: (181, 217, 181), training02_01_pd_pp.nii: (181, 217, 181), training02_01_t2_pp.nii: (181, 217, 181)
+[training02 - 02] Images: training02_02_flair_pp.nii: (181, 217, 181), training02_02_mprage_pp.nii: (181, 217, 181), training02_02_pd_pp.nii: (181, 217, 181), training02_02_t2_pp.nii: (181, 217, 181)
+[training02 - 03] Images: training02_03_flair_pp.nii: (181, 217, 181), training02_03_mprage_pp.nii: (181, 217, 181), training02_03_pd_pp.nii: (181, 217, 181), training02_03_t2_pp.nii: (181, 217, 181)
+[training02 - 04] Images: training02_04_flair_pp.nii: (181, 217, 181), training02_04_mprage_pp.nii: (181, 217, 181), training02_04_pd_pp.nii: (181, 217, 181), training02_04_t2_pp.nii: (181, 217, 181)
+[training03 - 01] Images: training03_01_flair_pp.nii: (181, 217, 181), training03_01_mprage_pp.nii: (181, 217, 181), training03_01_pd_pp.nii: (181, 217, 181), training03_01_t2_pp.nii: (181, 217, 181)
+[training03 - 02] Images: training03_02_flair_pp.nii: (181, 217, 181), training03_02_mprage_pp.nii: (181, 217, 181), training03_02_pd_pp.nii: (181, 217, 181), training03_02_t2_pp.nii: (181, 217, 181)
+[training03 - 03] Images: training03_03_flair_pp.nii: (181, 217, 181), training03_03_mprage_pp.nii: (181, 217, 181), training03_03_pd_pp.nii: (181, 217, 181), training03_03_t2_pp.nii: (181, 217, 181)
+[training03 - 04] Images: training03_04_flair_pp.nii: (181, 217, 181), training03_04_mprage_pp.nii: (181, 217, 181), training03_04_pd_pp.nii: (181, 217, 181), training03_04_t2_pp.nii: (181, 217, 181)
+[training03 - 05] Images: training03_05_flair_pp.nii: (181, 217, 181), training03_05_mprage_pp.nii: (181, 217, 181), training03_05_pd_pp.nii: (181, 217, 181), training03_05_t2_pp.nii: (181, 217, 181)
+[training04 - 01] Images: training04_01_flair_pp.nii: (181, 217, 181), training04_01_mprage_pp.nii: (181, 217, 181), training04_01_pd_pp.nii: (181, 217, 181), training04_01_t2_pp.nii: (181, 217, 181)
+[training04 - 02] Images: training04_02_flair_pp.nii: (181, 217, 181), training04_02_mprage_pp.nii: (181, 217, 181), training04_02_pd_pp.nii: (181, 217, 181), training04_02_t2_pp.nii: (181, 217, 181)
+[training04 - 03] Images: training04_03_flair_pp.nii: (181, 217, 181), training04_03_mprage_pp.nii: (181, 217, 181), training04_03_pd_pp.nii: (181, 217, 181), training04_03_t2_pp.nii: (181, 217, 181)
+[training04 - 04] Images: training04_04_flair_pp.nii: (181, 217, 181), training04_04_mprage_pp.nii: (181, 217, 181), training04_04_pd_pp.nii: (181, 217, 181), training04_04_t2_pp.nii: (181, 217, 181)
+[training05 - 01] Images: training05_01_flair_pp.nii: (181, 217, 181), training05_01_mprage_pp.nii: (181, 217, 181), training05_01_pd_pp.nii: (181, 217, 181), training05_01_t2_pp.nii: (181, 217, 181)
+[training05 - 02] Images: training05_02_flair_pp.nii: (181, 217, 181), training05_02_mprage_pp.nii: (181, 217, 181), training05_02_pd_pp.nii: (181, 217, 181), training05_02_t2_pp.nii: (181, 217, 181)
+[training05 - 03] Images: training05_03_flair_pp.nii: (181, 217, 181), training05_03_mprage_pp.nii: (181, 217, 181), training05_03_pd_pp.nii: (181, 217, 181), training05_03_t2_pp.nii: (181, 217, 181)
+[training05 - 04] Images: training05_04_flair_pp.nii: (181, 217, 181), training05_04_mprage_pp.nii: (181, 217, 181), training05_04_pd_pp.nii: (181, 217, 181), training05_04_t2_pp.nii: (181, 217, 181)
+
+Summary for Training (preprocessed):
+Total MPRAGE (T1): 21
+Total T2: 21
+Total PD: 21
+Total FLAIR: 21
+Total Masks (Rater 1 + Rater 2): 42
+Control cases (All masks empty): 0
+Lesion cases (Some mask has lesions): 21
+==================================================
+Analyzing ISBI2015 Test (/Volumes/Expansion1TB/MS/data/ISBI2015/testdata_website)
+==================================================
+Total subjects found: 14
+
+--- ORIG IMAGES ---
+[test01 - 01] Images: test01_01_flair.nii.gz: (256, 256, 35), test01_01_mprage.nii.gz: (256, 256, 120), test01_01_pd.nii.gz: (256, 256, 70), test01_01_t2.nii.gz: (256, 256, 70)
+[test01 - 02] Images: test01_02_flair.nii.gz: (256, 256, 70), test01_02_mprage.nii.gz: (256, 256, 120), test01_02_pd.nii.gz: (256, 256, 70), test01_02_t2.nii.gz: (256, 256, 70)
+[test01 - 03] Images: test01_03_flair.nii.gz: (256, 256, 70), test01_03_mprage.nii.gz: (256, 256, 120), test01_03_pd.nii.gz: (256, 256, 70), test01_03_t2.nii.gz: (256, 256, 70)
+[test01 - 04] Images: test01_04_flair.nii.gz: (256, 256, 70), test01_04_mprage.nii.gz: (256, 256, 120), test01_04_pd.nii.gz: (256, 256, 70), test01_04_t2.nii.gz: (256, 256, 70)
+[test02 - 01] Images: test02_01_flair.nii.gz: (256, 256, 35), test02_01_mprage.nii.gz: (256, 256, 120), test02_01_pd.nii.gz: (256, 256, 70), test02_01_t2.nii.gz: (256, 256, 70)
+[test02 - 02] Images: test02_02_flair.nii.gz: (256, 256, 70), test02_02_mprage.nii.gz: (256, 256, 120), test02_02_pd.nii.gz: (256, 256, 70), test02_02_t2.nii.gz: (256, 256, 70)
+[test02 - 03] Images: test02_03_flair.nii.gz: (256, 256, 70), test02_03_mprage.nii.gz: (256, 256, 120), test02_03_pd.nii.gz: (256, 256, 70), test02_03_t2.nii.gz: (256, 256, 70)
+[test02 - 04] Images: test02_04_flair.nii.gz: (256, 256, 70), test02_04_mprage.nii.gz: (256, 256, 120), test02_04_pd.nii.gz: (256, 256, 70), test02_04_t2.nii.gz: (256, 256, 70)
+[test02 - 05] Images: test02_05_flair.nii.gz: (256, 256, 70), test02_05_mprage.nii.gz: (256, 256, 120), test02_05_pd.nii.gz: (256, 256, 70), test02_05_t2.nii.gz: (256, 256, 70)
+[test03 - 01] Images: test03_01_flair.nii.gz: (256, 256, 35), test03_01_mprage.nii.gz: (256, 256, 120), test03_01_pd.nii.gz: (256, 256, 70), test03_01_t2.nii.gz: (256, 256, 70)
+[test03 - 02] Images: test03_02_flair.nii.gz: (256, 256, 35), test03_02_mprage.nii.gz: (256, 256, 120), test03_02_pd.nii.gz: (256, 256, 70), test03_02_t2.nii.gz: (256, 256, 70)
+[test03 - 03] Images: test03_03_flair.nii.gz: (256, 256, 70), test03_03_mprage.nii.gz: (256, 256, 120), test03_03_pd.nii.gz: (256, 256, 70), test03_03_t2.nii.gz: (256, 256, 70)
+[test03 - 04] Images: test03_04_flair.nii.gz: (256, 256, 70), test03_04_mprage.nii.gz: (256, 256, 120), test03_04_pd.nii.gz: (256, 256, 70), test03_04_t2.nii.gz: (256, 256, 70)
+[test04 - 01] Images: test04_01_flair.nii.gz: (256, 256, 70), test04_01_mprage.nii.gz: (256, 256, 120), test04_01_pd.nii.gz: (256, 256, 70), test04_01_t2.nii.gz: (256, 256, 70)
+[test04 - 02] Images: test04_02_flair.nii.gz: (256, 256, 35), test04_02_mprage.nii.gz: (256, 256, 120), test04_02_pd.nii.gz: (256, 256, 70), test04_02_t2.nii.gz: (256, 256, 70)
+[test04 - 03] Images: test04_03_flair.nii.gz: (256, 256, 35), test04_03_mprage.nii.gz: (256, 256, 120), test04_03_pd.nii.gz: (256, 256, 70), test04_03_t2.nii.gz: (256, 256, 70)
+[test04 - 04] Images: test04_04_flair.nii.gz: (256, 256, 35), test04_04_mprage.nii.gz: (256, 256, 120), test04_04_pd.nii.gz: (256, 256, 70), test04_04_t2.nii.gz: (256, 256, 70)
+[test05 - 01] Images: test05_01_flair.nii.gz: (256, 256, 35), test05_01_mprage.nii.gz: (256, 256, 120), test05_01_pd.nii.gz: (256, 256, 70), test05_01_t2.nii.gz: (256, 256, 70)
+[test05 - 02] Images: test05_02_flair.nii.gz: (256, 256, 70), test05_02_mprage.nii.gz: (256, 256, 120), test05_02_pd.nii.gz: (256, 256, 70), test05_02_t2.nii.gz: (256, 256, 70)
+[test05 - 03] Images: test05_03_flair.nii.gz: (256, 256, 70), test05_03_mprage.nii.gz: (256, 256, 120), test05_03_pd.nii.gz: (256, 256, 70), test05_03_t2.nii.gz: (256, 256, 70)
+[test05 - 04] Images: test05_04_flair.nii.gz: (256, 256, 70), test05_04_mprage.nii.gz: (256, 256, 120), test05_04_pd.nii.gz: (256, 256, 70), test05_04_t2.nii.gz: (256, 256, 70)
+[test06 - 01] Images: test06_01_flair.nii.gz: (256, 256, 70), test06_01_mprage.nii.gz: (256, 256, 120), test06_01_pd.nii.gz: (256, 256, 70), test06_01_t2.nii.gz: (256, 256, 70)
+[test06 - 02] Images: test06_02_flair.nii.gz: (256, 256, 35), test06_02_mprage.nii.gz: (256, 256, 120), test06_02_pd.nii.gz: (256, 256, 70), test06_02_t2.nii.gz: (256, 256, 70)
+[test06 - 03] Images: test06_03_flair.nii.gz: (256, 256, 35), test06_03_mprage.nii.gz: (256, 256, 120), test06_03_pd.nii.gz: (256, 256, 70), test06_03_t2.nii.gz: (256, 256, 70)
+[test06 - 04] Images: test06_04_flair.nii.gz: (256, 256, 70), test06_04_mprage.nii.gz: (256, 256, 120), test06_04_pd.nii.gz: (256, 256, 70), test06_04_t2.nii.gz: (256, 256, 70)
+[test07 - 01] Images: test07_01_flair.nii.gz: (256, 256, 35), test07_01_mprage.nii.gz: (256, 256, 120), test07_01_pd.nii.gz: (256, 256, 70), test07_01_t2.nii.gz: (256, 256, 70)
+[test07 - 02] Images: test07_02_flair.nii.gz: (256, 256, 35), test07_02_mprage.nii.gz: (256, 256, 120), test07_02_pd.nii.gz: (256, 256, 70), test07_02_t2.nii.gz: (256, 256, 70)
+[test07 - 03] Images: test07_03_flair.nii.gz: (256, 256, 70), test07_03_mprage.nii.gz: (256, 256, 120), test07_03_pd.nii.gz: (256, 256, 70), test07_03_t2.nii.gz: (256, 256, 70)
+[test07 - 04] Images: test07_04_flair.nii.gz: (256, 256, 70), test07_04_mprage.nii.gz: (256, 256, 120), test07_04_pd.nii.gz: (256, 256, 70), test07_04_t2.nii.gz: (256, 256, 70)
+[test08 - 01] Images: test08_01_flair.nii.gz: (256, 256, 35), test08_01_mprage.nii.gz: (256, 256, 120), test08_01_pd.nii.gz: (256, 256, 70), test08_01_t2.nii.gz: (256, 256, 70)
+[test08 - 02] Images: test08_02_flair.nii.gz: (256, 256, 70), test08_02_mprage.nii.gz: (256, 256, 120), test08_02_pd.nii.gz: (256, 256, 70), test08_02_t2.nii.gz: (256, 256, 70)
+[test08 - 03] Images: test08_03_flair.nii.gz: (256, 256, 70), test08_03_mprage.nii.gz: (256, 256, 120), test08_03_pd.nii.gz: (256, 256, 70), test08_03_t2.nii.gz: (256, 256, 70)
+[test08 - 04] Images: test08_04_flair.nii.gz: (256, 256, 70), test08_04_mprage.nii.gz: (256, 256, 120), test08_04_pd.nii.gz: (256, 256, 70), test08_04_t2.nii.gz: (256, 256, 70)
+[test09 - 01] Images: test09_01_flair.nii.gz: (256, 256, 35), test09_01_mprage.nii.gz: (256, 256, 120), test09_01_pd.nii.gz: (256, 256, 70), test09_01_t2.nii.gz: (256, 256, 70)
+[test09 - 02] Images: test09_02_flair.nii.gz: (256, 256, 35), test09_02_mprage.nii.gz: (256, 256, 120), test09_02_pd.nii.gz: (256, 256, 70), test09_02_t2.nii.gz: (256, 256, 70)
+[test09 - 03] Images: test09_03_flair.nii.gz: (256, 256, 70), test09_03_mprage.nii.gz: (256, 256, 120), test09_03_pd.nii.gz: (256, 256, 70), test09_03_t2.nii.gz: (256, 256, 70)
+[test09 - 04] Images: test09_04_flair.nii.gz: (256, 256, 70), test09_04_mprage.nii.gz: (256, 256, 120), test09_04_pd.nii.gz: (256, 256, 70), test09_04_t2.nii.gz: (256, 256, 70)
+[test10 - 01] Images: test10_01_flair.nii.gz: (256, 256, 35), test10_01_mprage.nii.gz: (256, 256, 120), test10_01_pd.nii.gz: (256, 256, 70), test10_01_t2.nii.gz: (256, 256, 70)
+[test10 - 02] Images: test10_02_flair.nii.gz: (256, 256, 35), test10_02_mprage.nii.gz: (256, 256, 120), test10_02_pd.nii.gz: (256, 256, 70), test10_02_t2.nii.gz: (256, 256, 70)
+[test10 - 03] Images: test10_03_flair.nii.gz: (256, 256, 70), test10_03_mprage.nii.gz: (256, 256, 120), test10_03_pd.nii.gz: (256, 256, 70), test10_03_t2.nii.gz: (256, 256, 70)
+[test10 - 04] Images: test10_04_flair.nii.gz: (256, 256, 70), test10_04_mprage.nii.gz: (256, 256, 120), test10_04_pd.nii.gz: (256, 256, 70), test10_04_t2.nii.gz: (256, 256, 70)
+[test10 - 05] Images: test10_05_flair.nii.gz: (256, 256, 70), test10_05_mprage.nii.gz: (256, 256, 120), test10_05_pd.nii.gz: (256, 256, 70), test10_05_t2.nii.gz: (256, 256, 70)
+[test10 - 06] Images: test10_06_flair.nii.gz: (256, 256, 70), test10_06_mprage.nii.gz: (256, 256, 120), test10_06_pd.nii.gz: (256, 256, 70), test10_06_t2.nii.gz: (256, 256, 70)
+[test11 - 01] Images: test11_01_flair.nii.gz: (256, 256, 35), test11_01_mprage.nii.gz: (256, 256, 120), test11_01_pd.nii.gz: (256, 256, 70), test11_01_t2.nii.gz: (256, 256, 70)
+[test11 - 02] Images: test11_02_flair.nii.gz: (256, 256, 35), test11_02_mprage.nii.gz: (256, 256, 120), test11_02_pd.nii.gz: (256, 256, 70), test11_02_t2.nii.gz: (256, 256, 70)
+[test11 - 03] Images: test11_03_flair.nii.gz: (256, 256, 70), test11_03_mprage.nii.gz: (256, 256, 120), test11_03_pd.nii.gz: (256, 256, 70), test11_03_t2.nii.gz: (256, 256, 70)
+[test11 - 04] Images: test11_04_flair.nii.gz: (256, 256, 70), test11_04_mprage.nii.gz: (256, 256, 120), test11_04_pd.nii.gz: (256, 256, 70), test11_04_t2.nii.gz: (256, 256, 70)
+[test11 - 05] Images: test11_05_flair.nii.gz: (256, 256, 70), test11_05_mprage.nii.gz: (256, 256, 120), test11_05_pd.nii.gz: (256, 256, 70), test11_05_t2.nii.gz: (256, 256, 70)
+[test12 - 01] Images: test12_01_flair.nii.gz: (256, 256, 35), test12_01_mprage.nii.gz: (256, 256, 120), test12_01_pd.nii.gz: (256, 256, 70), test12_01_t2.nii.gz: (256, 256, 70)
+[test12 - 02] Images: test12_02_flair.nii.gz: (256, 256, 70), test12_02_mprage.nii.gz: (256, 256, 120), test12_02_pd.nii.gz: (256, 256, 70), test12_02_t2.nii.gz: (256, 256, 70)
+[test12 - 03] Images: test12_03_flair.nii.gz: (256, 256, 70), test12_03_mprage.nii.gz: (256, 256, 120), test12_03_pd.nii.gz: (256, 256, 70), test12_03_t2.nii.gz: (256, 256, 70)
+[test12 - 04] Images: test12_04_flair.nii.gz: (256, 256, 70), test12_04_mprage.nii.gz: (256, 256, 120), test12_04_pd.nii.gz: (256, 256, 70), test12_04_t2.nii.gz: (256, 256, 70)
+[test13 - 01] Images: test13_01_flair.nii.gz: (256, 256, 35), test13_01_mprage.nii.gz: (256, 256, 120), test13_01_pd.nii.gz: (256, 256, 70), test13_01_t2.nii.gz: (256, 256, 70)
+[test13 - 02] Images: test13_02_flair.nii.gz: (256, 256, 35), test13_02_mprage.nii.gz: (256, 256, 120), test13_02_pd.nii.gz: (256, 256, 70), test13_02_t2.nii.gz: (256, 256, 70)
+[test13 - 03] Images: test13_03_flair.nii.gz: (256, 256, 35), test13_03_mprage.nii.gz: (256, 256, 120), test13_03_pd.nii.gz: (256, 256, 70), test13_03_t2.nii.gz: (256, 256, 70)
+[test13 - 04] Images: test13_04_flair.nii.gz: (256, 256, 70), test13_04_mprage.nii.gz: (256, 256, 120), test13_04_pd.nii.gz: (256, 256, 70), test13_04_t2.nii.gz: (256, 256, 70)
+[test14 - 01] Images: test14_01_flair.nii.gz: (256, 256, 35), test14_01_mprage.nii.gz: (256, 256, 120), test14_01_pd.nii.gz: (256, 256, 70), test14_01_t2.nii.gz: (256, 256, 70)
+[test14 - 02] Images: test14_02_flair.nii.gz: (256, 256, 70), test14_02_mprage.nii.gz: (256, 256, 120), test14_02_pd.nii.gz: (256, 256, 70), test14_02_t2.nii.gz: (256, 256, 70)
+[test14 - 03] Images: test14_03_flair.nii.gz: (256, 256, 70), test14_03_mprage.nii.gz: (256, 256, 120), test14_03_pd.nii.gz: (256, 256, 70), test14_03_t2.nii.gz: (256, 256, 70)
+[test14 - 04] Images: test14_04_flair.nii.gz: (256, 256, 70), test14_04_mprage.nii.gz: (256, 256, 120), test14_04_pd.nii.gz: (256, 256, 70), test14_04_t2.nii.gz: (256, 256, 70)
+[test14 - 05] Images: test14_05_flair.nii.gz: (256, 256, 70), test14_05_mprage.nii.gz: (256, 256, 120), test14_05_pd.nii.gz: (256, 256, 70), test14_05_t2.nii.gz: (256, 256, 70)
+
+Summary for Test (orig):
+Total MPRAGE (T1): 61
+Total T2: 61
+Total PD: 61
+Total FLAIR: 61
+Total Masks (Rater 1 + Rater 2): 0
+
+--- PREPROCESSED IMAGES ---
+[test01 - 01] Images: test01_01_flair_pp.nii: (181, 217, 181), test01_01_mprage_pp.nii: (181, 217, 181), test01_01_pd_pp.nii: (181, 217, 181), test01_01_t2_pp.nii: (181, 217, 181)
+[test01 - 02] Images: test01_02_flair_pp.nii: (181, 217, 181), test01_02_mprage_pp.nii: (181, 217, 181), test01_02_pd_pp.nii: (181, 217, 181), test01_02_t2_pp.nii: (181, 217, 181)
+[test01 - 03] Images: test01_03_flair_pp.nii: (181, 217, 181), test01_03_mprage_pp.nii: (181, 217, 181), test01_03_pd_pp.nii: (181, 217, 181), test01_03_t2_pp.nii: (181, 217, 181)
+[test01 - 04] Images: test01_04_flair_pp.nii: (181, 217, 181), test01_04_mprage_pp.nii: (181, 217, 181), test01_04_pd_pp.nii: (181, 217, 181), test01_04_t2_pp.nii: (181, 217, 181)
+[test02 - 01] Images: test02_01_flair_pp.nii: (181, 217, 181), test02_01_mprage_pp.nii: (181, 217, 181), test02_01_pd_pp.nii: (181, 217, 181), test02_01_t2_pp.nii: (181, 217, 181)
+[test02 - 02] Images: test02_02_flair_pp.nii: (181, 217, 181), test02_02_mprage_pp.nii: (181, 217, 181), test02_02_pd_pp.nii: (181, 217, 181), test02_02_t2_pp.nii: (181, 217, 181)
+[test02 - 03] Images: test02_03_flair_pp.nii: (181, 217, 181), test02_03_mprage_pp.nii: (181, 217, 181), test02_03_pd_pp.nii: (181, 217, 181), test02_03_t2_pp.nii: (181, 217, 181)
+[test02 - 04] Images: test02_04_flair_pp.nii: (181, 217, 181), test02_04_mprage_pp.nii: (181, 217, 181), test02_04_pd_pp.nii: (181, 217, 181), test02_04_t2_pp.nii: (181, 217, 181)
+[test02 - 05] Images: test02_05_flair_pp.nii: (181, 217, 181), test02_05_mprage_pp.nii: (181, 217, 181), test02_05_pd_pp.nii: (181, 217, 181), test02_05_t2_pp.nii: (181, 217, 181)
+[test03 - 01] Images: test03_01_flair_pp.nii: (181, 217, 181), test03_01_mprage_pp.nii: (181, 217, 181), test03_01_pd_pp.nii: (181, 217, 181), test03_01_t2_pp.nii: (181, 217, 181)
+[test03 - 02] Images: test03_02_flair_pp.nii: (181, 217, 181), test03_02_mprage_pp.nii: (181, 217, 181), test03_02_pd_pp.nii: (181, 217, 181), test03_02_t2_pp.nii: (181, 217, 181)
+[test03 - 03] Images: test03_03_flair_pp.nii: (181, 217, 181), test03_03_mprage_pp.nii: (181, 217, 181), test03_03_pd_pp.nii: (181, 217, 181), test03_03_t2_pp.nii: (181, 217, 181)
+[test03 - 04] Images: test03_04_flair_pp.nii: (181, 217, 181), test03_04_mprage_pp.nii: (181, 217, 181), test03_04_pd_pp.nii: (181, 217, 181), test03_04_t2_pp.nii: (181, 217, 181)
+[test04 - 01] Images: test04_01_flair_pp.nii: (181, 217, 181), test04_01_mprage_pp.nii: (181, 217, 181), test04_01_pd_pp.nii: (181, 217, 181), test04_01_t2_pp.nii: (181, 217, 181)
+[test04 - 02] Images: test04_02_flair_pp.nii: (181, 217, 181), test04_02_mprage_pp.nii: (181, 217, 181), test04_02_pd_pp.nii: (181, 217, 181), test04_02_t2_pp.nii: (181, 217, 181)
+[test04 - 03] Images: test04_03_flair_pp.nii: (181, 217, 181), test04_03_mprage_pp.nii: (181, 217, 181), test04_03_pd_pp.nii: (181, 217, 181), test04_03_t2_pp.nii: (181, 217, 181)
+[test04 - 04] Images: test04_04_flair_pp.nii: (181, 217, 181), test04_04_mprage_pp.nii: (181, 217, 181), test04_04_pd_pp.nii: (181, 217, 181), test04_04_t2_pp.nii: (181, 217, 181)
+[test05 - 01] Images: test05_01_flair_pp.nii: (181, 217, 181), test05_01_mprage_pp.nii: (181, 217, 181), test05_01_pd_pp.nii: (181, 217, 181), test05_01_t2_pp.nii: (181, 217, 181)
+[test05 - 02] Images: test05_02_flair_pp.nii: (181, 217, 181), test05_02_mprage_pp.nii: (181, 217, 181), test05_02_pd_pp.nii: (181, 217, 181), test05_02_t2_pp.nii: (181, 217, 181)
+[test05 - 03] Images: test05_03_flair_pp.nii: (181, 217, 181), test05_03_mprage_pp.nii: (181, 217, 181), test05_03_pd_pp.nii: (181, 217, 181), test05_03_t2_pp.nii: (181, 217, 181)
+[test05 - 04] Images: test05_04_flair_pp.nii: (181, 217, 181), test05_04_mprage_pp.nii: (181, 217, 181), test05_04_pd_pp.nii: (181, 217, 181), test05_04_t2_pp.nii: (181, 217, 181)
+[test06 - 01] Images: test06_01_flair_pp.nii: (181, 217, 181), test06_01_mprage_pp.nii: (181, 217, 181), test06_01_pd_pp.nii: (181, 217, 181), test06_01_t2_pp.nii: (181, 217, 181)
+[test06 - 02] Images: test06_02_flair_pp.nii: (181, 217, 181), test06_02_mprage_pp.nii: (181, 217, 181), test06_02_pd_pp.nii: (181, 217, 181), test06_02_t2_pp.nii: (181, 217, 181)
+[test06 - 03] Images: test06_03_flair_pp.nii: (181, 217, 181), test06_03_mprage_pp.nii: (181, 217, 181), test06_03_pd_pp.nii: (181, 217, 181), test06_03_t2_pp.nii: (181, 217, 181)
+[test06 - 04] Images: test06_04_flair_pp.nii: (181, 217, 181), test06_04_mprage_pp.nii: (181, 217, 181), test06_04_pd_pp.nii: (181, 217, 181), test06_04_t2_pp.nii: (181, 217, 181)
+[test07 - 01] Images: test07_01_flair_pp.nii: (181, 217, 181), test07_01_mprage_pp.nii: (181, 217, 181), test07_01_pd_pp.nii: (181, 217, 181), test07_01_t2_pp.nii: (181, 217, 181)
+[test07 - 02] Images: test07_02_flair_pp.nii: (181, 217, 181), test07_02_mprage_pp.nii: (181, 217, 181), test07_02_pd_pp.nii: (181, 217, 181), test07_02_t2_pp.nii: (181, 217, 181)
+[test07 - 03] Images: test07_03_flair_pp.nii: (181, 217, 181), test07_03_mprage_pp.nii: (181, 217, 181), test07_03_pd_pp.nii: (181, 217, 181), test07_03_t2_pp.nii: (181, 217, 181)
+[test07 - 04] Images: test07_04_flair_pp.nii: (181, 217, 181), test07_04_mprage_pp.nii: (181, 217, 181), test07_04_pd_pp.nii: (181, 217, 181), test07_04_t2_pp.nii: (181, 217, 181)
+[test08 - 01] Images: test08_01_flair_pp.nii: (181, 217, 181), test08_01_mprage_pp.nii: (181, 217, 181), test08_01_pd_pp.nii: (181, 217, 181), test08_01_t2_pp.nii: (181, 217, 181)
+[test08 - 02] Images: test08_02_flair_pp.nii: (181, 217, 181), test08_02_mprage_pp.nii: (181, 217, 181), test08_02_pd_pp.nii: (181, 217, 181), test08_02_t2_pp.nii: (181, 217, 181)
+[test08 - 03] Images: test08_03_flair_pp.nii: (181, 217, 181), test08_03_mprage_pp.nii: (181, 217, 181), test08_03_pd_pp.nii: (181, 217, 181), test08_03_t2_pp.nii: (181, 217, 181)
+[test08 - 04] Images: test08_04_flair_pp.nii: (181, 217, 181), test08_04_mprage_pp.nii: (181, 217, 181), test08_04_pd_pp.nii: (181, 217, 181), test08_04_t2_pp.nii: (181, 217, 181)
+[test09 - 01] Images: test09_01_flair_pp.nii: (181, 217, 181), test09_01_mprage_pp.nii: (181, 217, 181), test09_01_pd_pp.nii: (181, 217, 181), test09_01_t2_pp.nii: (181, 217, 181)
+[test09 - 02] Images: test09_02_flair_pp.nii: (181, 217, 181), test09_02_mprage_pp.nii: (181, 217, 181), test09_02_pd_pp.nii: (181, 217, 181), test09_02_t2_pp.nii: (181, 217, 181)
+[test09 - 03] Images: test09_03_flair_pp.nii: (181, 217, 181), test09_03_mprage_pp.nii: (181, 217, 181), test09_03_pd_pp.nii: (181, 217, 181), test09_03_t2_pp.nii: (181, 217, 181)
+[test09 - 04] Images: test09_04_flair_pp.nii: (181, 217, 181), test09_04_mprage_pp.nii: (181, 217, 181), test09_04_pd_pp.nii: (181, 217, 181), test09_04_t2_pp.nii: (181, 217, 181)
+[test10 - 01] Images: test10_01_flair_pp.nii: (181, 217, 181), test10_01_mprage_pp.nii: (181, 217, 181), test10_01_pd_pp.nii: (181, 217, 181), test10_01_t2_pp.nii: (181, 217, 181)
+[test10 - 02] Images: test10_02_flair_pp.nii: (181, 217, 181), test10_02_mprage_pp.nii: (181, 217, 181), test10_02_pd_pp.nii: (181, 217, 181), test10_02_t2_pp.nii: (181, 217, 181)
+[test10 - 03] Images: test10_03_flair_pp.nii: (181, 217, 181), test10_03_mprage_pp.nii: (181, 217, 181), test10_03_pd_pp.nii: (181, 217, 181), test10_03_t2_pp.nii: (181, 217, 181)
+[test10 - 04] Images: test10_04_flair_pp.nii: (181, 217, 181), test10_04_mprage_pp.nii: (181, 217, 181), test10_04_pd_pp.nii: (181, 217, 181), test10_04_t2_pp.nii: (181, 217, 181)
+[test10 - 05] Images: test10_05_flair_pp.nii: (181, 217, 181), test10_05_mprage_pp.nii: (181, 217, 181), test10_05_pd_pp.nii: (181, 217, 181), test10_05_t2_pp.nii: (181, 217, 181)
+[test10 - 06] Images: test10_06_flair_pp.nii: (181, 217, 181), test10_06_mprage_pp.nii: (181, 217, 181), test10_06_pd_pp.nii: (181, 217, 181), test10_06_t2_pp.nii: (181, 217, 181)
+[test11 - 01] Images: test11_01_flair_pp.nii: (181, 217, 181), test11_01_mprage_pp.nii: (181, 217, 181), test11_01_pd_pp.nii: (181, 217, 181), test11_01_t2_pp.nii: (181, 217, 181)
+[test11 - 02] Images: test11_02_flair_pp.nii: (181, 217, 181), test11_02_mprage_pp.nii: (181, 217, 181), test11_02_pd_pp.nii: (181, 217, 181), test11_02_t2_pp.nii: (181, 217, 181)
+[test11 - 03] Images: test11_03_flair_pp.nii: (181, 217, 181), test11_03_mprage_pp.nii: (181, 217, 181), test11_03_pd_pp.nii: (181, 217, 181), test11_03_t2_pp.nii: (181, 217, 181)
+[test11 - 04] Images: test11_04_flair_pp.nii: (181, 217, 181), test11_04_mprage_pp.nii: (181, 217, 181), test11_04_pd_pp.nii: (181, 217, 181), test11_04_t2_pp.nii: (181, 217, 181)
+[test11 - 05] Images: test11_05_flair_pp.nii: (181, 217, 181), test11_05_mprage_pp.nii: (181, 217, 181), test11_05_pd_pp.nii: (181, 217, 181), test11_05_t2_pp.nii: (181, 217, 181)
+[test12 - 01] Images: test12_01_flair_pp.nii: (181, 217, 181), test12_01_mprage_pp.nii: (181, 217, 181), test12_01_pd_pp.nii: (181, 217, 181), test12_01_t2_pp.nii: (181, 217, 181)
+[test12 - 02] Images: test12_02_flair_pp.nii: (181, 217, 181), test12_02_mprage_pp.nii: (181, 217, 181), test12_02_pd_pp.nii: (181, 217, 181), test12_02_t2_pp.nii: (181, 217, 181)
+[test12 - 03] Images: test12_03_flair_pp.nii: (181, 217, 181), test12_03_mprage_pp.nii: (181, 217, 181), test12_03_pd_pp.nii: (181, 217, 181), test12_03_t2_pp.nii: (181, 217, 181)
+[test12 - 04] Images: test12_04_flair_pp.nii: (181, 217, 181), test12_04_mprage_pp.nii: (181, 217, 181), test12_04_pd_pp.nii: (181, 217, 181), test12_04_t2_pp.nii: (181, 217, 181)
+[test13 - 01] Images: test13_01_flair_pp.nii: (181, 217, 181), test13_01_mprage_pp.nii: (181, 217, 181), test13_01_pd_pp.nii: (181, 217, 181), test13_01_t2_pp.nii: (181, 217, 181)
+[test13 - 02] Images: test13_02_flair_pp.nii: (181, 217, 181), test13_02_mprage_pp.nii: (181, 217, 181), test13_02_pd_pp.nii: (181, 217, 181), test13_02_t2_pp.nii: (181, 217, 181)
+[test13 - 03] Images: test13_03_flair_pp.nii: (181, 217, 181), test13_03_mprage_pp.nii: (181, 217, 181), test13_03_pd_pp.nii: (181, 217, 181), test13_03_t2_pp.nii: (181, 217, 181)
+[test13 - 04] Images: test13_04_flair_pp.nii: (181, 217, 181), test13_04_mprage_pp.nii: (181, 217, 181), test13_04_pd_pp.nii: (181, 217, 181), test13_04_t2_pp.nii: (181, 217, 181)
+[test14 - 01] Images: test14_01_flair_pp.nii: (181, 217, 181), test14_01_mprage_pp.nii: (181, 217, 181), test14_01_pd_pp.nii: (181, 217, 181), test14_01_t2_pp.nii: (181, 217, 181)
+[test14 - 02] Images: test14_02_flair_pp.nii: (181, 217, 181), test14_02_mprage_pp.nii: (181, 217, 181), test14_02_pd_pp.nii: (181, 217, 181), test14_02_t2_pp.nii: (181, 217, 181)
+[test14 - 03] Images: test14_03_flair_pp.nii: (181, 217, 181), test14_03_mprage_pp.nii: (181, 217, 181), test14_03_pd_pp.nii: (181, 217, 181), test14_03_t2_pp.nii: (181, 217, 181)
+[test14 - 04] Images: test14_04_flair_pp.nii: (181, 217, 181), test14_04_mprage_pp.nii: (181, 217, 181), test14_04_pd_pp.nii: (181, 217, 181), test14_04_t2_pp.nii: (181, 217, 181)
+[test14 - 05] Images: test14_05_flair_pp.nii: (181, 217, 181), test14_05_mprage_pp.nii: (181, 217, 181), test14_05_pd_pp.nii: (181, 217, 181), test14_05_t2_pp.nii: (181, 217, 181)
+
+Summary for Test (preprocessed):
+Total MPRAGE (T1): 61
+Total T2: 61
+Total PD: 61
+Total FLAIR: 61
+Total Masks (Rater 1 + Rater 2): 0
