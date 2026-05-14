@@ -58,10 +58,18 @@ def load_volume(study_dir: str):
         path = os.path.join(study_dir, fname)
         if not os.path.exists(path):
             return None
-        return nib.load(path).get_fdata(dtype=np.float32)
+        data = nib.load(path).get_fdata(dtype=np.float32)
+        # Proper MR Normalization: Min-Max scaling to [0, 1]
+        dmin, dmax = data.min(), data.max()
+        if dmax > dmin:
+            data = (data - dmin) / (dmax - dmin)
+        else:
+            data = np.zeros_like(data)
+        return data
 
     flair = _load("flair.nii.gz")
-    mask  = _load("mask.nii.gz")
+    mask_path = os.path.join(study_dir, "mask.nii.gz")
+    mask = nib.load(mask_path).get_fdata(dtype=np.float32) if os.path.exists(mask_path) else None
 
     if flair is None or mask is None:
         raise FileNotFoundError(
