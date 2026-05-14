@@ -1,5 +1,9 @@
 # Dependencies
+import os
+os.environ["SM_FRAMEWORK"] = "tf.keras"
 import tensorflow as tf
+import segmentation_models as sm
+
 
 class Model2D(tf.keras.Model):
     # default
@@ -11,6 +15,7 @@ class Model2D(tf.keras.Model):
     outputs = []
 
     def __init__(self, IMG_HEIGHT: int = 256, IMG_WIDTH: int = 256, IMG_CHANNELS: int = 3):
+        super().__init__()
         self.IMG_HEIGHT = IMG_HEIGHT
         self.IMG_WIDTH = IMG_WIDTH
         self.IMG_CHANNELS = IMG_CHANNELS
@@ -79,7 +84,7 @@ class Model2D(tf.keras.Model):
 
     def initializeModel(self):
         self.model = tf.keras.Model(inputs = [self.inputs], outputs = [self.outputs])
-        self.model.compile(optimizer="adam", loss=tf.keras.losses.Dice(), metrics=["accuracy"])
+        self.model.compile(optimizer="adam", loss=sm.losses.dice_loss, metrics=["accuracy"])
 
     def summarize(self):
         self.model.summary()

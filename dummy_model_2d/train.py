@@ -62,7 +62,7 @@ from model   import Model2D
 from dataset import build_tf_dataset
 
 # ── Paths ─────────────────────────────────────────────────────────────────────
-DATASET_ROOT = "/Volumes/Expansion1TB/MS/model_dataset"
+DATASET_ROOT = "/home/darshan/MS/model_dataset"
 RUNS_DIR     = os.path.join(os.path.dirname(__file__), "runs")
 
 
