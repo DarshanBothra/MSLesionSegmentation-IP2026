@@ -185,7 +185,8 @@ def build_tf_dataset(split_dir: str,
 
     print(f"  Total slices: {X.shape[0]}  image shape: {X.shape[1:]}")
 
-    ds = tf.data.Dataset.from_tensor_slices((X, Y))
+    with tf.device('/cpu:0'):
+        ds = tf.data.Dataset.from_tensor_slices((X, Y))
     if is_train:
         ds = ds.shuffle(buffer_size=min(shuffle_buffer, X.shape[0]))
     ds = (ds

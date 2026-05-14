@@ -65,6 +65,16 @@ from dataset import build_tf_dataset
 DATASET_ROOT = "/home/darshan/MS/model_dataset"
 RUNS_DIR     = os.path.join(os.path.dirname(__file__), "runs")
 
+gpus = tf.config.list_physical_devices('GPU')
+if gpus:
+    try:
+        # Currently, memory growth needs to be the same across GPUs
+        for gpu in gpus:
+            tf.config.experimental.set_memory_growth(gpu, True)
+        print("--> GPU Memory Growth Enabled")
+    except RuntimeError as e:
+        # Memory growth must be set before GPUs have been initialized
+        print(e)
 
 # ─────────────────────────────────────────────────────────────────────────────
 # Custom Keras metrics
@@ -327,7 +337,7 @@ def train(epochs: int = 50,
     model.summary()
 
     # ── Callbacks ─────────────────────────────────────────────────────────────
-    ckpt_path = os.path.join(run_dir, "best_model.keras")
+    ckpt_path = os.path.join(run_dir, "best_model.h5")
 
     callbacks = [
         # Save best weights monitored on ISBI2015 validation Dice

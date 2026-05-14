@@ -1,37 +1,62 @@
 #!/bin/bash
-# eval.sh - Uses the trained model to predict on an image from the training dataset
+# eval.sh — Run predict.py on a sample study from the training dataset
+#            using the latest trained model checkpoint.
 
 set -e
 
-# Find the latest model run
-LATEST_RUN=$(ls -td runs/*/ | head -1)
-MODEL_PATH="${LATEST_RUN}best_model.keras"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+cd "$SCRIPT_DIR"
 
-if [ ! -f "$MODEL_PATH" ]; then
-    echo "Error: Model checkpoint not found in any runs/ subdirectory."
+# ── Find the latest run with a best_model.h5 ─────────────────────────────────
+MODEL_PATH=""
+for d in $(ls -td runs/*/); do
+    if [ -f "${d}best_model.h5" ]; then
+        MODEL_PATH="${d}best_model.h5"
+        break
+    fi
+done
+
+if [ -z "$MODEL_PATH" ]; then
+    echo "ERROR: No best_model.h5 found in any runs/ subdirectory."
     exit 1
 fi
 
 echo "Using model: $MODEL_PATH"
 
-# Find an image from the training dataset
-DATASET_DIR="/Volumes/Expansion1TB/MS/model_dataset/train"
+# ── Dataset directory ─────────────────────────────────────────────────────────
+DATASET_DIR="/home/darshan/MS/model_dataset/train"
+
 if [ ! -d "$DATASET_DIR" ]; then
-    echo "Warning: Dataset directory $DATASET_DIR not found."
-    echo "Please make sure you have run the dataset preparation step."
+    echo "ERROR: Dataset directory $DATASET_DIR not found."
+    echo "Make sure you have run prepare_dataset.py first."
     exit 1
 fi
 
-INPUT_IMAGE=$(find "$DATASET_DIR" -name "flair.nii.gz" | head -n 1)
+# ── Pick a study with a mask (P1_T1 is a good default) ───────────────────────
+STUDY="P1_T1"
+STUDY_DIR="${DATASET_DIR}/${STUDY}"
 
-if [ -z "$INPUT_IMAGE" ]; then
-    echo "Error: Could not find any flair.nii.gz image in $DATASET_DIR."
-    exit 1
+if [ ! -d "$STUDY_DIR" ]; then
+    # Fallback: pick the first available study
+    STUDY=$(ls "$DATASET_DIR" | head -n 1)
+    STUDY_DIR="${DATASET_DIR}/${STUDY}"
 fi
 
-OUTPUT_MASK="predicted_mask.nii.gz"
+echo "Study directory: $STUDY_DIR"
 
-echo "Running prediction on $INPUT_IMAGE..."
-python predict.py --input "$INPUT_IMAGE" --model "$MODEL_PATH" --output "$OUTPUT_MASK"
+# ── Output goes next to the model checkpoint ──────────────────────────────────
+RUN_DIR=$(dirname "$MODEL_PATH")
+OUTPUT_PNG="${RUN_DIR}/prediction_${STUDY}.png"
 
-echo "Prediction complete. Output saved to $OUTPUT_MASK."
+echo "Running prediction + visualisation ..."
+python3 predict.py \
+    --study_dir "$STUDY_DIR" \
+    --model     "$MODEL_PATH" \
+    --output    "$OUTPUT_PNG"
+
+echo ""
+echo "═══════════════════════════════════════════════════════════"
+echo "  Evaluation complete."
+echo "  Figure : $OUTPUT_PNG"
+echo "  Mask   : ${OUTPUT_PNG%.png}_pred_mask.nii.gz"
+echo "═══════════════════════════════════════════════════════════"
