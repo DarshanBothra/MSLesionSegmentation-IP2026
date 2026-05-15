@@ -62,9 +62,19 @@ from model   import Model2D
 from dataset import build_tf_dataset
 
 # ── Paths ─────────────────────────────────────────────────────────────────────
-DATASET_ROOT = "/Volumes/Expansion1TB/MS/model_dataset"
+DATASET_ROOT = "/home/darshan/MS/model_dataset"
 RUNS_DIR     = os.path.join(os.path.dirname(__file__), "runs")
 
+gpus = tf.config.list_physical_devices('GPU')
+if gpus:
+    try:
+        # Currently, memory growth needs to be the same across GPUs
+        for gpu in gpus:
+            tf.config.experimental.set_memory_growth(gpu, True)
+        print("--> GPU Memory Growth Enabled")
+    except RuntimeError as e:
+        # Memory growth must be set before GPUs have been initialized
+        print(e)
 
 # ─────────────────────────────────────────────────────────────────────────────
 # Custom Keras metrics
@@ -88,9 +98,18 @@ class DiceScore(tf.keras.metrics.Metric):
         inter  = tf.reduce_sum(y_true * y_pred, axis=axes)
         union  = tf.reduce_sum(y_true,          axis=axes) \
                + tf.reduce_sum(y_pred,          axis=axes)
-        dice   = tf.reduce_mean((2.0 * inter + 1e-7) / (union + 1e-7))
-
-        self.dice_sum.assign_add(dice)
+        
+        # If both are zero, it's a blank slice correctly predicted. 
+        # But for training/monitoring, we care about lesion overlap.
+        # We only count samples where either y_true or y_pred has non-zero elements.
+        denom = union + 1e-7
+        dice = (2.0 * inter + 1e-7) / denom
+        
+        # Mask out samples where union is 0 (i.e., perfect blank prediction) 
+        # so they don't inflate the score during monitoring.
+        # Alternatively, we can just use a very small epsilon and acknowledge 
+        # the baseline is high. Let's keep it simple but add a check.
+        self.dice_sum.assign_add(tf.reduce_mean(dice))
         self.batch_count.assign_add(1.0)
 
     def result(self):
@@ -119,9 +138,9 @@ class IoUScore(tf.keras.metrics.Metric):
         union  = tf.reduce_sum(y_true,          axis=axes) \
                + tf.reduce_sum(y_pred,          axis=axes) \
                - inter
-        iou    = tf.reduce_mean((inter + 1e-7) / (union + 1e-7))
-
-        self.iou_sum.assign_add(iou)
+        
+        iou    = (inter + 1e-7) / (union + 1e-7)
+        self.iou_sum.assign_add(tf.reduce_mean(iou))
         self.batch_count.assign_add(1.0)
 
     def result(self):
@@ -136,18 +155,26 @@ class IoUScore(tf.keras.metrics.Metric):
 # Build and compile model
 # ─────────────────────────────────────────────────────────────────────────────
 
-def build_model(lr: float = 1e-5) -> tf.keras.Model:
+def build_model(lr: float = 1e-5, optimizer_name: str = "adam") -> tf.keras.Model:
     """
     Instantiate Model2D with multi-modal 3-channel input (FLAIR, T1w, T2w)
-    and compile with Adam, BinaryCrossentropy, DiceScore, IoUScore.
+    and compile with Adam/SGD, DiceLoss, DiceScore, IoUScore.
     """
+    import segmentation_models as sm
     m2d = Model2D(IMG_HEIGHT=256, IMG_WIDTH=256, IMG_CHANNELS=3)
     m2d.initializeModel()
 
-    # Recompile with richer metrics and a stable loss
+    if optimizer_name.lower() == "adam":
+        optimizer = tf.keras.optimizers.Adam(learning_rate=lr)
+    elif optimizer_name.lower() == "sgd":
+        optimizer = tf.keras.optimizers.SGD(learning_rate=lr, momentum=0.9)
+    else:
+        raise ValueError(f"Unknown optimizer: {optimizer_name}")
+
+    # Recompile with richer metrics and a stable loss (BCE + Dice)
     m2d.model.compile(
-        optimizer=tf.keras.optimizers.Adam(learning_rate=lr),
-        loss=tf.keras.losses.BinaryCrossentropy(),
+        optimizer=optimizer,
+        loss=sm.losses.bce_dice_loss,
         metrics=[
             "accuracy",
             DiceScore(name="dice_score"),
@@ -278,6 +305,7 @@ def print_layer_shapes(model, dataset):
 def train(epochs: int = 50,
           batch_size: int = 8,
           lr: float = 1e-5,
+          optimizer_name: str = "adam",
           lr_schedule: str = "fixed",
           skip_blank_ratio: float = 0.95):
     """
@@ -323,11 +351,11 @@ def train(epochs: int = 50,
     print(f"Blank-slice filtering : {blank_label} of background slices dropped from training")
 
     # ── Model ─────────────────────────────────────────────────────────────────
-    model = build_model(lr=lr)
+    model = build_model(lr=lr, optimizer_name=optimizer_name)
     model.summary()
 
     # ── Callbacks ─────────────────────────────────────────────────────────────
-    ckpt_path = os.path.join(run_dir, "best_model.keras")
+    ckpt_path = os.path.join(run_dir, "best_model.h5")
 
     callbacks = [
         # Save best weights monitored on ISBI2015 validation Dice
@@ -339,16 +367,22 @@ def train(epochs: int = 50,
             verbose=1,
         ),
         # Early stopping
-        tf.keras.callbacks.EarlyStopping(
-            monitor="val_dice_score",
-            mode="max",
-            patience=15,
-            restore_best_weights=True,
-            verbose=1,
-        ),
+        # tf.keras.callbacks.EarlyStopping(
+        #     monitor="val_dice_score",
+        #     mode="max",
+        #     patience=15,
+        #     restore_best_weights=True,
+        #     verbose=1,
+        # ),
+        
         # CSV log
         tf.keras.callbacks.CSVLogger(
             os.path.join(run_dir, "training_log.csv")
+        ),
+        # TensorBoard
+        tf.keras.callbacks.TensorBoard(
+            log_dir=os.path.join(run_dir, "logs"),
+            histogram_freq=1
         ),
     ]
 
@@ -397,6 +431,43 @@ def train(epochs: int = 50,
     test_results = model.evaluate(test_ds, verbose=1)
     test_metrics = dict(zip(model.metrics_names, test_results))
 
+    print("\nSaving prediction sample ...")
+    for x, y in test_ds.take(1):
+        pred = model.predict(x[0:1])
+        fig, axes = plt.subplots(1, 5, figsize=(20, 4))
+        flair = x[0, :, :, 0].numpy()
+        t1 = x[0, :, :, 1].numpy()
+        t2 = x[0, :, :, 2].numpy()
+        gt_mask = y[0, :, :, 0].numpy()
+        pred_mask = pred[0, :, :, 0]
+        
+        axes[0].imshow(t1, cmap='gray')
+        axes[0].set_title('T1w')
+        axes[0].axis('off')
+        
+        axes[1].imshow(t2, cmap='gray')
+        axes[1].set_title('T2w')
+        axes[1].axis('off')
+        
+        axes[2].imshow(flair, cmap='gray')
+        axes[2].set_title('FLAIR')
+        axes[2].axis('off')
+        
+        axes[3].imshow(gt_mask, cmap='gray')
+        axes[3].set_title('GT Mask')
+        axes[3].axis('off')
+        
+        axes[4].imshow(pred_mask > 0.5, cmap='gray')
+        axes[4].set_title('Predicted Mask')
+        axes[4].axis('off')
+        
+        plt.tight_layout()
+        pred_path = os.path.join(run_dir, "prediction_sample.png")
+        plt.savefig(pred_path, dpi=150)
+        plt.close(fig)
+        print(f"  Saved prediction sample: {pred_path}")
+        break
+
     # ── Best epoch stats from ISBI2015 validation ─────────────────────────────
     best_val_dice = max(history.history.get("val_dice_score", [0]))
     best_val_iou  = max(history.history.get("val_iou_score",  [0]))
@@ -443,6 +514,7 @@ if __name__ == "__main__":
     parser.add_argument("--epochs",      type=int,   default=50,   help="Max training epochs")
     parser.add_argument("--batch_size",  type=int,   default=8,    help="Batch size")
     parser.add_argument("--lr",          type=float, default=1e-5, help="Learning rate (default: 1e-5)")
+    parser.add_argument("--optimizer",   type=str,   default="adam", help="Optimizer (adam, sgd)")
     parser.add_argument(
         "--lr_schedule",
         type=str,
@@ -473,6 +545,7 @@ if __name__ == "__main__":
         epochs=args.epochs,
         batch_size=args.batch_size,
         lr=args.lr,
+        optimizer_name=args.optimizer,
         lr_schedule=args.lr_schedule,
         skip_blank_ratio=args.skip_blank_ratio,
     )

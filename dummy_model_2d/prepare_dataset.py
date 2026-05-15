@@ -2,7 +2,7 @@
 prepare_dataset.py
 ------------------
 Creates a clean, model-ready copy of the preprocessed data in:
-  /Volumes/Expansion1TB/MS/model_dataset/
+  /home/darshan/MS/model_dataset/
   
 Structure produced
 ------------------
@@ -47,10 +47,10 @@ import nibabel as nib
 # ─────────────────────────────────────────────────────────────────────────────
 # Paths – edit only these if you move data
 # ─────────────────────────────────────────────────────────────────────────────
-MSLESSEG_TRAIN = "/Volumes/Expansion1TB/MS/data/MSLesSeg/MSLesSeg Dataset/train"
-MSLESSEG_TEST  = "/Volumes/Expansion1TB/MS/data/MSLesSeg/MSLesSeg Dataset/test"
-ISBI_TRAIN     = "/Volumes/Expansion1TB/MS/data/ISBI2015/training"
-OUT_ROOT       = "/Volumes/Expansion1TB/MS/model_dataset"
+MSLESSEG_TRAIN = "/home/darshan/MS/data/MSLesSeg/MSLesSeg Dataset/train"
+MSLESSEG_TEST  = "/home/darshan/MS/data/MSLesSeg/MSLesSeg Dataset/test"
+ISBI_TRAIN     = "/home/darshan/MS/data/ISBI2015/training"
+OUT_ROOT       = "/home/darshan/MS/model_dataset"
 
 SEED = 42
 random.seed(SEED)

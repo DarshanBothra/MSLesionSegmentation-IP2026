@@ -7,6 +7,11 @@ data/
 *.nii.gz
 *.dcm
 
+model_dataset/
+*.nii
+*.nii.gz
+*.dcm
+
 # OS files
 .DS_Store
 *.swp
