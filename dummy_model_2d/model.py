@@ -103,7 +103,6 @@ class Model2D(tf.keras.Model):
 
     def initializeModel(self):
         self.model = tf.keras.Model(inputs = [self.inputs], outputs = [self.outputs])
-        self.model.compile(optimizer="adam", loss=sm.losses.dice_loss, metrics=["accuracy"])
 
     def summarize(self):
         self.model.summary()

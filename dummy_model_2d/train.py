@@ -11,8 +11,8 @@ Modality used
 Splits & roles
 --------------
   train/        : 90% of MSLesSeg patients – model training
-  external_val/ : ISBI2015 5 subjects      – validation during model.fit() (monitors generalisation)
-  test/         : 10% of MSLesSeg patients – completely held-out; evaluated ONCE after training
+  external_val/ : 10% of MSLesSeg patients – validation during model.fit()
+  test/         : ISBI2015 5 subjects      – completely held-out; evaluated ONCE after training
 
 Blank-slice filtering (--skip_blank_ratio)
 ------------------------------------------
@@ -62,7 +62,7 @@ from model   import Model2D
 from dataset import build_tf_dataset
 
 # ── Paths ─────────────────────────────────────────────────────────────────────
-DATASET_ROOT = "/home/darshan/MS/model_dataset"
+DATASET_ROOT = "/home/darshan/MS/dummy_model_2d/model_dataset"
 RUNS_DIR     = os.path.join(os.path.dirname(__file__), "runs")
 
 gpus = tf.config.list_physical_devices('GPU')
@@ -329,7 +329,7 @@ def train(epochs: int = 50,
         is_train=True,
         skip_blank_ratio=skip_blank_ratio,
     )
-    # Validation during fit: ISBI2015 external set (monitors generalisation)
+    # Validation during fit: MSLesSeg 10% held-out
     # All slices kept (skip_blank_ratio=0.0)
     val_ds, n_val = build_tf_dataset(
         os.path.join(DATASET_ROOT, "external_val"),
@@ -337,7 +337,7 @@ def train(epochs: int = 50,
         is_train=False,
         skip_blank_ratio=0.0,
     )
-    # Held-out test: MSLesSeg 10% patients – NOT seen during training
+    # Held-out test: ISBI2015 external set
     # All slices kept (skip_blank_ratio=0.0)
     test_ds, n_test = build_tf_dataset(
         os.path.join(DATASET_ROOT, "test"),
@@ -347,7 +347,7 @@ def train(epochs: int = 50,
     )
 
     blank_label = f"{skip_blank_ratio:.0%}" if skip_blank_ratio > 0 else "none (keep all)"
-    print(f"\nSlice counts  train={n_train}  val(ISBI)={n_val}  test(MSLesSeg)={n_test}")
+    print(f"\nSlice counts  train={n_train}  val(MSLesSeg)={n_val}  test(ISBI)={n_test}")
     print(f"Blank-slice filtering : {blank_label} of background slices dropped from training")
 
     # ── Model ─────────────────────────────────────────────────────────────────
@@ -358,7 +358,7 @@ def train(epochs: int = 50,
     ckpt_path = os.path.join(run_dir, "best_model.h5")
 
     callbacks = [
-        # Save best weights monitored on ISBI2015 validation Dice
+        # Save best weights monitored on MSLesSeg validation Dice
         tf.keras.callbacks.ModelCheckpoint(
             filepath=ckpt_path,
             monitor="val_dice_score",
@@ -407,8 +407,8 @@ def train(epochs: int = 50,
 
     # ── Fit (val = ISBI2015, used to monitor generalisation each epoch) ─────────
     print(f"\nStarting training for up to {epochs} epochs ...")
-    print(f"  Validation : ISBI2015 external set (all slices, no blank filtering)")
-    print(f"  Test set   : MSLesSeg 10% patients (evaluated once AFTER training)\n")
+    print(f"  Validation : MSLesSeg 10% set (all slices, no blank filtering)")
+    print(f"  Test set   : ISBI2015 external set (evaluated once AFTER training)\n")
     history = model.fit(
         train_ds,
         epochs=epochs,
@@ -424,9 +424,9 @@ def train(epochs: int = 50,
     print("\nSaving training curve plots ...")
     plot_training_curves(history, run_dir)
 
-    # ── Held-out test: MSLesSeg 10% patients (evaluated ONCE, post-training) ──
+    # ── Held-out test: ISBI2015 (evaluated ONCE, post-training) ──
     print("\n" + "="*60)
-    print("Evaluating on held-out MSLesSeg test set (10% patients) ...")
+    print("Evaluating on held-out ISBI2015 test set ...")
     print("="*60)
     test_results = model.evaluate(test_ds, verbose=1)
     test_metrics = dict(zip(model.metrics_names, test_results))
@@ -468,7 +468,7 @@ def train(epochs: int = 50,
         print(f"  Saved prediction sample: {pred_path}")
         break
 
-    # ── Best epoch stats from ISBI2015 validation ─────────────────────────────
+    # ── Best epoch stats from validation ─────────────────────────────
     best_val_dice = max(history.history.get("val_dice_score", [0]))
     best_val_iou  = max(history.history.get("val_iou_score",  [0]))
 
@@ -478,11 +478,11 @@ def train(epochs: int = 50,
         "lr_schedule": lr_schedule,
         "skip_blank_ratio": skip_blank_ratio,
         "epochs_trained": len(history.history["loss"]),
-        "val_isbi2015": {
+        "val_mslesseg": {
             "best_dice": round(float(best_val_dice), 4),
             "best_iou":  round(float(best_val_iou),  4),
         },
-        "test_mslesseg": {
+        "test_isbi2015": {
             k: round(float(v), 4) for k, v in test_metrics.items()
         },
         "checkpoint": ckpt_path,
@@ -496,10 +496,10 @@ def train(epochs: int = 50,
     print("\n" + "="*60)
     print("TRAINING COMPLETE – Final Metrics")
     print("="*60)
-    print("  Validation  (ISBI2015 – best epoch during training):")
+    print("  Validation  (MSLesSeg 10% – best epoch during training):")
     print(f"    Dice : {best_val_dice:.4f}")
     print(f"    IoU  : {best_val_iou:.4f}")
-    print("  Test  (MSLesSeg 10% – evaluated once after training):")
+    print("  Test  (ISBI2015 – evaluated once after training):")
     print(f"    Dice : {test_metrics.get('dice_score', 'N/A')}")
     print(f"    IoU  : {test_metrics.get('iou_score',  'N/A')}")
     print(f"\nSummary saved to: {summary_path}")

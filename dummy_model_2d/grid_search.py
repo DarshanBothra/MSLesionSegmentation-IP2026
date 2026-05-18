@@ -6,9 +6,9 @@ import pandas as pd
 import json
 
 def run_grid_search():
-    batch_sizes = [4, 8, 16]
-    optimizers = ['adam', 'sgd']
-    learning_rates = [1e-3, 1e-4, 1e-5]
+    batch_sizes = [8] # test: [4, 8, 16]
+    optimizers = ['adam'] # test: ['adam', 'sgd']
+    learning_rates = [1e-5]# test:  [1e-3, 1e-4, 1e-5]
     max_epochs = 100
 
     results = []
@@ -67,10 +67,10 @@ def run_grid_search():
                     "Optimizer": opt,
                     "Learning Rate": lr,
                     "Epochs Trained": summary.get("epochs_trained", 0),
-                    "Val Dice (ISBI)": summary.get("val_isbi2015", {}).get("best_dice", 0),
-                    "Val IoU (ISBI)": summary.get("val_isbi2015", {}).get("best_iou", 0),
-                    "Test Dice": summary.get("test_mslesseg", {}).get("dice_score", 0),
-                    "Test IoU": summary.get("test_mslesseg", {}).get("iou_score", 0)
+                    "Val Dice (MSLesSeg)": summary.get("val_mslesseg", {}).get("best_dice", 0),
+                    "Val IoU (MSLesSeg)": summary.get("val_mslesseg", {}).get("best_iou", 0),
+                    "Test Dice (ISBI)": summary.get("test_isbi2015", {}).get("dice_score", 0),
+                    "Test IoU (ISBI)": summary.get("test_isbi2015", {}).get("iou_score", 0)
                 }
                 results.append(res)
             else:

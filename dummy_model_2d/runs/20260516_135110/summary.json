@@ -1,0 +1,19 @@
+{
+  "run_id": "20260516_135110",
+  "lr": 1e-05,
+  "lr_schedule": "fixed",
+  "skip_blank_ratio": 0.95,
+  "epochs_trained": 100,
+  "val_mslesseg": {
+    "best_dice": 0.6987,
+    "best_iou": 0.6498
+  },
+  "test_isbi2015": {
+    "loss": 0.5519,
+    "accuracy": 0.9993,
+    "dice_score": 0.6732,
+    "iou_score": 0.6293
+  },
+  "checkpoint": "/home/darshan/MS/dummy_model_2d/runs/20260516_135110/best_model.h5",
+  "training_log": "/home/darshan/MS/dummy_model_2d/runs/20260516_135110/training_log.csv"
+}
