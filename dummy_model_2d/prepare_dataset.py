@@ -2,7 +2,7 @@
 prepare_dataset.py
 ------------------
 Creates a clean, model-ready copy of the preprocessed data in:
-  /home/darshan/MS/dummy_model_2d/model_dataset/
+  /home/darshan/MS/model_dataset/
   
 Structure produced
 ------------------
@@ -13,16 +13,16 @@ model_dataset/
       t1.nii.gz
       t2.nii.gz
       mask.nii.gz
-  test/                     (ISBI2015 5 training subjects, zero-padded to 182x218x182)
+  test/                     (10% of MSLesSeg patients, held-out)
     ...
-  external_val/             (10% of MSLesSeg patients, validation)
+  external_val/             (ISBI2015 5 training subjects, zero-padded to 182x218x182)
     ...
 
 Source directories pooled
 -------------------------
 * MSLesSeg Dataset/train/  -- 53 patients (P1-P53), timepoints in T1/T2/... subfolders
 * MSLesSeg Dataset/test/   -- 22 patients (P54-P75), flat structure (no timepoint subfolders)
-All 75 patients are pooled, then split 90/10 at the patient level for train/external_val.
+All 75 patients are pooled, then split 90/10 at the patient level.
 
 Dimensions
 ----------
@@ -50,7 +50,7 @@ import nibabel as nib
 MSLESSEG_TRAIN = "/home/darshan/MS/data/MSLesSeg/MSLesSeg Dataset/train"
 MSLESSEG_TEST  = "/home/darshan/MS/data/MSLesSeg/MSLesSeg Dataset/test"
 ISBI_TRAIN     = "/home/darshan/MS/data/ISBI2015/training"
-OUT_ROOT       = "/home/darshan/MS/dummy_model_2d/model_dataset"
+OUT_ROOT       = "/home/darshan/MS/model_dataset"
 
 SEED = 42
 random.seed(SEED)
@@ -220,9 +220,9 @@ def prepare_mslesseg(): # 90/10 Patient-level split (train/test) — all 75 pati
                             os.path.join(OUT_ROOT, "train"))
 
     for patient, tp, tp_path in test_studies:
-        print(f"\n[VAL] {patient}/{tp}")
+        print(f"\n[TEST] {patient}/{tp}")
         copy_mslesseg_study(patient, tp, tp_path,
-                            os.path.join(OUT_ROOT, "external_val"))
+                            os.path.join(OUT_ROOT, "test"))
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -235,10 +235,10 @@ MASK_RATER = "mask1"
 
 def prepare_isbi():
     print("\n" + "="*60)
-    print("ISBI2015: collecting studies for testing ...")
+    print("ISBI2015: collecting studies for external validation ...")
     print("="*60)
 
-    test_dir = os.path.join(OUT_ROOT, "test")
+    ext_dir = os.path.join(OUT_ROOT, "external_val")
     subjects = sorted([
         d for d in os.listdir(ISBI_TRAIN)
         if d.startswith("training") and
@@ -264,8 +264,8 @@ def prepare_isbi():
 
         for tp in timepoints:
             study_id  = f"{subj}_{tp}"
-            out_study = os.path.join(test_dir, study_id)
-            print(f"\n[TEST] {study_id}")
+            out_study = os.path.join(ext_dir, study_id)
+            print(f"\n[EXT_VAL] {study_id}")
 
             def pp_file(modality):
                 """Return path to preprocessed file for given modality."""

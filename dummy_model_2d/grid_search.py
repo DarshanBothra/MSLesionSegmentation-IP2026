@@ -6,87 +6,92 @@ import pandas as pd
 import json
 
 def run_grid_search():
-    batch_sizes = [8] # test: [4, 8, 16]
-    optimizers = ['adam'] # test: ['adam', 'sgd']
-    learning_rates = [1e-5]# test:  [1e-3, 1e-4, 1e-5]
-    max_epochs = 100
+    batch_sizes    = [8] # testing: [4, 8, 16]
+    optimizers     = ['adam'] # testing: ['adam', 'sgd']
+    learning_rates = [1e-5] # testing: [1e-3, 1e-4, 1e-5]
+    max_epochs     = 200
 
     results = []
-    
+
     script_dir = os.path.dirname(os.path.abspath(__file__))
     train_script = os.path.join(script_dir, "train.py")
-    runs_dir = os.path.join(script_dir, "runs")
-    
-    # We will sort runs by creation time to find the newest run after each training
-    # Or better, we can modify train.py to accept a specific run_id or just find the latest folder in runs/
-    
+    runs_dir     = os.path.join(script_dir, "runs")
+
     combinations = list(itertools.product(batch_sizes, optimizers, learning_rates))
     total = len(combinations)
-    
-    print(f"Starting grid search over {total} combinations...")
-    
+
+    print(f"Starting grid search over {total} combinations ...")
+    print(f"  Dataset : dummy_model_2d/dataset/split/{{train|val|test}}")
+    print(f"  Input   : 1-channel FLAIR (256x256x1)")
+    print(f"  Epochs  : {max_epochs} (no early stopping)\n")
+
     for i, (bs, opt, lr) in enumerate(combinations):
-        print(f"\n[{i+1}/{total}] Training with Batch Size: {bs}, Optimizer: {opt}, LR: {lr}")
-        
-        # Count existing runs to find the new one easily
-        if os.path.exists(runs_dir):
-            runs_before = set(os.listdir(runs_dir))
-        else:
-            runs_before = set()
-            
+        print(f"\n{'='*60}")
+        print(f"[{i+1}/{total}]  Batch={bs}  Optimizer={opt}  LR={lr}")
+        print(f"{'='*60}")
+
+        # Snapshot existing runs so we can identify the new one
+        runs_before = set(os.listdir(runs_dir)) if os.path.exists(runs_dir) else set()
+
         cmd = [
             sys.executable, train_script,
-            "--epochs", str(max_epochs),
+            "--epochs",     str(max_epochs),
             "--batch_size", str(bs),
-            "--optimizer", opt,
-            "--lr", str(lr)
+            "--optimizer",  opt,
+            "--lr",         str(lr),
         ]
-        
-        # Run training
+
         try:
             subprocess.run(cmd, check=True)
-        except subprocess.CalledProcessError as e:
-            print(f"Training failed for combination bs={bs}, opt={opt}, lr={lr}")
+        except subprocess.CalledProcessError:
+            print(f"[WARN] Training failed for bs={bs}, opt={opt}, lr={lr} — skipping")
             continue
-            
-        # Find the new run directory
+
+        # Find the newly created run directory
         runs_after = set(os.listdir(runs_dir))
-        new_runs = runs_after - runs_before
-        
-        if new_runs:
-            latest_run = list(new_runs)[0] # Assuming one new run
-            summary_path = os.path.join(runs_dir, latest_run, "summary.json")
-            
-            if os.path.exists(summary_path):
-                with open(summary_path, 'r') as f:
-                    summary = json.load(f)
-                
-                res = {
-                    "Run ID": latest_run,
-                    "Batch Size": bs,
-                    "Optimizer": opt,
-                    "Learning Rate": lr,
-                    "Epochs Trained": summary.get("epochs_trained", 0),
-                    "Val Dice (MSLesSeg)": summary.get("val_mslesseg", {}).get("best_dice", 0),
-                    "Val IoU (MSLesSeg)": summary.get("val_mslesseg", {}).get("best_iou", 0),
-                    "Test Dice (ISBI)": summary.get("test_isbi2015", {}).get("dice_score", 0),
-                    "Test IoU (ISBI)": summary.get("test_isbi2015", {}).get("iou_score", 0)
-                }
-                results.append(res)
-            else:
-                print(f"No summary found for {latest_run}")
-                
-    # Save results
+        new_runs   = runs_after - runs_before
+
+        if not new_runs:
+            print("[WARN] Could not find new run directory — skipping summary collection")
+            continue
+
+        latest_run   = sorted(new_runs)[0]          # timestamps are sortable
+        summary_path = os.path.join(runs_dir, latest_run, "summary.json")
+
+        if os.path.exists(summary_path):
+            with open(summary_path, 'r') as f:
+                summary = json.load(f)
+
+            res = {
+                "Run ID":        latest_run,
+                "Batch Size":    bs,
+                "Optimizer":     opt,
+                "Learning Rate": lr,
+                "Epochs Trained": summary.get("epochs_trained", 0),
+                "Best Val Dice": summary.get("val_split", {}).get("best_dice", 0),
+                "Best Val IoU":  summary.get("val_split", {}).get("best_iou",  0),
+                "Test Dice":     summary.get("test_split", {}).get("dice_score", 0),
+                "Test IoU":      summary.get("test_split", {}).get("iou_score",  0),
+            }
+            results.append(res)
+            print(f"\n  Summary: Val Dice={res['Best Val Dice']:.4f}  "
+                  f"Test Dice={res['Test Dice']:.4f}")
+        else:
+            print(f"[WARN] No summary.json found for run {latest_run}")
+
+    # ── Print & save final results table ─────────────────────────────────────
     if results:
         df = pd.DataFrame(results)
-        print("\n--- Grid Search Results ---")
+        print("\n\n" + "="*80)
+        print("GRID SEARCH COMPLETE — Results Summary")
+        print("="*80)
         print(df.to_markdown(index=False))
-        
+
         res_path = os.path.join(script_dir, "grid_search_results.csv")
         df.to_csv(res_path, index=False)
-        print(f"\nResults saved to {res_path}")
+        print(f"\nFull results table saved to: {res_path}")
     else:
-        print("No results to save.")
+        print("No results collected.")
 
 if __name__ == "__main__":
     run_grid_search()

@@ -14,7 +14,7 @@ command-not-found==0.3
 configobj==5.0.6
 constantly==15.1.0
 contourpy==1.1.1
-cryptography==47.0.0
+cryptography==45.0.7
 cupshelpers==1.0
 cycler==0.12.1
 dbus-python==1.2.16
@@ -68,6 +68,7 @@ nvitop==1.6.2
 oauthlib==3.1.0
 opt_einsum==3.4.0
 packaging==26.2
+pandas==2.0.3
 pexpect==4.6.0
 pillow==10.4.0
 protobuf==4.25.9
@@ -91,7 +92,7 @@ pyserial==3.4
 python-apt==2.0.1+ubuntu0.20.4.1
 python-dateutil==2.9.0.post0
 python-debian==0.1.36+ubuntu1.1
-pytz==2019.3
+pytz==2026.2
 PyWavelets==1.4.1
 pyxdg==0.26
 PyYAML==5.3.1
@@ -104,6 +105,7 @@ screen-resolution-extra==0.0.0
 SecretStorage==2.3.1
 segmentation-models==1.0.1
 service-identity==18.1.0
+SimpleITK==2.5.5
 simplejson==3.16.0
 six==1.14.0
 sos==4.5.6
@@ -122,6 +124,7 @@ termcolor==2.4.0
 tifffile==2023.7.10
 Twisted==18.9.0
 typing_extensions==4.5.0
+tzdata==2026.2
 ubuntu-advantage-tools==8001
 ubuntu-drivers-common==0.0.0
 ufw==0.36

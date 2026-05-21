@@ -49,40 +49,36 @@ def load_nii(path):
     return data
 
 def main():
-    test_dir = '/home/darshan/MS/dummy_model_2d/model_dataset/custom_test'
-    model_path = '/home/darshan/MS/dummy_model_2d/runs/20260516_135110/best_model.h5'
-    output_dir = '/home/darshan/MS/dummy_model_2d/test_predictions/model3'
-    os.makedirs(output_dir, exist_ok=True)
+    test_dir = '/home/darshan/MS/dummy_model_2d/dataset/split/test'
+    model_path = '/home/darshan/MS/dummy_model_2d/runs/model4/best_model.h5'
+    artifacts_dir = '/home/darshan/.gemini/antigravity/brain/2324e7f3-93f8-49b4-84ad-4558dc46bac9/artifacts'
+    os.makedirs(artifacts_dir, exist_ok=True)
     
     # Custom objects might be needed for bce_dice_loss
     model = tf.keras.models.load_model(
         model_path, 
-        custom_objects={'bce_dice_loss': sm.losses.bce_dice_loss}, 
+        custom_objects={'dice_loss': sm.losses.dice_loss}, 
         compile=False
     )
     
-    patients = [d for d in os.listdir(test_dir) if os.path.isdir(os.path.join(test_dir, d))]
-    random.seed(42)  # For reproducibility
-    selected_patients = random.sample(patients, min(5, len(patients)))
+    patients = [d for d in os.listdir(test_dir) if d.endswith("FLAIR.nii.gz")]
+    # random.seed(42)  # For reproducibility
+    # selected_patients = random.sample(patients, min(5, len(patients)))
+    selected_patients = patients
     
     details = []
     
     for i, patient in enumerate(selected_patients):
-        patient_dir = os.path.join(test_dir, patient)
+        patient_path = os.path.join(test_dir, patient)
         
-        flair = load_nii(os.path.join(patient_dir, 'flair.nii.gz'))
-        t1 = load_nii(os.path.join(patient_dir, 't1.nii.gz'))
-        t2 = load_nii(os.path.join(patient_dir, 't2.nii.gz'))
-        
-        mask_path = os.path.join(patient_dir, 'mask.nii.gz')
+        flair = load_nii(patient_path)
+        mask_path = patient_path.replace("FLAIR.nii.gz", "MASK.nii.gz")
         mask = nib.load(mask_path).get_fdata(dtype=np.float32) if os.path.exists(mask_path) else None
         
         if flair is None:
             continue
             
         H, W, D = flair.shape
-        if t1 is None: t1 = np.zeros_like(flair)
-        if t2 is None: t2 = np.zeros_like(flair)
         if mask is not None: mask = (mask > 0.5).astype(np.float32)
         else: mask = np.zeros_like(flair)
         
@@ -106,11 +102,9 @@ def main():
                 
         # Prepare the slice for prediction
         f_s = centre_pad_2d(flair[:, :, best_z], TARGET_H, TARGET_W)
-        t1_s = centre_pad_2d(t1[:, :, best_z], TARGET_H, TARGET_W)
-        t2_s = centre_pad_2d(t2[:, :, best_z], TARGET_H, TARGET_W)
         
-        x = np.stack([f_s, t1_s, t2_s], axis=-1)
-        x_batch = np.expand_dims(x, axis=0) # (1, 256, 256, 3)
+        x = np.stack([f_s], axis=-1)
+        x_batch = np.expand_dims(x, axis=0) # (1, 256, 256, 1)
         
         # Predict
         pred = model.predict(x_batch, verbose=0)
@@ -120,32 +114,24 @@ def main():
         pred_unpad = unpad_2d(pred_bin, H, W)
         
         # Plotting
-        fig, axes = plt.subplots(1, 5, figsize=(20, 4))
+        fig, axes = plt.subplots(1, 3, figsize=(20, 4))
         
-        axes[0].imshow(np.rot90(t1[:, :, best_z]), cmap='gray')
-        axes[0].set_title('T1w')
+        axes[0].imshow(np.rot90(flair[:, :, best_z]), cmap='gray')
+        axes[0].set_title('FLAIR')
         axes[0].axis('off')
         
-        axes[1].imshow(np.rot90(t2[:, :, best_z]), cmap='gray')
-        axes[1].set_title('T2w')
+        axes[1].imshow(np.rot90(mask[:, :, best_z]), cmap='gray')
+        axes[1].set_title('Ground Truth Mask')
         axes[1].axis('off')
         
-        axes[2].imshow(np.rot90(flair[:, :, best_z]), cmap='gray')
-        axes[2].set_title('FLAIR')
+        axes[2].imshow(np.rot90(pred_unpad), cmap='gray')
+        axes[2].set_title('Predicted Mask')
         axes[2].axis('off')
-        
-        axes[3].imshow(np.rot90(mask[:, :, best_z]), cmap='gray')
-        axes[3].set_title('Ground Truth Mask')
-        axes[3].axis('off')
-        
-        axes[4].imshow(np.rot90(pred_unpad), cmap='gray')
-        axes[4].set_title('Predicted Mask')
-        axes[4].axis('off')
         
         fig.suptitle(f"Patient: {patient} | Slice: {best_z} | Original Dim: {H}x{W}x{D} | Padded Dim: 256x256x{D}", fontsize=14)
         
         plt.tight_layout()
-        plot_path = os.path.join(output_dir, f"{patient}_prediction.png")
+        plot_path = os.path.join("/home/darshan/MS/dummy_model_2d/test_predictions/model4/", f"{patient}_prediction.png")
         plt.savefig(plot_path, dpi=150)
         plt.close(fig)
         
@@ -156,7 +142,7 @@ def main():
             "plot_path": plot_path
         })
         
-    with open(os.path.join(output_dir, 'prediction_details.json'), 'w') as f:
+    with open(os.path.join(artifacts_dir, 'prediction_details.json'), 'w') as f:
         json.dump(details, f, indent=2)
 
 if __name__ == "__main__":

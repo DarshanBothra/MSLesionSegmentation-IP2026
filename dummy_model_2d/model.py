@@ -10,11 +10,11 @@ class Model2D(tf.keras.Model):
 
     IMG_HEIGHT = 256
     IMG_WIDTH = 256
-    IMG_CHANNELS = 3    # T1w + T2w + FLAIR (multi-modal)
+    IMG_CHANNELS = 1    # FLAIR only (single channel)
     inputs = []
     outputs = []
 
-    def __init__(self, IMG_HEIGHT: int = 256, IMG_WIDTH: int = 256, IMG_CHANNELS: int = 3):
+    def __init__(self, IMG_HEIGHT: int = 256, IMG_WIDTH: int = 256, IMG_CHANNELS: int = 1):
         super().__init__()
         self.IMG_HEIGHT = IMG_HEIGHT
         self.IMG_WIDTH = IMG_WIDTH
@@ -108,7 +108,7 @@ class Model2D(tf.keras.Model):
         self.model.summary()
 
 def main():
-    model = Model2D(IMG_HEIGHT=256, IMG_WIDTH=256, IMG_CHANNELS=3)  # T1w + T2w + FLAIR
+    model = Model2D(IMG_HEIGHT=256, IMG_WIDTH=256, IMG_CHANNELS=1)  # FLAIR only
     model.initializeModel()
     model.summarize()
 

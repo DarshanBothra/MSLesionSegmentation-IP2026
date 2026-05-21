@@ -11,8 +11,8 @@ Modality used
 Splits & roles
 --------------
   train/        : 90% of MSLesSeg patients – model training
-  external_val/ : 10% of MSLesSeg patients – validation during model.fit()
-  test/         : ISBI2015 5 subjects      – completely held-out; evaluated ONCE after training
+  external_val/ : ISBI2015 5 subjects      – validation during model.fit() (monitors generalisation)
+  test/         : 10% of MSLesSeg patients – completely held-out; evaluated ONCE after training
 
 Blank-slice filtering (--skip_blank_ratio)
 ------------------------------------------
@@ -22,7 +22,7 @@ Blank-slice filtering (--skip_blank_ratio)
 
 Metrics reported every epoch
 ------------------------------
-  - Binary Cross-Entropy  (loss)
+  - Dice Loss  (loss)
   - Pixel Accuracy
   - Dice Similarity Score  (train & test)
   - IoU Score              (train & test)
@@ -59,10 +59,13 @@ import matplotlib.pyplot as plt
 # ── Local imports ─────────────────────────────────────────────────────────────
 sys.path.insert(0, os.path.dirname(__file__))
 from model   import Model2D
-from dataset import build_tf_dataset
+from dataset import build_tf_dataset, extract_slices
 
 # ── Paths ─────────────────────────────────────────────────────────────────────
-DATASET_ROOT = "/home/darshan/MS/dummy_model_2d/model_dataset"
+SPLIT_DIR    = os.path.join(os.path.dirname(__file__), "dataset", "split")
+TRAIN_DIR    = os.path.join(SPLIT_DIR, "train")
+VAL_DIR      = os.path.join(SPLIT_DIR, "val")
+TEST_DIR     = os.path.join(SPLIT_DIR, "test")
 RUNS_DIR     = os.path.join(os.path.dirname(__file__), "runs")
 
 gpus = tf.config.list_physical_devices('GPU')
@@ -157,11 +160,11 @@ class IoUScore(tf.keras.metrics.Metric):
 
 def build_model(lr: float = 1e-5, optimizer_name: str = "adam") -> tf.keras.Model:
     """
-    Instantiate Model2D with multi-modal 3-channel input (FLAIR, T1w, T2w)
-    and compile with Adam/SGD, DiceLoss, DiceScore, IoUScore.
+    Instantiate Model2D with 1-channel FLAIR input (256x256x1)
+    and compile with Adam/SGD, BCE+Dice loss, DiceScore, IoUScore.
     """
     import segmentation_models as sm
-    m2d = Model2D(IMG_HEIGHT=256, IMG_WIDTH=256, IMG_CHANNELS=3)
+    m2d = Model2D(IMG_HEIGHT=256, IMG_WIDTH=256, IMG_CHANNELS=1)
     m2d.initializeModel()
 
     if optimizer_name.lower() == "adam":
@@ -171,10 +174,10 @@ def build_model(lr: float = 1e-5, optimizer_name: str = "adam") -> tf.keras.Mode
     else:
         raise ValueError(f"Unknown optimizer: {optimizer_name}")
 
-    # Recompile with richer metrics and a stable loss (BCE + Dice)
+    # Recompile with richer metrics and Dice Loss
     m2d.model.compile(
         optimizer=optimizer,
-        loss=sm.losses.bce_dice_loss,
+        loss=sm.losses.dice_loss,
         metrics=[
             "accuracy",
             DiceScore(name="dice_score"),
@@ -316,38 +319,35 @@ def train(epochs: int = 50,
                             0.0 = keep all slices; 0.95 = drop 95% (default).
                             Validation and test splits always keep all slices.
     """
-    run_id  = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
+    runs = [x for x in os.listdir(RUNS_DIR) if x.startswith('model')]
+    run_id = "model"+str(int(runs[-1][5:])+1)
+    # run_id  = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
     run_dir = os.path.join(RUNS_DIR, run_id)
     os.makedirs(run_dir, exist_ok=True)
     print(f"\nRun directory: {run_dir}")
 
     # ── Datasets ──────────────────────────────────────────────────────────────
-    # Training split: blank-slice filtering applied
     train_ds, n_train = build_tf_dataset(
-        os.path.join(DATASET_ROOT, "train"),
+        TRAIN_DIR,
         batch_size=batch_size,
         is_train=True,
         skip_blank_ratio=skip_blank_ratio,
     )
-    # Validation during fit: MSLesSeg 10% held-out
-    # All slices kept (skip_blank_ratio=0.0)
     val_ds, n_val = build_tf_dataset(
-        os.path.join(DATASET_ROOT, "external_val"),
+        VAL_DIR,
         batch_size=batch_size,
         is_train=False,
         skip_blank_ratio=0.0,
     )
-    # Held-out test: ISBI2015 external set
-    # All slices kept (skip_blank_ratio=0.0)
     test_ds, n_test = build_tf_dataset(
-        os.path.join(DATASET_ROOT, "test"),
+        TEST_DIR,
         batch_size=batch_size,
         is_train=False,
         skip_blank_ratio=0.0,
     )
 
     blank_label = f"{skip_blank_ratio:.0%}" if skip_blank_ratio > 0 else "none (keep all)"
-    print(f"\nSlice counts  train={n_train}  val(MSLesSeg)={n_val}  test(ISBI)={n_test}")
+    print(f"\nSlice counts  train={n_train}  val={n_val}  test={n_test}")
     print(f"Blank-slice filtering : {blank_label} of background slices dropped from training")
 
     # ── Model ─────────────────────────────────────────────────────────────────
@@ -358,7 +358,7 @@ def train(epochs: int = 50,
     ckpt_path = os.path.join(run_dir, "best_model.h5")
 
     callbacks = [
-        # Save best weights monitored on MSLesSeg validation Dice
+        # Save best weights monitored on ISBI2015 validation Dice
         tf.keras.callbacks.ModelCheckpoint(
             filepath=ckpt_path,
             monitor="val_dice_score",
@@ -405,10 +405,10 @@ def train(epochs: int = 50,
     # ── Print intermediate layer shapes for 1 sample ──────────────────────────
     print_layer_shapes(model, train_ds)
 
-    # ── Fit (val = ISBI2015, used to monitor generalisation each epoch) ─────────
+    # ── Fit ───────────────────────────────────────────────────────────────────
     print(f"\nStarting training for up to {epochs} epochs ...")
-    print(f"  Validation : MSLesSeg 10% set (all slices, no blank filtering)")
-    print(f"  Test set   : ISBI2015 external set (evaluated once AFTER training)\n")
+    print(f"  Validation : dataset/split/val (all slices)")
+    print(f"  Test set   : dataset/split/test (evaluated once AFTER training)\n")
     history = model.fit(
         train_ds,
         epochs=epochs,
@@ -424,9 +424,9 @@ def train(epochs: int = 50,
     print("\nSaving training curve plots ...")
     plot_training_curves(history, run_dir)
 
-    # ── Held-out test: ISBI2015 (evaluated ONCE, post-training) ──
+    # ── Held-out test: MSLesSeg 10% patients (evaluated ONCE, post-training) ──
     print("\n" + "="*60)
-    print("Evaluating on held-out ISBI2015 test set ...")
+    print("Evaluating on held-out MSLesSeg test set (10% patients) ...")
     print("="*60)
     test_results = model.evaluate(test_ds, verbose=1)
     test_metrics = dict(zip(model.metrics_names, test_results))
@@ -434,33 +434,23 @@ def train(epochs: int = 50,
     print("\nSaving prediction sample ...")
     for x, y in test_ds.take(1):
         pred = model.predict(x[0:1])
-        fig, axes = plt.subplots(1, 5, figsize=(20, 4))
-        flair = x[0, :, :, 0].numpy()
-        t1 = x[0, :, :, 1].numpy()
-        t2 = x[0, :, :, 2].numpy()
-        gt_mask = y[0, :, :, 0].numpy()
+        fig, axes = plt.subplots(1, 3, figsize=(12, 4))
+        flair    = x[0, :, :, 0].numpy()   # single FLAIR channel
+        gt_mask  = y[0, :, :, 0].numpy()
         pred_mask = pred[0, :, :, 0]
-        
-        axes[0].imshow(t1, cmap='gray')
-        axes[0].set_title('T1w')
+
+        axes[0].imshow(flair, cmap='gray')
+        axes[0].set_title('FLAIR')
         axes[0].axis('off')
-        
-        axes[1].imshow(t2, cmap='gray')
-        axes[1].set_title('T2w')
+
+        axes[1].imshow(gt_mask, cmap='gray')
+        axes[1].set_title('GT Mask')
         axes[1].axis('off')
-        
-        axes[2].imshow(flair, cmap='gray')
-        axes[2].set_title('FLAIR')
+
+        axes[2].imshow(pred_mask > 0.5, cmap='gray')
+        axes[2].set_title('Predicted Mask')
         axes[2].axis('off')
-        
-        axes[3].imshow(gt_mask, cmap='gray')
-        axes[3].set_title('GT Mask')
-        axes[3].axis('off')
-        
-        axes[4].imshow(pred_mask > 0.5, cmap='gray')
-        axes[4].set_title('Predicted Mask')
-        axes[4].axis('off')
-        
+
         plt.tight_layout()
         pred_path = os.path.join(run_dir, "prediction_sample.png")
         plt.savefig(pred_path, dpi=150)
@@ -468,25 +458,102 @@ def train(epochs: int = 50,
         print(f"  Saved prediction sample: {pred_path}")
         break
 
-    # ── Best epoch stats from validation ─────────────────────────────
+    # ── Best epoch stats from ISBI2015 validation ─────────────────────────────
     best_val_dice = max(history.history.get("val_dice_score", [0]))
     best_val_iou  = max(history.history.get("val_iou_score",  [0]))
 
+    # ── Post-Training Confusion Matrix on Train and Val Splits (per patient) ──
+    print("\n" + "="*60)
+    print("COMPUTING CONFUSION MATRIX FOR BEST MODEL (PER PATIENT)")
+    print("="*60)
+    
+    # Load the best checkpointed model
+    import segmentation_models as sm
+    best_model = tf.keras.models.load_model(
+        ckpt_path,
+        custom_objects={
+            'dice_loss': sm.losses.dice_loss,
+            'dice_score': DiceScore,
+            'iou_score': IoUScore
+        },
+        compile=False
+    )
+    
+    def evaluate_confusion_matrix(split_name, split_dir):
+        print(f"\n--- {split_name.upper()} SPLIT ---")
+        flair_files = sorted(f for f in os.listdir(split_dir) if f.endswith("_FLAIR.nii.gz"))
+        
+        # Headers for printing
+        header = f"{'Patient':<12} | {'TP':>12} | {'TN':>12} | {'FP':>12} | {'FN':>12}"
+        sep = "-" * len(header)
+        print(header)
+        print(sep)
+        
+        total_tp = 0
+        total_tn = 0
+        total_fp = 0
+        total_fn = 0
+        
+        for flair_fname in flair_files:
+            subject_id = flair_fname.replace("_FLAIR.nii.gz", "")
+            mask_fname = f"{subject_id}_MASK.nii.gz"
+            flair_path = os.path.join(split_dir, flair_fname)
+            mask_path = os.path.join(split_dir, mask_fname)
+            
+            if not os.path.exists(mask_path):
+                continue
+                
+            imgs, masks = extract_slices(flair_path, mask_path, skip_blank_ratio=0.0, is_train=False)
+            if imgs is None:
+                continue
+                
+            preds = best_model.predict(imgs, batch_size=batch_size, verbose=0)
+            preds_bin = (preds > 0.5).astype(np.float32)
+            
+            tp = int(np.sum((masks == 1.0) & (preds_bin == 1.0)))
+            tn = int(np.sum((masks == 0.0) & (preds_bin == 0.0)))
+            fp = int(np.sum((masks == 0.0) & (preds_bin == 1.0)))
+            fn = int(np.sum((masks == 1.0) & (preds_bin == 0.0)))
+            
+            total_tp += tp
+            total_tn += tn
+            total_fp += fp
+            total_fn += fn
+            
+            print(f"{subject_id:<12} | {tp:>12,} | {tn:>12,} | {fp:>12,} | {fn:>12,}")
+            
+        print(sep)
+        print(f"{'TOTAL':<12} | {total_tp:>12,} | {total_tn:>12,} | {total_fp:>12,} | {total_fn:>12,}")
+        print(sep + "\n")
+        
+        return {
+            "TP": total_tp,
+            "TN": total_tn,
+            "FP": total_fp,
+            "FN": total_fn
+        }
+        
+    train_cm = evaluate_confusion_matrix("Training", TRAIN_DIR)
+    val_cm = evaluate_confusion_matrix("Validation", VAL_DIR)
+
     summary = {
-        "run_id": run_id,
-        "lr": lr,
-        "lr_schedule": lr_schedule,
+        "run_id":           run_id,
+        "lr":               lr,
+        "optimizer":        optimizer_name,
+        "lr_schedule":      lr_schedule,
         "skip_blank_ratio": skip_blank_ratio,
-        "epochs_trained": len(history.history["loss"]),
-        "val_mslesseg": {
+        "epochs_trained":   len(history.history["loss"]),
+        "val_split": {
             "best_dice": round(float(best_val_dice), 4),
             "best_iou":  round(float(best_val_iou),  4),
         },
-        "test_isbi2015": {
+        "test_split": {
             k: round(float(v), 4) for k, v in test_metrics.items()
         },
-        "checkpoint": ckpt_path,
-        "training_log": os.path.join(run_dir, "training_log.csv"),
+        "train_confusion_matrix": train_cm,
+        "val_confusion_matrix": val_cm,
+        "checkpoint":    ckpt_path,
+        "training_log":  os.path.join(run_dir, "training_log.csv"),
     }
 
     summary_path = os.path.join(run_dir, "summary.json")
@@ -496,10 +563,10 @@ def train(epochs: int = 50,
     print("\n" + "="*60)
     print("TRAINING COMPLETE – Final Metrics")
     print("="*60)
-    print("  Validation  (MSLesSeg 10% – best epoch during training):")
+    print("  Validation (dataset/split/val – best epoch during training):")
     print(f"    Dice : {best_val_dice:.4f}")
     print(f"    IoU  : {best_val_iou:.4f}")
-    print("  Test  (ISBI2015 – evaluated once after training):")
+    print("  Test (dataset/split/test – evaluated once after training):")
     print(f"    Dice : {test_metrics.get('dice_score', 'N/A')}")
     print(f"    IoU  : {test_metrics.get('iou_score',  'N/A')}")
     print(f"\nSummary saved to: {summary_path}")
