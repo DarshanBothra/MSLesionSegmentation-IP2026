@@ -156,20 +156,123 @@ class DataCollector:
         Total mask: {isbi_mask}
         """)
 
+    def fetch_miccai_data(self, json_file):
+        root = os.path.join(self.DATASET_ROOT, "MICCAI2016")
+        with open(json_file, 'r') as f:
+            data = json.load(f)
+        
+        training_centers = [x for x in data["training"].keys() if x.startswith("Center")]
+        testing_centers = [x for x in data["testing"].keys() if x.startswith("Center")]
 
+        i = 1
+        self.miccai_files = {}
 
+        for center in training_centers:
+            patients = [x for x in data["training"][center].keys() if x.startswith("Patient")]
+            for patient in patients:
+                f = {}
+                flair_file = os.path.join(root, "Training", center , patient, "Raw_Data", "FLAIR.nii.gz")
+                t1_file = os.path.join(root, "Training", center , patient, "Raw_Data", "T1.nii.gz")
+                t2_file = os.path.join(root, "Training", center , patient, "Raw_Data", "T2.nii.gz")
+
+                flair_file = flair_file if os.path.exists(flair_file) else None
+                t1_file = t1_file if os.path.exists(t1_file) else None
+                t2_file = t2_file if os.path.exists(t2_file) else None
+
+                mask_file = os.path.join(root, "Training", center , patient, "Masks", "Consensus.nii.gz")
+
+                # set none if mask file does not exist
+                mask_file = mask_file if os.path.exists(mask_file) else None
+
+                if (flair_file and t1_file and t2_file and mask_file):
+                    f["flair"] = flair_file
+                    f["t1"] = t1_file
+                    f["t2"] = t2_file
+                    f["mask"] = mask_file
+
+                    self.miccai_files[f"S{i}"] = f
+                    i+=1
+                else:
+                    print(center, patient)
+        
+        for center in testing_centers:
+            patients = [x for x in data["testing"][center].keys() if x.startswith("Patient")]
+            for patient in patients:
+                f = {}
+                flair_file = os.path.join(root, "Testing", center , patient, "Raw_Data", "FLAIR.nii.gz")
+                t1_file = os.path.join(root, "Testing", center , patient, "Raw_Data", "T1.nii.gz")
+                t2_file = os.path.join(root, "Testing", center , patient, "Raw_Data", "T2.nii.gz")
+
+                flair_file = flair_file if os.path.exists(flair_file) else None
+                t1_file = t1_file if os.path.exists(t1_file) else None
+                t2_file = t2_file if os.path.exists(t2_file) else None
+
+                mask_file = os.path.join(root, "Testing", center , patient, "Masks", "Consensus.nii.gz")
+
+                # set none if mask file does not exist
+                mask_file = mask_file if os.path.exists(mask_file) else None
+
+                if (flair_file and t1_file and t2_file and mask_file):
+                    f["flair"] = flair_file
+                    f["t1"] = t1_file
+                    f["t2"] = t2_file
+                    f["mask"] = mask_file
+
+                    self.miccai_files[f"S{i}"] = f
+                    i+=1
+                else:
+                    print(center, patient)
+
+        return self.miccai_files
+    
+    def test_miccai(self):
+        print("========== MICCAI FILES ==========")
+        print("Keys: ", self.miccai_files.keys())
+        print()
+        for key in self.miccai_files:
+            print("First key", key)
+            print("Files", self.miccai_files[key])
+            break
+        print()
+        print("\tTotal keys: ", len(self.miccai_files.keys()), end = "")
+        isbi_flair = 0
+        isbi_t1 = 0
+        isbi_t2 = 0
+        isbi_mask = 0
+        
+        for key in self.miccai_files:
+            value = self.miccai_files[key]
+            for mode in value:
+                if mode == "flair":
+                    isbi_flair = isbi_flair + 1 if value[mode] is not None else isbi_flair
+                elif mode == "t1":
+                    isbi_t1 = isbi_t1 + 1 if value[mode] is not None else isbi_t1
+                elif mode == "t2":
+                    isbi_t2 = isbi_t2 + 1 if value[mode] is not None else isbi_t2
+                elif mode == "mask":
+                    isbi_mask = isbi_mask + 1 if value[mode] is not None else isbi_mask
+
+        print(f"""
+        Total flair: {isbi_flair}
+        Total t1: {isbi_t1}
+        Total t2: {isbi_t2}
+        Total mask: {isbi_mask}
+        """)
 
 if __name__ == "__main__":
     collector = DataCollector()
     
     # isbi
-    '''
     isbi_data = collector.fetch_isbi_data("/home/darshan/MS/eda/results/exploratory/isbi_eda.json")
-    collector.test_isbi()
-    '''
+    # collector.test_isbi()
 
     #mslegseg
     mslegseg_data = collector.fetch_mslegseg_data("/home/darshan/MS/eda/results/exploratory/msleg_eda.json")
-    collector.test_mslegseg()
+    # collector.test_mslegseg()
+
+    #miccai
+    miccai_data = collector.fetch_miccai_data("/home/darshan/MS/eda/results/exploratory/miccai2016_eda.json")
+    # collector.test_miccai()
+
 
 
