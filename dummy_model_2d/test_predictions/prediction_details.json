@@ -1,0 +1,32 @@
+[
+  {
+    "patient": "P38_T1",
+    "slice": 91,
+    "dim": "182x218x182",
+    "plot_path": "/home/darshan/MS/dummy_model_2d/test_predictions/P38_T1_prediction.png"
+  },
+  {
+    "patient": "P21_T1",
+    "slice": 91,
+    "dim": "182x218x182",
+    "plot_path": "/home/darshan/MS/dummy_model_2d/test_predictions/P21_T1_prediction.png"
+  },
+  {
+    "patient": "P22_T2",
+    "slice": 91,
+    "dim": "182x218x182",
+    "plot_path": "/home/darshan/MS/dummy_model_2d/test_predictions/P22_T2_prediction.png"
+  },
+  {
+    "patient": "P35_T1",
+    "slice": 91,
+    "dim": "182x218x182",
+    "plot_path": "/home/darshan/MS/dummy_model_2d/test_predictions/P35_T1_prediction.png"
+  },
+  {
+    "patient": "P12_T2",
+    "slice": 91,
+    "dim": "182x218x182",
+    "plot_path": "/home/darshan/MS/dummy_model_2d/test_predictions/P12_T2_prediction.png"
+  }
+]

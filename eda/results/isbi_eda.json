@@ -1,0 +1,439 @@
+{
+    "total_subjects": 5,
+    "all_flair_present": true,
+    "all_t1w_present": true,
+    "all_t2w_present": true,
+    "all_masks_present": true,
+    "total_flair": 20,
+    "total_t1w": 20,
+    "total_t2w": 20,
+    "total_mask": 20,
+    "patient_wise": {
+        "01": {
+            "01": {
+                "present_count": 3,
+                "present": [
+                    "mprage",
+                    "flair",
+                    "t2"
+                ],
+                "missing_count": 0,
+                "missing": [],
+                "all_present": true,
+                "all_missing": false,
+                "mask_present": true
+            },
+            "02": {
+                "present_count": 3,
+                "present": [
+                    "mprage",
+                    "flair",
+                    "t2"
+                ],
+                "missing_count": 0,
+                "missing": [],
+                "all_present": true,
+                "all_missing": false,
+                "mask_present": true
+            },
+            "03": {
+                "present_count": 3,
+                "present": [
+                    "mprage",
+                    "flair",
+                    "t2"
+                ],
+                "missing_count": 0,
+                "missing": [],
+                "all_present": true,
+                "all_missing": false,
+                "mask_present": true
+            },
+            "04": {
+                "present_count": 3,
+                "present": [
+                    "mprage",
+                    "flair",
+                    "t2"
+                ],
+                "missing_count": 0,
+                "missing": [],
+                "all_present": true,
+                "all_missing": false,
+                "mask_present": true
+            },
+            "flair_present": [
+                "01",
+                "02",
+                "03",
+                "04"
+            ],
+            "flair_missing": [],
+            "total_flair_present": 4,
+            "total_flair_missing": 0,
+            "t1w_present": [
+                "01",
+                "02",
+                "03",
+                "04"
+            ],
+            "t1w_missing": [],
+            "total_t1w_present": 4,
+            "total_t1w_missing": 0,
+            "t2w_present": [
+                "01",
+                "02",
+                "03",
+                "04"
+            ],
+            "t2w_missing": [],
+            "total_t2w_present": 4,
+            "total_t2w_missing": 0
+        },
+        "02": {
+            "01": {
+                "present_count": 3,
+                "present": [
+                    "mprage",
+                    "flair",
+                    "t2"
+                ],
+                "missing_count": 0,
+                "missing": [],
+                "all_present": true,
+                "all_missing": false,
+                "mask_present": true
+            },
+            "02": {
+                "present_count": 3,
+                "present": [
+                    "mprage",
+                    "flair",
+                    "t2"
+                ],
+                "missing_count": 0,
+                "missing": [],
+                "all_present": true,
+                "all_missing": false,
+                "mask_present": true
+            },
+            "03": {
+                "present_count": 3,
+                "present": [
+                    "mprage",
+                    "flair",
+                    "t2"
+                ],
+                "missing_count": 0,
+                "missing": [],
+                "all_present": true,
+                "all_missing": false,
+                "mask_present": true
+            },
+            "04": {
+                "present_count": 3,
+                "present": [
+                    "mprage",
+                    "flair",
+                    "t2"
+                ],
+                "missing_count": 0,
+                "missing": [],
+                "all_present": true,
+                "all_missing": false,
+                "mask_present": true
+            },
+            "flair_present": [
+                "01",
+                "02",
+                "03",
+                "04"
+            ],
+            "flair_missing": [],
+            "total_flair_present": 4,
+            "total_flair_missing": 0,
+            "t1w_present": [
+                "01",
+                "02",
+                "03",
+                "04"
+            ],
+            "t1w_missing": [],
+            "total_t1w_present": 4,
+            "total_t1w_missing": 0,
+            "t2w_present": [
+                "01",
+                "02",
+                "03",
+                "04"
+            ],
+            "t2w_missing": [],
+            "total_t2w_present": 4,
+            "total_t2w_missing": 0
+        },
+        "03": {
+            "01": {
+                "present_count": 3,
+                "present": [
+                    "mprage",
+                    "flair",
+                    "t2"
+                ],
+                "missing_count": 0,
+                "missing": [],
+                "all_present": true,
+                "all_missing": false,
+                "mask_present": true
+            },
+            "02": {
+                "present_count": 3,
+                "present": [
+                    "mprage",
+                    "flair",
+                    "t2"
+                ],
+                "missing_count": 0,
+                "missing": [],
+                "all_present": true,
+                "all_missing": false,
+                "mask_present": true
+            },
+            "03": {
+                "present_count": 3,
+                "present": [
+                    "mprage",
+                    "flair",
+                    "t2"
+                ],
+                "missing_count": 0,
+                "missing": [],
+                "all_present": true,
+                "all_missing": false,
+                "mask_present": true
+            },
+            "04": {
+                "present_count": 3,
+                "present": [
+                    "mprage",
+                    "flair",
+                    "t2"
+                ],
+                "missing_count": 0,
+                "missing": [],
+                "all_present": true,
+                "all_missing": false,
+                "mask_present": true
+            },
+            "flair_present": [
+                "01",
+                "02",
+                "03",
+                "04"
+            ],
+            "flair_missing": [],
+            "total_flair_present": 4,
+            "total_flair_missing": 0,
+            "t1w_present": [
+                "01",
+                "02",
+                "03",
+                "04"
+            ],
+            "t1w_missing": [],
+            "total_t1w_present": 4,
+            "total_t1w_missing": 0,
+            "t2w_present": [
+                "01",
+                "02",
+                "03",
+                "04"
+            ],
+            "t2w_missing": [],
+            "total_t2w_present": 4,
+            "total_t2w_missing": 0
+        },
+        "04": {
+            "01": {
+                "present_count": 3,
+                "present": [
+                    "mprage",
+                    "flair",
+                    "t2"
+                ],
+                "missing_count": 0,
+                "missing": [],
+                "all_present": true,
+                "all_missing": false,
+                "mask_present": true
+            },
+            "02": {
+                "present_count": 3,
+                "present": [
+                    "mprage",
+                    "flair",
+                    "t2"
+                ],
+                "missing_count": 0,
+                "missing": [],
+                "all_present": true,
+                "all_missing": false,
+                "mask_present": true
+            },
+            "03": {
+                "present_count": 3,
+                "present": [
+                    "mprage",
+                    "flair",
+                    "t2"
+                ],
+                "missing_count": 0,
+                "missing": [],
+                "all_present": true,
+                "all_missing": false,
+                "mask_present": true
+            },
+            "04": {
+                "present_count": 3,
+                "present": [
+                    "mprage",
+                    "flair",
+                    "t2"
+                ],
+                "missing_count": 0,
+                "missing": [],
+                "all_present": true,
+                "all_missing": false,
+                "mask_present": true
+            },
+            "flair_present": [
+                "01",
+                "02",
+                "03",
+                "04"
+            ],
+            "flair_missing": [],
+            "total_flair_present": 4,
+            "total_flair_missing": 0,
+            "t1w_present": [
+                "01",
+                "02",
+                "03",
+                "04"
+            ],
+            "t1w_missing": [],
+            "total_t1w_present": 4,
+            "total_t1w_missing": 0,
+            "t2w_present": [
+                "01",
+                "02",
+                "03",
+                "04"
+            ],
+            "t2w_missing": [],
+            "total_t2w_present": 4,
+            "total_t2w_missing": 0
+        },
+        "05": {
+            "01": {
+                "present_count": 3,
+                "present": [
+                    "mprage",
+                    "flair",
+                    "t2"
+                ],
+                "missing_count": 0,
+                "missing": [],
+                "all_present": true,
+                "all_missing": false,
+                "mask_present": true
+            },
+            "02": {
+                "present_count": 3,
+                "present": [
+                    "mprage",
+                    "flair",
+                    "t2"
+                ],
+                "missing_count": 0,
+                "missing": [],
+                "all_present": true,
+                "all_missing": false,
+                "mask_present": true
+            },
+            "03": {
+                "present_count": 3,
+                "present": [
+                    "mprage",
+                    "flair",
+                    "t2"
+                ],
+                "missing_count": 0,
+                "missing": [],
+                "all_present": true,
+                "all_missing": false,
+                "mask_present": true
+            },
+            "04": {
+                "present_count": 3,
+                "present": [
+                    "mprage",
+                    "flair",
+                    "t2"
+                ],
+                "missing_count": 0,
+                "missing": [],
+                "all_present": true,
+                "all_missing": false,
+                "mask_present": true
+            },
+            "flair_present": [
+                "01",
+                "02",
+                "03",
+                "04"
+            ],
+            "flair_missing": [],
+            "total_flair_present": 4,
+            "total_flair_missing": 0,
+            "t1w_present": [
+                "01",
+                "02",
+                "03",
+                "04"
+            ],
+            "t1w_missing": [],
+            "total_t1w_present": 4,
+            "total_t1w_missing": 0,
+            "t2w_present": [
+                "01",
+                "02",
+                "03",
+                "04"
+            ],
+            "t2w_missing": [],
+            "total_t2w_present": 4,
+            "total_t2w_missing": 0
+        }
+    },
+    "dimensions": {
+        "flair": {
+            "(256, 256, 35)": 6,
+            "(256, 256, 70)": 14
+        },
+        "mprage": {
+            "(256, 256, 120)": 20
+        },
+        "t2": {
+            "(256, 256, 70)": 20
+        },
+        "mask": {
+            "(181, 217, 181)": 20
+        },
+        "combined": {
+            "(256, 256, 35)": 6,
+            "(256, 256, 70)": 34,
+            "(256, 256, 120)": 20
+        }
+    }
+}
+

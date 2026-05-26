@@ -1,0 +1,1055 @@
+{
+    "total_subjects": 53,
+    "all_flair_present": true,
+    "all_t1w_present": true,
+    "all_t2w_present": true,
+    "all_masks_present": true,
+    "total_flair": 53,
+    "total_t1w": 53,
+    "total_t2w": 53,
+    "total_mask": 53,
+    "training": {
+        "subjects": 15,
+        "Center_01": {
+            "subjects": 5,
+            "Patient_05": {
+                "present": [
+                    "FLAIR",
+                    "T1",
+                    "T2"
+                ],
+                "present_count": 3,
+                "missing": [],
+                "missing_count": 0,
+                "all_present": true,
+                "all_missing": false,
+                "mask_present": true
+            },
+            "Patient_03": {
+                "present": [
+                    "FLAIR",
+                    "T1",
+                    "T2"
+                ],
+                "present_count": 3,
+                "missing": [],
+                "missing_count": 0,
+                "all_present": true,
+                "all_missing": false,
+                "mask_present": true
+            },
+            "Patient_04": {
+                "present": [
+                    "FLAIR",
+                    "T1",
+                    "T2"
+                ],
+                "present_count": 3,
+                "missing": [],
+                "missing_count": 0,
+                "all_present": true,
+                "all_missing": false,
+                "mask_present": true
+            },
+            "Patient_02": {
+                "present": [
+                    "FLAIR",
+                    "T1",
+                    "T2"
+                ],
+                "present_count": 3,
+                "missing": [],
+                "missing_count": 0,
+                "all_present": true,
+                "all_missing": false,
+                "mask_present": true
+            },
+            "Patient_01": {
+                "present": [
+                    "FLAIR",
+                    "T1",
+                    "T2"
+                ],
+                "present_count": 3,
+                "missing": [],
+                "missing_count": 0,
+                "all_present": true,
+                "all_missing": false,
+                "mask_present": true
+            },
+            "flair_present": [
+                "Patient_05",
+                "Patient_03",
+                "Patient_04",
+                "Patient_02",
+                "Patient_01"
+            ],
+            "total_flair_present": 5,
+            "flair_missing": [],
+            "total_flair_missing": 0,
+            "t1w_present": [
+                "Patient_05",
+                "Patient_03",
+                "Patient_04",
+                "Patient_02",
+                "Patient_01"
+            ],
+            "total_t1w_present": 5,
+            "t1w_missing": [],
+            "total_t1w_missing": 0,
+            "t2w_present": [
+                "Patient_05",
+                "Patient_03",
+                "Patient_04",
+                "Patient_02",
+                "Patient_01"
+            ],
+            "total_t2w_present": 5,
+            "t2w_missing": [],
+            "total_t2w_missing": 0
+        },
+        "Center_07": {
+            "subjects": 5,
+            "Patient_05": {
+                "present": [
+                    "FLAIR",
+                    "T1",
+                    "T2"
+                ],
+                "present_count": 3,
+                "missing": [],
+                "missing_count": 0,
+                "all_present": true,
+                "all_missing": false,
+                "mask_present": true
+            },
+            "Patient_03": {
+                "present": [
+                    "FLAIR",
+                    "T1",
+                    "T2"
+                ],
+                "present_count": 3,
+                "missing": [],
+                "missing_count": 0,
+                "all_present": true,
+                "all_missing": false,
+                "mask_present": true
+            },
+            "Patient_04": {
+                "present": [
+                    "FLAIR",
+                    "T1",
+                    "T2"
+                ],
+                "present_count": 3,
+                "missing": [],
+                "missing_count": 0,
+                "all_present": true,
+                "all_missing": false,
+                "mask_present": true
+            },
+            "Patient_02": {
+                "present": [
+                    "FLAIR",
+                    "T1",
+                    "T2"
+                ],
+                "present_count": 3,
+                "missing": [],
+                "missing_count": 0,
+                "all_present": true,
+                "all_missing": false,
+                "mask_present": true
+            },
+            "Patient_01": {
+                "present": [
+                    "FLAIR",
+                    "T1",
+                    "T2"
+                ],
+                "present_count": 3,
+                "missing": [],
+                "missing_count": 0,
+                "all_present": true,
+                "all_missing": false,
+                "mask_present": true
+            },
+            "flair_present": [
+                "Patient_05",
+                "Patient_03",
+                "Patient_04",
+                "Patient_02",
+                "Patient_01"
+            ],
+            "total_flair_present": 5,
+            "flair_missing": [],
+            "total_flair_missing": 0,
+            "t1w_present": [
+                "Patient_05",
+                "Patient_03",
+                "Patient_04",
+                "Patient_02",
+                "Patient_01"
+            ],
+            "total_t1w_present": 5,
+            "t1w_missing": [],
+            "total_t1w_missing": 0,
+            "t2w_present": [
+                "Patient_05",
+                "Patient_03",
+                "Patient_04",
+                "Patient_02",
+                "Patient_01"
+            ],
+            "total_t2w_present": 5,
+            "t2w_missing": [],
+            "total_t2w_missing": 0
+        },
+        "Center_08": {
+            "subjects": 5,
+            "Patient_05": {
+                "present": [
+                    "FLAIR",
+                    "T1",
+                    "T2"
+                ],
+                "present_count": 3,
+                "missing": [],
+                "missing_count": 0,
+                "all_present": true,
+                "all_missing": false,
+                "mask_present": true
+            },
+            "Patient_03": {
+                "present": [
+                    "FLAIR",
+                    "T1",
+                    "T2"
+                ],
+                "present_count": 3,
+                "missing": [],
+                "missing_count": 0,
+                "all_present": true,
+                "all_missing": false,
+                "mask_present": true
+            },
+            "Patient_04": {
+                "present": [
+                    "FLAIR",
+                    "T1",
+                    "T2"
+                ],
+                "present_count": 3,
+                "missing": [],
+                "missing_count": 0,
+                "all_present": true,
+                "all_missing": false,
+                "mask_present": true
+            },
+            "Patient_02": {
+                "present": [
+                    "FLAIR",
+                    "T1",
+                    "T2"
+                ],
+                "present_count": 3,
+                "missing": [],
+                "missing_count": 0,
+                "all_present": true,
+                "all_missing": false,
+                "mask_present": true
+            },
+            "Patient_01": {
+                "present": [
+                    "FLAIR",
+                    "T1",
+                    "T2"
+                ],
+                "present_count": 3,
+                "missing": [],
+                "missing_count": 0,
+                "all_present": true,
+                "all_missing": false,
+                "mask_present": true
+            },
+            "flair_present": [
+                "Patient_05",
+                "Patient_03",
+                "Patient_04",
+                "Patient_02",
+                "Patient_01"
+            ],
+            "total_flair_present": 5,
+            "flair_missing": [],
+            "total_flair_missing": 0,
+            "t1w_present": [
+                "Patient_05",
+                "Patient_03",
+                "Patient_04",
+                "Patient_02",
+                "Patient_01"
+            ],
+            "total_t1w_present": 5,
+            "t1w_missing": [],
+            "total_t1w_missing": 0,
+            "t2w_present": [
+                "Patient_05",
+                "Patient_03",
+                "Patient_04",
+                "Patient_02",
+                "Patient_01"
+            ],
+            "total_t2w_present": 5,
+            "t2w_missing": [],
+            "total_t2w_missing": 0
+        }
+    },
+    "testing": {
+        "subjects": 38,
+        "Center_01": {
+            "subjects": 10,
+            "Patient_05": {
+                "present": [
+                    "FLAIR",
+                    "T1",
+                    "T2"
+                ],
+                "present_count": 3,
+                "missing": [],
+                "missing_count": 0,
+                "all_present": true,
+                "all_missing": false,
+                "mask_present": true
+            },
+            "Patient_08": {
+                "present": [
+                    "FLAIR",
+                    "T1",
+                    "T2"
+                ],
+                "present_count": 3,
+                "missing": [],
+                "missing_count": 0,
+                "all_present": true,
+                "all_missing": false,
+                "mask_present": true
+            },
+            "Patient_10": {
+                "present": [
+                    "FLAIR",
+                    "T1",
+                    "T2"
+                ],
+                "present_count": 3,
+                "missing": [],
+                "missing_count": 0,
+                "all_present": true,
+                "all_missing": false,
+                "mask_present": true
+            },
+            "Patient_03": {
+                "present": [
+                    "FLAIR",
+                    "T1",
+                    "T2"
+                ],
+                "present_count": 3,
+                "missing": [],
+                "missing_count": 0,
+                "all_present": true,
+                "all_missing": false,
+                "mask_present": true
+            },
+            "Patient_04": {
+                "present": [
+                    "FLAIR",
+                    "T1",
+                    "T2"
+                ],
+                "present_count": 3,
+                "missing": [],
+                "missing_count": 0,
+                "all_present": true,
+                "all_missing": false,
+                "mask_present": true
+            },
+            "Patient_02": {
+                "present": [
+                    "FLAIR",
+                    "T1",
+                    "T2"
+                ],
+                "present_count": 3,
+                "missing": [],
+                "missing_count": 0,
+                "all_present": true,
+                "all_missing": false,
+                "mask_present": true
+            },
+            "Patient_09": {
+                "present": [
+                    "FLAIR",
+                    "T1",
+                    "T2"
+                ],
+                "present_count": 3,
+                "missing": [],
+                "missing_count": 0,
+                "all_present": true,
+                "all_missing": false,
+                "mask_present": true
+            },
+            "Patient_07": {
+                "present": [
+                    "FLAIR",
+                    "T1",
+                    "T2"
+                ],
+                "present_count": 3,
+                "missing": [],
+                "missing_count": 0,
+                "all_present": true,
+                "all_missing": false,
+                "mask_present": true
+            },
+            "Patient_01": {
+                "present": [
+                    "FLAIR",
+                    "T1",
+                    "T2"
+                ],
+                "present_count": 3,
+                "missing": [],
+                "missing_count": 0,
+                "all_present": true,
+                "all_missing": false,
+                "mask_present": true
+            },
+            "Patient_06": {
+                "present": [
+                    "FLAIR",
+                    "T1",
+                    "T2"
+                ],
+                "present_count": 3,
+                "missing": [],
+                "missing_count": 0,
+                "all_present": true,
+                "all_missing": false,
+                "mask_present": true
+            },
+            "flair_present": [
+                "Patient_05",
+                "Patient_08",
+                "Patient_10",
+                "Patient_03",
+                "Patient_04",
+                "Patient_02",
+                "Patient_09",
+                "Patient_07",
+                "Patient_01",
+                "Patient_06"
+            ],
+            "total_flair_present": 10,
+            "flair_missing": [],
+            "total_flair_missing": 0,
+            "t1w_present": [
+                "Patient_05",
+                "Patient_08",
+                "Patient_10",
+                "Patient_03",
+                "Patient_04",
+                "Patient_02",
+                "Patient_09",
+                "Patient_07",
+                "Patient_01",
+                "Patient_06"
+            ],
+            "total_t1w_present": 10,
+            "t1w_missing": [],
+            "total_t1w_missing": 0,
+            "t2w_present": [
+                "Patient_05",
+                "Patient_08",
+                "Patient_10",
+                "Patient_03",
+                "Patient_04",
+                "Patient_02",
+                "Patient_09",
+                "Patient_07",
+                "Patient_01",
+                "Patient_06"
+            ],
+            "total_t2w_present": 10,
+            "t2w_missing": [],
+            "total_t2w_missing": 0
+        },
+        "Center_03": {
+            "subjects": 8,
+            "Patient_05": {
+                "present": [
+                    "FLAIR",
+                    "T1",
+                    "T2"
+                ],
+                "present_count": 3,
+                "missing": [],
+                "missing_count": 0,
+                "all_present": true,
+                "all_missing": false,
+                "mask_present": true
+            },
+            "Patient_08": {
+                "present": [
+                    "FLAIR",
+                    "T1",
+                    "T2"
+                ],
+                "present_count": 3,
+                "missing": [],
+                "missing_count": 0,
+                "all_present": true,
+                "all_missing": false,
+                "mask_present": true
+            },
+            "Patient_03": {
+                "present": [
+                    "FLAIR",
+                    "T1",
+                    "T2"
+                ],
+                "present_count": 3,
+                "missing": [],
+                "missing_count": 0,
+                "all_present": true,
+                "all_missing": false,
+                "mask_present": true
+            },
+            "Patient_04": {
+                "present": [
+                    "FLAIR",
+                    "T1",
+                    "T2"
+                ],
+                "present_count": 3,
+                "missing": [],
+                "missing_count": 0,
+                "all_present": true,
+                "all_missing": false,
+                "mask_present": true
+            },
+            "Patient_02": {
+                "present": [
+                    "FLAIR",
+                    "T1",
+                    "T2"
+                ],
+                "present_count": 3,
+                "missing": [],
+                "missing_count": 0,
+                "all_present": true,
+                "all_missing": false,
+                "mask_present": true
+            },
+            "Patient_07": {
+                "present": [
+                    "FLAIR",
+                    "T1",
+                    "T2"
+                ],
+                "present_count": 3,
+                "missing": [],
+                "missing_count": 0,
+                "all_present": true,
+                "all_missing": false,
+                "mask_present": true
+            },
+            "Patient_01": {
+                "present": [
+                    "FLAIR",
+                    "T1",
+                    "T2"
+                ],
+                "present_count": 3,
+                "missing": [],
+                "missing_count": 0,
+                "all_present": true,
+                "all_missing": false,
+                "mask_present": true
+            },
+            "Patient_06": {
+                "present": [
+                    "FLAIR",
+                    "T1",
+                    "T2"
+                ],
+                "present_count": 3,
+                "missing": [],
+                "missing_count": 0,
+                "all_present": true,
+                "all_missing": false,
+                "mask_present": true
+            },
+            "flair_present": [
+                "Patient_05",
+                "Patient_08",
+                "Patient_03",
+                "Patient_04",
+                "Patient_02",
+                "Patient_07",
+                "Patient_01",
+                "Patient_06"
+            ],
+            "total_flair_present": 8,
+            "flair_missing": [],
+            "total_flair_missing": 0,
+            "t1w_present": [
+                "Patient_05",
+                "Patient_08",
+                "Patient_03",
+                "Patient_04",
+                "Patient_02",
+                "Patient_07",
+                "Patient_01",
+                "Patient_06"
+            ],
+            "total_t1w_present": 8,
+            "t1w_missing": [],
+            "total_t1w_missing": 0,
+            "t2w_present": [
+                "Patient_05",
+                "Patient_08",
+                "Patient_03",
+                "Patient_04",
+                "Patient_02",
+                "Patient_07",
+                "Patient_01",
+                "Patient_06"
+            ],
+            "total_t2w_present": 8,
+            "t2w_missing": [],
+            "total_t2w_missing": 0
+        },
+        "Center_07": {
+            "subjects": 10,
+            "Patient_05": {
+                "present": [
+                    "FLAIR",
+                    "T1",
+                    "T2"
+                ],
+                "present_count": 3,
+                "missing": [],
+                "missing_count": 0,
+                "all_present": true,
+                "all_missing": false,
+                "mask_present": true
+            },
+            "Patient_08": {
+                "present": [
+                    "FLAIR",
+                    "T1",
+                    "T2"
+                ],
+                "present_count": 3,
+                "missing": [],
+                "missing_count": 0,
+                "all_present": true,
+                "all_missing": false,
+                "mask_present": true
+            },
+            "Patient_10": {
+                "present": [
+                    "FLAIR",
+                    "T1",
+                    "T2"
+                ],
+                "present_count": 3,
+                "missing": [],
+                "missing_count": 0,
+                "all_present": true,
+                "all_missing": false,
+                "mask_present": true
+            },
+            "Patient_03": {
+                "present": [
+                    "FLAIR",
+                    "T1",
+                    "T2"
+                ],
+                "present_count": 3,
+                "missing": [],
+                "missing_count": 0,
+                "all_present": true,
+                "all_missing": false,
+                "mask_present": true
+            },
+            "Patient_04": {
+                "present": [
+                    "FLAIR",
+                    "T1",
+                    "T2"
+                ],
+                "present_count": 3,
+                "missing": [],
+                "missing_count": 0,
+                "all_present": true,
+                "all_missing": false,
+                "mask_present": true
+            },
+            "Patient_02": {
+                "present": [
+                    "FLAIR",
+                    "T1",
+                    "T2"
+                ],
+                "present_count": 3,
+                "missing": [],
+                "missing_count": 0,
+                "all_present": true,
+                "all_missing": false,
+                "mask_present": true
+            },
+            "Patient_09": {
+                "present": [
+                    "FLAIR",
+                    "T1",
+                    "T2"
+                ],
+                "present_count": 3,
+                "missing": [],
+                "missing_count": 0,
+                "all_present": true,
+                "all_missing": false,
+                "mask_present": true
+            },
+            "Patient_07": {
+                "present": [
+                    "FLAIR",
+                    "T1",
+                    "T2"
+                ],
+                "present_count": 3,
+                "missing": [],
+                "missing_count": 0,
+                "all_present": true,
+                "all_missing": false,
+                "mask_present": true
+            },
+            "Patient_01": {
+                "present": [
+                    "FLAIR",
+                    "T1",
+                    "T2"
+                ],
+                "present_count": 3,
+                "missing": [],
+                "missing_count": 0,
+                "all_present": true,
+                "all_missing": false,
+                "mask_present": true
+            },
+            "Patient_06": {
+                "present": [
+                    "FLAIR",
+                    "T1",
+                    "T2"
+                ],
+                "present_count": 3,
+                "missing": [],
+                "missing_count": 0,
+                "all_present": true,
+                "all_missing": false,
+                "mask_present": true
+            },
+            "flair_present": [
+                "Patient_05",
+                "Patient_08",
+                "Patient_10",
+                "Patient_03",
+                "Patient_04",
+                "Patient_02",
+                "Patient_09",
+                "Patient_07",
+                "Patient_01",
+                "Patient_06"
+            ],
+            "total_flair_present": 10,
+            "flair_missing": [],
+            "total_flair_missing": 0,
+            "t1w_present": [
+                "Patient_05",
+                "Patient_08",
+                "Patient_10",
+                "Patient_03",
+                "Patient_04",
+                "Patient_02",
+                "Patient_09",
+                "Patient_07",
+                "Patient_01",
+                "Patient_06"
+            ],
+            "total_t1w_present": 10,
+            "t1w_missing": [],
+            "total_t1w_missing": 0,
+            "t2w_present": [
+                "Patient_05",
+                "Patient_08",
+                "Patient_10",
+                "Patient_03",
+                "Patient_04",
+                "Patient_02",
+                "Patient_09",
+                "Patient_07",
+                "Patient_01",
+                "Patient_06"
+            ],
+            "total_t2w_present": 10,
+            "t2w_missing": [],
+            "total_t2w_missing": 0
+        },
+        "Center_08": {
+            "subjects": 10,
+            "Patient_05": {
+                "present": [
+                    "FLAIR",
+                    "T1",
+                    "T2"
+                ],
+                "present_count": 3,
+                "missing": [],
+                "missing_count": 0,
+                "all_present": true,
+                "all_missing": false,
+                "mask_present": true
+            },
+            "Patient_08": {
+                "present": [
+                    "FLAIR",
+                    "T1",
+                    "T2"
+                ],
+                "present_count": 3,
+                "missing": [],
+                "missing_count": 0,
+                "all_present": true,
+                "all_missing": false,
+                "mask_present": true
+            },
+            "Patient_10": {
+                "present": [
+                    "FLAIR",
+                    "T1",
+                    "T2"
+                ],
+                "present_count": 3,
+                "missing": [],
+                "missing_count": 0,
+                "all_present": true,
+                "all_missing": false,
+                "mask_present": true
+            },
+            "Patient_03": {
+                "present": [
+                    "FLAIR",
+                    "T1",
+                    "T2"
+                ],
+                "present_count": 3,
+                "missing": [],
+                "missing_count": 0,
+                "all_present": true,
+                "all_missing": false,
+                "mask_present": true
+            },
+            "Patient_04": {
+                "present": [
+                    "FLAIR",
+                    "T1",
+                    "T2"
+                ],
+                "present_count": 3,
+                "missing": [],
+                "missing_count": 0,
+                "all_present": true,
+                "all_missing": false,
+                "mask_present": true
+            },
+            "Patient_02": {
+                "present": [
+                    "FLAIR",
+                    "T1",
+                    "T2"
+                ],
+                "present_count": 3,
+                "missing": [],
+                "missing_count": 0,
+                "all_present": true,
+                "all_missing": false,
+                "mask_present": true
+            },
+            "Patient_09": {
+                "present": [
+                    "FLAIR",
+                    "T1",
+                    "T2"
+                ],
+                "present_count": 3,
+                "missing": [],
+                "missing_count": 0,
+                "all_present": true,
+                "all_missing": false,
+                "mask_present": true
+            },
+            "Patient_07": {
+                "present": [
+                    "FLAIR",
+                    "T1",
+                    "T2"
+                ],
+                "present_count": 3,
+                "missing": [],
+                "missing_count": 0,
+                "all_present": true,
+                "all_missing": false,
+                "mask_present": true
+            },
+            "Patient_01": {
+                "present": [
+                    "FLAIR",
+                    "T1",
+                    "T2"
+                ],
+                "present_count": 3,
+                "missing": [],
+                "missing_count": 0,
+                "all_present": true,
+                "all_missing": false,
+                "mask_present": true
+            },
+            "Patient_06": {
+                "present": [
+                    "FLAIR",
+                    "T1",
+                    "T2"
+                ],
+                "present_count": 3,
+                "missing": [],
+                "missing_count": 0,
+                "all_present": true,
+                "all_missing": false,
+                "mask_present": true
+            },
+            "flair_present": [
+                "Patient_05",
+                "Patient_08",
+                "Patient_10",
+                "Patient_03",
+                "Patient_04",
+                "Patient_02",
+                "Patient_09",
+                "Patient_07",
+                "Patient_01",
+                "Patient_06"
+            ],
+            "total_flair_present": 10,
+            "flair_missing": [],
+            "total_flair_missing": 0,
+            "t1w_present": [
+                "Patient_05",
+                "Patient_08",
+                "Patient_10",
+                "Patient_03",
+                "Patient_04",
+                "Patient_02",
+                "Patient_09",
+                "Patient_07",
+                "Patient_01",
+                "Patient_06"
+            ],
+            "total_t1w_present": 10,
+            "t1w_missing": [],
+            "total_t1w_missing": 0,
+            "t2w_present": [
+                "Patient_05",
+                "Patient_08",
+                "Patient_10",
+                "Patient_03",
+                "Patient_04",
+                "Patient_02",
+                "Patient_09",
+                "Patient_07",
+                "Patient_01",
+                "Patient_06"
+            ],
+            "total_t2w_present": 10,
+            "t2w_missing": [],
+            "total_t2w_missing": 0
+        }
+    },
+    "dimensions": {
+        "flair": {
+            "(144, 512, 512)": 15,
+            "(128, 224, 256)": 13,
+            "(261, 336, 336)": 13,
+            "(224, 512, 512)": 8,
+            "(128, 228, 256)": 1,
+            "(128, 244, 256)": 1,
+            "(245, 336, 336)": 1,
+            "(240, 336, 336)": 1
+        },
+        "t1": {
+            "(176, 256, 256)": 15,
+            "(256, 256, 176)": 15,
+            "(210, 336, 336)": 1,
+            "(200, 336, 336)": 12,
+            "(248, 512, 512)": 8,
+            "(215, 336, 336)": 1,
+            "(190, 336, 336)": 1
+        },
+        "t2": {
+            "(240, 320, 44)": 15,
+            "(320, 320, 25)": 15,
+            "(512, 512, 46)": 14,
+            "(512, 512, 36)": 5,
+            "(512, 512, 40)": 1,
+            "(512, 512, 44)": 2,
+            "(512, 512, 50)": 1
+        },
+        "mask": {
+            "(144, 512, 512)": 15,
+            "(128, 224, 256)": 13,
+            "(261, 336, 336)": 13,
+            "(224, 512, 512)": 8,
+            "(128, 228, 256)": 1,
+            "(128, 244, 256)": 1,
+            "(245, 336, 336)": 1,
+            "(240, 336, 336)": 1
+        },
+        "combined": {
+            "(144, 512, 512)": 15,
+            "(128, 224, 256)": 13,
+            "(261, 336, 336)": 13,
+            "(224, 512, 512)": 8,
+            "(128, 228, 256)": 1,
+            "(128, 244, 256)": 1,
+            "(245, 336, 336)": 1,
+            "(240, 336, 336)": 1,
+            "(176, 256, 256)": 15,
+            "(256, 256, 176)": 15,
+            "(210, 336, 336)": 1,
+            "(200, 336, 336)": 12,
+            "(248, 512, 512)": 8,
+            "(215, 336, 336)": 1,
+            "(190, 336, 336)": 1,
+            "(240, 320, 44)": 15,
+            "(320, 320, 25)": 15,
+            "(512, 512, 46)": 14,
+            "(512, 512, 36)": 5,
+            "(512, 512, 40)": 1,
+            "(512, 512, 44)": 2,
+            "(512, 512, 50)": 1
+        }
+    }
+}
