@@ -1,3 +1,7 @@
+"""
+This script explores all the directories for MSLegSeg, MICCAI and ISBI2015 dataset using the JSON Files prepared for each dataset during eda. using which fetches all file paths of flair, t1w, t2w samples along with their masks and universally pools them!
+"""
+
 import os
 import json
 
@@ -5,7 +9,7 @@ class DataCollector:
     def __init__(self):
         self.DATASET_ROOT = "/home/darshan/MS/data/RAW"
     
-    def fetch_isbi_data(self, json_file):
+    def _fetch_isbi_data(self, json_file):
 
         root = os.path.join(self.DATASET_ROOT, "ISBI2015", "train")
         with open(json_file, "r") as f:
@@ -37,10 +41,13 @@ class DataCollector:
 
                     self.isbi_files[f"S{i}"] = f
                     i+=1
+                else:
+                    print("Skipping ISBI2015: ", patient, tp)
+
 
         return self.isbi_files
     
-    def test_isbi(self):
+    def _test_isbi(self):
         print("========== ISBI FILES ==========")
         print("Keys: ", self.isbi_files.keys())
         print()
@@ -74,7 +81,7 @@ class DataCollector:
         Total mask: {isbi_mask}
         """)
     
-    def fetch_mslegseg_data(self, json_file):
+    def _fetch_mslegseg_data(self, json_file):
         data_root = os.path.join(self.DATASET_ROOT, "MSLegSeg", "MSLegSeg_RAW")
         mask_root = os.path.join(self.DATASET_ROOT, "MSLegSeg", "MSLegSeg Dataset")
 
@@ -118,11 +125,11 @@ class DataCollector:
                     self.mslegseg_files[f"S{i}"] = f
                     i+=1
                 else:
-                    print(patient, tp)
+                    print("Skipping MSLegSeg: ", patient, tp)
 
         return self.mslegseg_files
 
-    def test_mslegseg(self):
+    def _test_mslegseg(self):
         print("========== MSLEGSEG FILES ==========")
         print("Keys: ", self.mslegseg_files.keys())
         print()
@@ -156,7 +163,7 @@ class DataCollector:
         Total mask: {isbi_mask}
         """)
 
-    def fetch_miccai_data(self, json_file):
+    def _fetch_miccai_data(self, json_file):
         root = os.path.join(self.DATASET_ROOT, "MICCAI2016")
         with open(json_file, 'r') as f:
             data = json.load(f)
@@ -193,7 +200,7 @@ class DataCollector:
                     self.miccai_files[f"S{i}"] = f
                     i+=1
                 else:
-                    print(center, patient)
+                    print("Skipping MICCAI 2016: ", center, patient)
         
         for center in testing_centers:
             patients = [x for x in data["testing"][center].keys() if x.startswith("Patient")]
@@ -225,7 +232,7 @@ class DataCollector:
 
         return self.miccai_files
     
-    def test_miccai(self):
+    def _test_miccai(self):
         print("========== MICCAI FILES ==========")
         print("Keys: ", self.miccai_files.keys())
         print()
@@ -259,20 +266,58 @@ class DataCollector:
         Total mask: {isbi_mask}
         """)
 
+    def pool_data(self):
+            
+        isbi_data = self._fetch_isbi_data("/home/darshan/MS/eda/results/exploratory/isbi_eda.json")
+        mslegseg_data = self._fetch_mslegseg_data("/home/darshan/MS/eda/results/exploratory/msleg_eda.json")
+        miccai_data = self._fetch_miccai_data("/home/darshan/MS/eda/results/exploratory/miccai2016_eda.json")
+
+        # universally combine all data
+        self.data = {}
+        i = 1
+        for dataset in [isbi_data, mslegseg_data, miccai_data]:
+            for key in dataset:
+                self.data[f"S{i}"] = dataset[key]
+                i+=1
+
+        return self.data
+
+
 if __name__ == "__main__":
     collector = DataCollector()
     
-    # isbi
-    isbi_data = collector.fetch_isbi_data("/home/darshan/MS/eda/results/exploratory/isbi_eda.json")
-    # collector.test_isbi()
+    # # isbi
+    # isbi_data = collector.fetch_isbi_data("/home/darshan/MS/eda/results/exploratory/isbi_eda.json")
+    # # collector.test_isbi()
 
-    #mslegseg
-    mslegseg_data = collector.fetch_mslegseg_data("/home/darshan/MS/eda/results/exploratory/msleg_eda.json")
-    # collector.test_mslegseg()
+    # #mslegseg
+    # mslegseg_data = collector.fetch_mslegseg_data("/home/darshan/MS/eda/results/exploratory/msleg_eda.json")
+    # # collector.test_mslegseg()
 
-    #miccai
-    miccai_data = collector.fetch_miccai_data("/home/darshan/MS/eda/results/exploratory/miccai2016_eda.json")
-    # collector.test_miccai()
+    # #miccai
+    # miccai_data = collector.fetch_miccai_data("/home/darshan/MS/eda/results/exploratory/miccai2016_eda.json")
+    # # collector.test_miccai()
 
+    data = collector.pool_data()
+    flair_count = 0
+    t1_count = 0
+    t2_count = 0
+    mask_count = 0
+    print("Keys: ", data.keys())
+    print("Total keys: ", len(data.keys()))
 
+    for key in data.keys():
+        if data[key]["flair"] is not None:
+            flair_count +=1
+        if data[key]["t1"] is not None:
+            t1_count +=1
+        if data[key]["t2"] is not None:
+            t2_count +=1
+        if data[key]["mask"] is not None:
+            mask_count +=1
+
+    print(f"Total flair: {flair_count}")
+    print(f"Total t1: {t1_count}")
+    print(f"Total t2: {t2_count}")
+    print(f"Total mask: {mask_count}")
 
