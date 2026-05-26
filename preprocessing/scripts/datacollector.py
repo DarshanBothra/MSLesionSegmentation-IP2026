@@ -6,5 +6,5 @@ class DataCollector:
         self.DATASET_ROOT = "/home/darshan/MS/data/RAW"
     
     def fetch_isbi_data(json_file):
-        root = os.path.join(self.DATASET_ROOT, )
+        root = os.path.join(self.DATASET_ROOT, "ISBI2015", "train")
 
