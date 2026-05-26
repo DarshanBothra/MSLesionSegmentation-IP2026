@@ -1,0 +1,21 @@
+venv/
+.env
+
+# Data and large files
+data/
+*.nii
+*.nii.gz
+*.dcm
+
+dummy_model_2d/model_dataset
+
+# OS files
+.DS_Store
+*.swp
+
+HD-BET/
+HD-BET/**
+git
+dummy_model_2d/dataset/*
+
+Miniconda3-latest-Linux-x86_64.shdummy_model_2d/runs/

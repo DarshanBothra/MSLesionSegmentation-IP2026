@@ -1,0 +1,20 @@
+{
+  "run_id": "model4",
+  "lr": 1e-05,
+  "optimizer": "adam",
+  "lr_schedule": "fixed",
+  "skip_blank_ratio": 0.95,
+  "epochs_trained": 100,
+  "val_split": {
+    "best_dice": 0.908,
+    "best_iou": 0.903
+  },
+  "test_split": {
+    "loss": 0.23,
+    "accuracy": 0.9999,
+    "dice_score": 0.8767,
+    "iou_score": 0.8656
+  },
+  "checkpoint": "/home/darshan/MS/dummy_model_2d/runs/model4/best_model.h5",
+  "training_log": "/home/darshan/MS/dummy_model_2d/runs/model4/training_log.csv"
+}
