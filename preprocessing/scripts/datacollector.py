@@ -11,6 +11,8 @@ class DataCollector:
     
     def _fetch_isbi_data(self, json_file):
 
+        print("Fetching samples from ISBI2015 dataset...")
+
         root = os.path.join(self.DATASET_ROOT, "ISBI2015", "train")
         with open(json_file, "r") as f:
             data = json.load(f)
@@ -38,13 +40,12 @@ class DataCollector:
                     f["t1"] = t1_file
                     f["t2"] = t2_file
                     f["mask"] = mask_file
-
                     self.isbi_files[f"S{i}"] = f
                     i+=1
                 else:
                     print("Skipping ISBI2015: ", patient, tp)
 
-
+        print(f"{i} Samples loaded\n")
         return self.isbi_files
     
     def _test_isbi(self):
@@ -82,6 +83,7 @@ class DataCollector:
         """)
     
     def _fetch_mslegseg_data(self, json_file):
+        print("Fetching samples from MSLegSeg dataset...")
         data_root = os.path.join(self.DATASET_ROOT, "MSLegSeg", "MSLegSeg_RAW")
         mask_root = os.path.join(self.DATASET_ROOT, "MSLegSeg", "MSLegSeg Dataset")
 
@@ -126,7 +128,7 @@ class DataCollector:
                     i+=1
                 else:
                     print("Skipping MSLegSeg: ", patient, tp)
-
+        print(f"{i} samples loaded\n")
         return self.mslegseg_files
 
     def _test_mslegseg(self):
@@ -164,6 +166,7 @@ class DataCollector:
         """)
 
     def _fetch_miccai_data(self, json_file):
+        print("Fetching samples from MICCAI2016 dataset...")
         root = os.path.join(self.DATASET_ROOT, "MICCAI2016")
         with open(json_file, 'r') as f:
             data = json.load(f)
@@ -229,7 +232,7 @@ class DataCollector:
                     i+=1
                 else:
                     print(center, patient)
-
+        print("{i} samples loaded\n")
         return self.miccai_files
     
     def _test_miccai(self):
@@ -320,4 +323,9 @@ if __name__ == "__main__":
     print(f"Total t1: {t1_count}")
     print(f"Total t2: {t2_count}")
     print(f"Total mask: {mask_count}")
+
+    OUTPUT_FILE = "/home/darshan/MS/preprocessing/samples.json"
+    with open(OUTPUT_FILE, "w") as f:
+        json.dump(data, f, indent=4)
+    print(f"Sample paths saved to {OUTPUT_FILE}")
 

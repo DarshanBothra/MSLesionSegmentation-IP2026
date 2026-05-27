@@ -4,7 +4,7 @@ from pathlib import Path
 try:
     import ants
 except ImportError:
-    print("❌ Error: 'ants' library not found. Please run: pip install antspyx")
+    print("Error: 'ANTs' library not found. Please run: pip install antspyx")
     exit(1)
 
 def register_single_file_antspy(input_file, template_file, output_file, is_mask=False):
@@ -55,10 +55,10 @@ def register_single_file_antspy(input_file, template_file, output_file, is_mask=
         
         # 4. Save file directly to output destination grid
         ants.image_write(warped_img, str(output_path))
-        print(f"✅ ANTsPy Registration Complete! Saved to: {output_path}\n")
+        print(f"ANTsPy Registration Complete! Saved to: {output_path}\n")
         
     except Exception as e:
-        print(f"❌ ANTsPy registration failed for {input_path.name}: {str(e)}")
+        print(f"ANTsPy registration failed for {input_path.name}: {str(e)}")
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Pure Python ANTsPy registration utility for brain MRI.")
