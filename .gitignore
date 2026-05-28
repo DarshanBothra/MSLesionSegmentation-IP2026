@@ -19,3 +19,4 @@ git
 dummy_model_2d/dataset/*
 
 Miniconda3-latest-Linux-x86_64.shdummy_model_2d/runs/
+!Registration/**
