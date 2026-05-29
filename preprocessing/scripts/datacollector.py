@@ -20,7 +20,7 @@ class DataCollector:
         data = data["patient_wise"]
         patients = data.keys()
         self.isbi_files = {}
-        i = 1
+        i = 0
         for patient in patients:
             time_points = [x for x in data[patient].keys() if x.startswith('0')]
             for tp in time_points:
@@ -40,6 +40,7 @@ class DataCollector:
                     f["t1"] = t1_file
                     f["t2"] = t2_file
                     f["mask"] = mask_file
+                    f["dataset"] = "isbi"
                     self.isbi_files[f"S{i}"] = f
                     i+=1
                 else:
@@ -123,6 +124,7 @@ class DataCollector:
                     f["t1"] = t1_file
                     f["t2"] = t2_file
                     f["mask"] = mask_file
+                    f["dataset"] = "mslegseg"
 
                     self.mslegseg_files[f"S{i}"] = f
                     i+=1
@@ -189,7 +191,7 @@ class DataCollector:
                 t1_file = t1_file if os.path.exists(t1_file) else None
                 t2_file = t2_file if os.path.exists(t2_file) else None
 
-                mask_file = os.path.join(root, "Training", center , patient, "Masks", "Consensus.nii.gz")
+                mask_file = os.path.join(root, "Training", center , patient, "Masks", "ManualSegmentation_1.nii.gz")
 
                 # set none if mask file does not exist
                 mask_file = mask_file if os.path.exists(mask_file) else None
@@ -199,6 +201,7 @@ class DataCollector:
                     f["t1"] = t1_file
                     f["t2"] = t2_file
                     f["mask"] = mask_file
+                    f["dataset"] = "miccai"
 
                     self.miccai_files[f"S{i}"] = f
                     i+=1
@@ -217,7 +220,7 @@ class DataCollector:
                 t1_file = t1_file if os.path.exists(t1_file) else None
                 t2_file = t2_file if os.path.exists(t2_file) else None
 
-                mask_file = os.path.join(root, "Testing", center , patient, "Masks", "Consensus.nii.gz")
+                mask_file = os.path.join(root, "Testing", center , patient, "Masks", "ManualSegmentation_1.nii.gz")
 
                 # set none if mask file does not exist
                 mask_file = mask_file if os.path.exists(mask_file) else None
@@ -227,12 +230,13 @@ class DataCollector:
                     f["t1"] = t1_file
                     f["t2"] = t2_file
                     f["mask"] = mask_file
+                    f["dataset"] = "miccai"
 
                     self.miccai_files[f"S{i}"] = f
                     i+=1
                 else:
                     print(center, patient)
-        print("{i} samples loaded\n")
+        print(f"{i} samples loaded\n")
         return self.miccai_files
     
     def _test_miccai(self):
@@ -290,16 +294,17 @@ if __name__ == "__main__":
     collector = DataCollector()
     
     # # isbi
-    # isbi_data = collector.fetch_isbi_data("/home/darshan/MS/eda/results/exploratory/isbi_eda.json")
-    # # collector.test_isbi()
+    # isbi_data = collector._fetch_isbi_data("/home/darshan/MS/eda/results/exploratory/isbi_eda.json")
+    # collector.test_isbi()
 
     # #mslegseg
-    # mslegseg_data = collector.fetch_mslegseg_data("/home/darshan/MS/eda/results/exploratory/msleg_eda.json")
-    # # collector.test_mslegseg()
+    # mslegseg_data = collector._fetch_mslegseg_data("/home/darshan/MS/eda/results/exploratory/msleg_eda.json")
+    # collector._test_mslegseg()
+    # collector.test_mslegseg()
 
     # #miccai
-    # miccai_data = collector.fetch_miccai_data("/home/darshan/MS/eda/results/exploratory/miccai2016_eda.json")
-    # # collector.test_miccai()
+    # miccai_data = collector._fetch_miccai_data("/home/darshan/MS/eda/results/exploratory/miccai2016_eda.json")
+    # collector.test_miccai()
 
     data = collector.pool_data()
     flair_count = 0
