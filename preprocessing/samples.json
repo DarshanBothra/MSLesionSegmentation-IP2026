@@ -1,0 +1,1311 @@
+{
+    "S1": {
+        "flair": "/home/darshan/MS/data/RAW/ISBI2015/train/training01/orig/training01_01_flair.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/ISBI2015/train/training01/orig/training01_01_mprage.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/ISBI2015/train/training01/orig/training01_01_t2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/ISBI2015/train/training01/masks/training01_01_mask1.nii",
+        "dataset": "isbi"
+    },
+    "S2": {
+        "flair": "/home/darshan/MS/data/RAW/ISBI2015/train/training01/orig/training01_02_flair.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/ISBI2015/train/training01/orig/training01_02_mprage.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/ISBI2015/train/training01/orig/training01_02_t2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/ISBI2015/train/training01/masks/training01_02_mask1.nii",
+        "dataset": "isbi"
+    },
+    "S3": {
+        "flair": "/home/darshan/MS/data/RAW/ISBI2015/train/training01/orig/training01_03_flair.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/ISBI2015/train/training01/orig/training01_03_mprage.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/ISBI2015/train/training01/orig/training01_03_t2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/ISBI2015/train/training01/masks/training01_03_mask1.nii",
+        "dataset": "isbi"
+    },
+    "S4": {
+        "flair": "/home/darshan/MS/data/RAW/ISBI2015/train/training01/orig/training01_04_flair.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/ISBI2015/train/training01/orig/training01_04_mprage.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/ISBI2015/train/training01/orig/training01_04_t2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/ISBI2015/train/training01/masks/training01_04_mask1.nii",
+        "dataset": "isbi"
+    },
+    "S5": {
+        "flair": "/home/darshan/MS/data/RAW/ISBI2015/train/training02/orig/training02_01_flair.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/ISBI2015/train/training02/orig/training02_01_mprage.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/ISBI2015/train/training02/orig/training02_01_t2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/ISBI2015/train/training02/masks/training02_01_mask1.nii",
+        "dataset": "isbi"
+    },
+    "S6": {
+        "flair": "/home/darshan/MS/data/RAW/ISBI2015/train/training02/orig/training02_02_flair.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/ISBI2015/train/training02/orig/training02_02_mprage.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/ISBI2015/train/training02/orig/training02_02_t2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/ISBI2015/train/training02/masks/training02_02_mask1.nii",
+        "dataset": "isbi"
+    },
+    "S7": {
+        "flair": "/home/darshan/MS/data/RAW/ISBI2015/train/training02/orig/training02_03_flair.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/ISBI2015/train/training02/orig/training02_03_mprage.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/ISBI2015/train/training02/orig/training02_03_t2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/ISBI2015/train/training02/masks/training02_03_mask1.nii",
+        "dataset": "isbi"
+    },
+    "S8": {
+        "flair": "/home/darshan/MS/data/RAW/ISBI2015/train/training02/orig/training02_04_flair.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/ISBI2015/train/training02/orig/training02_04_mprage.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/ISBI2015/train/training02/orig/training02_04_t2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/ISBI2015/train/training02/masks/training02_04_mask1.nii",
+        "dataset": "isbi"
+    },
+    "S9": {
+        "flair": "/home/darshan/MS/data/RAW/ISBI2015/train/training03/orig/training03_01_flair.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/ISBI2015/train/training03/orig/training03_01_mprage.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/ISBI2015/train/training03/orig/training03_01_t2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/ISBI2015/train/training03/masks/training03_01_mask1.nii",
+        "dataset": "isbi"
+    },
+    "S10": {
+        "flair": "/home/darshan/MS/data/RAW/ISBI2015/train/training03/orig/training03_02_flair.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/ISBI2015/train/training03/orig/training03_02_mprage.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/ISBI2015/train/training03/orig/training03_02_t2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/ISBI2015/train/training03/masks/training03_02_mask1.nii",
+        "dataset": "isbi"
+    },
+    "S11": {
+        "flair": "/home/darshan/MS/data/RAW/ISBI2015/train/training03/orig/training03_03_flair.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/ISBI2015/train/training03/orig/training03_03_mprage.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/ISBI2015/train/training03/orig/training03_03_t2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/ISBI2015/train/training03/masks/training03_03_mask1.nii",
+        "dataset": "isbi"
+    },
+    "S12": {
+        "flair": "/home/darshan/MS/data/RAW/ISBI2015/train/training03/orig/training03_04_flair.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/ISBI2015/train/training03/orig/training03_04_mprage.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/ISBI2015/train/training03/orig/training03_04_t2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/ISBI2015/train/training03/masks/training03_04_mask1.nii",
+        "dataset": "isbi"
+    },
+    "S13": {
+        "flair": "/home/darshan/MS/data/RAW/ISBI2015/train/training04/orig/training04_01_flair.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/ISBI2015/train/training04/orig/training04_01_mprage.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/ISBI2015/train/training04/orig/training04_01_t2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/ISBI2015/train/training04/masks/training04_01_mask1.nii",
+        "dataset": "isbi"
+    },
+    "S14": {
+        "flair": "/home/darshan/MS/data/RAW/ISBI2015/train/training04/orig/training04_02_flair.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/ISBI2015/train/training04/orig/training04_02_mprage.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/ISBI2015/train/training04/orig/training04_02_t2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/ISBI2015/train/training04/masks/training04_02_mask1.nii",
+        "dataset": "isbi"
+    },
+    "S15": {
+        "flair": "/home/darshan/MS/data/RAW/ISBI2015/train/training04/orig/training04_03_flair.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/ISBI2015/train/training04/orig/training04_03_mprage.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/ISBI2015/train/training04/orig/training04_03_t2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/ISBI2015/train/training04/masks/training04_03_mask1.nii",
+        "dataset": "isbi"
+    },
+    "S16": {
+        "flair": "/home/darshan/MS/data/RAW/ISBI2015/train/training04/orig/training04_04_flair.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/ISBI2015/train/training04/orig/training04_04_mprage.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/ISBI2015/train/training04/orig/training04_04_t2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/ISBI2015/train/training04/masks/training04_04_mask1.nii",
+        "dataset": "isbi"
+    },
+    "S17": {
+        "flair": "/home/darshan/MS/data/RAW/ISBI2015/train/training05/orig/training05_01_flair.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/ISBI2015/train/training05/orig/training05_01_mprage.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/ISBI2015/train/training05/orig/training05_01_t2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/ISBI2015/train/training05/masks/training05_01_mask1.nii",
+        "dataset": "isbi"
+    },
+    "S18": {
+        "flair": "/home/darshan/MS/data/RAW/ISBI2015/train/training05/orig/training05_02_flair.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/ISBI2015/train/training05/orig/training05_02_mprage.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/ISBI2015/train/training05/orig/training05_02_t2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/ISBI2015/train/training05/masks/training05_02_mask1.nii",
+        "dataset": "isbi"
+    },
+    "S19": {
+        "flair": "/home/darshan/MS/data/RAW/ISBI2015/train/training05/orig/training05_03_flair.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/ISBI2015/train/training05/orig/training05_03_mprage.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/ISBI2015/train/training05/orig/training05_03_t2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/ISBI2015/train/training05/masks/training05_03_mask1.nii",
+        "dataset": "isbi"
+    },
+    "S20": {
+        "flair": "/home/darshan/MS/data/RAW/ISBI2015/train/training05/orig/training05_04_flair.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/ISBI2015/train/training05/orig/training05_04_mprage.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/ISBI2015/train/training05/orig/training05_04_t2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/ISBI2015/train/training05/masks/training05_04_mask1.nii",
+        "dataset": "isbi"
+    },
+    "S21": {
+        "flair": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P1/T1/P1_T1_FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P1/T1/P1_T1_T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P1/T1/P1_T1_T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg Dataset/train/P1/T1/P1_T1_MASK.nii.gz",
+        "dataset": "mslegseg"
+    },
+    "S22": {
+        "flair": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P1/T2/P1_T2_FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P1/T2/P1_T2_T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P1/T2/P1_T2_T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg Dataset/train/P1/T2/P1_T2_MASK.nii.gz",
+        "dataset": "mslegseg"
+    },
+    "S23": {
+        "flair": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P1/T3/P1_T3_FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P1/T3/P1_T3_T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P1/T3/P1_T3_T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg Dataset/train/P1/T3/P1_T3_MASK.nii.gz",
+        "dataset": "mslegseg"
+    },
+    "S24": {
+        "flair": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P10/T1/P10_T1_FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P10/T1/P10_T1_T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P10/T1/P10_T1_T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg Dataset/train/P10/T1/P10_T1_MASK.nii.gz",
+        "dataset": "mslegseg"
+    },
+    "S25": {
+        "flair": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P10/T2/P10_T2_FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P10/T2/P10_T2_T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P10/T2/P10_T2_T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg Dataset/train/P10/T2/P10_T2_MASK.nii.gz",
+        "dataset": "mslegseg"
+    },
+    "S26": {
+        "flair": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P11/T1/P11_T1_FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P11/T1/P11_T1_T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P11/T1/P11_T1_T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg Dataset/train/P11/T1/P11_T1_MASK.nii.gz",
+        "dataset": "mslegseg"
+    },
+    "S27": {
+        "flair": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P11/T2/P11_T2_FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P11/T2/P11_T2_T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P11/T2/P11_T2_T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg Dataset/train/P11/T2/P11_T2_MASK.nii.gz",
+        "dataset": "mslegseg"
+    },
+    "S28": {
+        "flair": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P12/T1/P12_T1_FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P12/T1/P12_T1_T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P12/T1/P12_T1_T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg Dataset/train/P12/T1/P12_T1_MASK.nii.gz",
+        "dataset": "mslegseg"
+    },
+    "S29": {
+        "flair": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P12/T2/P12_T2_FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P12/T2/P12_T2_T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P12/T2/P12_T2_T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg Dataset/train/P12/T2/P12_T2_MASK.nii.gz",
+        "dataset": "mslegseg"
+    },
+    "S30": {
+        "flair": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P12/T3/P12_T3_FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P12/T3/P12_T3_T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P12/T3/P12_T3_T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg Dataset/train/P12/T3/P12_T3_MASK.nii.gz",
+        "dataset": "mslegseg"
+    },
+    "S31": {
+        "flair": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P12/T4/P12_T4_FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P12/T4/P12_T4_T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P12/T4/P12_T4_T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg Dataset/train/P12/T4/P12_T4_MASK.nii.gz",
+        "dataset": "mslegseg"
+    },
+    "S32": {
+        "flair": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P13/T1/P13_T1_FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P13/T1/P13_T1_T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P13/T1/P13_T1_T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg Dataset/train/P13/T1/P13_T1_MASK.nii.gz",
+        "dataset": "mslegseg"
+    },
+    "S33": {
+        "flair": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P13/T2/P13_T2_FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P13/T2/P13_T2_T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P13/T2/P13_T2_T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg Dataset/train/P13/T2/P13_T2_MASK.nii.gz",
+        "dataset": "mslegseg"
+    },
+    "S34": {
+        "flair": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P14/T1/P14_T1_FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P14/T1/P14_T1_T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P14/T1/P14_T1_T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg Dataset/train/P14/T1/P14_T1_MASK.nii.gz",
+        "dataset": "mslegseg"
+    },
+    "S35": {
+        "flair": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P14/T2/P14_T2_FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P14/T2/P14_T2_T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P14/T2/P14_T2_T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg Dataset/train/P14/T2/P14_T2_MASK.nii.gz",
+        "dataset": "mslegseg"
+    },
+    "S36": {
+        "flair": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P14/T3/P14_T3_FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P14/T3/P14_T3_T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P14/T3/P14_T3_T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg Dataset/train/P14/T3/P14_T3_MASK.nii.gz",
+        "dataset": "mslegseg"
+    },
+    "S37": {
+        "flair": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P14/T4/P14_T4_FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P14/T4/P14_T4_T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P14/T4/P14_T4_T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg Dataset/train/P14/T4/P14_T4_MASK.nii.gz",
+        "dataset": "mslegseg"
+    },
+    "S38": {
+        "flair": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P15/T1/P15_T1_FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P15/T1/P15_T1_T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P15/T1/P15_T1_T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg Dataset/train/P15/T1/P15_T1_MASK.nii.gz",
+        "dataset": "mslegseg"
+    },
+    "S39": {
+        "flair": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P16/T1/P16_T1_FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P16/T1/P16_T1_T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P16/T1/P16_T1_T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg Dataset/train/P16/T1/P16_T1_MASK.nii.gz",
+        "dataset": "mslegseg"
+    },
+    "S40": {
+        "flair": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P17/T1/P17_T1_FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P17/T1/P17_T1_T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P17/T1/P17_T1_T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg Dataset/train/P17/T1/P17_T1_MASK.nii.gz",
+        "dataset": "mslegseg"
+    },
+    "S41": {
+        "flair": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P18/T1/P18_T1_FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P18/T1/P18_T1_T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P18/T1/P18_T1_T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg Dataset/train/P18/T1/P18_T1_MASK.nii.gz",
+        "dataset": "mslegseg"
+    },
+    "S42": {
+        "flair": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P19/T1/P19_T1_FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P19/T1/P19_T1_T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P19/T1/P19_T1_T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg Dataset/train/P19/T1/P19_T1_MASK.nii.gz",
+        "dataset": "mslegseg"
+    },
+    "S43": {
+        "flair": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P19/T2/P19_T2_FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P19/T2/P19_T2_T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P19/T2/P19_T2_T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg Dataset/train/P19/T2/P19_T2_MASK.nii.gz",
+        "dataset": "mslegseg"
+    },
+    "S44": {
+        "flair": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P19/T3/P19_T3_FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P19/T3/P19_T3_T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P19/T3/P19_T3_T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg Dataset/train/P19/T3/P19_T3_MASK.nii.gz",
+        "dataset": "mslegseg"
+    },
+    "S45": {
+        "flair": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P2/T1/P2_T1_FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P2/T1/P2_T1_T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P2/T1/P2_T1_T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg Dataset/train/P2/T1/P2_T1_MASK.nii.gz",
+        "dataset": "mslegseg"
+    },
+    "S46": {
+        "flair": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P2/T2/P2_T2_FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P2/T2/P2_T2_T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P2/T2/P2_T2_T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg Dataset/train/P2/T2/P2_T2_MASK.nii.gz",
+        "dataset": "mslegseg"
+    },
+    "S47": {
+        "flair": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P2/T3/P2_T3_FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P2/T3/P2_T3_T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P2/T3/P2_T3_T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg Dataset/train/P2/T3/P2_T3_MASK.nii.gz",
+        "dataset": "mslegseg"
+    },
+    "S48": {
+        "flair": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P2/T4/P2_T4_FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P2/T4/P2_T4_T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P2/T4/P2_T4_T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg Dataset/train/P2/T4/P2_T4_MASK.nii.gz",
+        "dataset": "mslegseg"
+    },
+    "S49": {
+        "flair": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P20/T1/P20_T1_FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P20/T1/P20_T1_T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P20/T1/P20_T1_T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg Dataset/train/P20/T1/P20_T1_MASK.nii.gz",
+        "dataset": "mslegseg"
+    },
+    "S50": {
+        "flair": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P20/T2/P20_T2_FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P20/T2/P20_T2_T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P20/T2/P20_T2_T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg Dataset/train/P20/T2/P20_T2_MASK.nii.gz",
+        "dataset": "mslegseg"
+    },
+    "S51": {
+        "flair": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P20/T3/P20_T3_FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P20/T3/P20_T3_T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P20/T3/P20_T3_T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg Dataset/train/P20/T3/P20_T3_MASK.nii.gz",
+        "dataset": "mslegseg"
+    },
+    "S52": {
+        "flair": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P21/T1/P21_T1_FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P21/T1/P21_T1_T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P21/T1/P21_T1_T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg Dataset/train/P21/T1/P21_T1_MASK.nii.gz",
+        "dataset": "mslegseg"
+    },
+    "S53": {
+        "flair": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P22/T1/P22_T1_FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P22/T1/P22_T1_T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P22/T1/P22_T1_T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg Dataset/train/P22/T1/P22_T1_MASK.nii.gz",
+        "dataset": "mslegseg"
+    },
+    "S54": {
+        "flair": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P22/T2/P22_T2_FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P22/T2/P22_T2_T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P22/T2/P22_T2_T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg Dataset/train/P22/T2/P22_T2_MASK.nii.gz",
+        "dataset": "mslegseg"
+    },
+    "S55": {
+        "flair": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P23/T1/P23_T1_FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P23/T1/P23_T1_T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P23/T1/P23_T1_T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg Dataset/train/P23/T1/P23_T1_MASK.nii.gz",
+        "dataset": "mslegseg"
+    },
+    "S56": {
+        "flair": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P24/T1/P24_T1_FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P24/T1/P24_T1_T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P24/T1/P24_T1_T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg Dataset/train/P24/T1/P24_T1_MASK.nii.gz",
+        "dataset": "mslegseg"
+    },
+    "S57": {
+        "flair": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P25/T1/P25_T1_FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P25/T1/P25_T1_T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P25/T1/P25_T1_T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg Dataset/train/P25/T1/P25_T1_MASK.nii.gz",
+        "dataset": "mslegseg"
+    },
+    "S58": {
+        "flair": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P26/T1/P26_T1_FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P26/T1/P26_T1_T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P26/T1/P26_T1_T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg Dataset/train/P26/T1/P26_T1_MASK.nii.gz",
+        "dataset": "mslegseg"
+    },
+    "S59": {
+        "flair": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P27/T1/P27_T1_FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P27/T1/P27_T1_T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P27/T1/P27_T1_T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg Dataset/train/P27/T1/P27_T1_MASK.nii.gz",
+        "dataset": "mslegseg"
+    },
+    "S60": {
+        "flair": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P28/T1/P28_T1_FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P28/T1/P28_T1_T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P28/T1/P28_T1_T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg Dataset/train/P28/T1/P28_T1_MASK.nii.gz",
+        "dataset": "mslegseg"
+    },
+    "S61": {
+        "flair": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P28/T2/P28_T2_FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P28/T2/P28_T2_T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P28/T2/P28_T2_T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg Dataset/train/P28/T2/P28_T2_MASK.nii.gz",
+        "dataset": "mslegseg"
+    },
+    "S62": {
+        "flair": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P29/T1/P29_T1_FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P29/T1/P29_T1_T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P29/T1/P29_T1_T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg Dataset/train/P29/T1/P29_T1_MASK.nii.gz",
+        "dataset": "mslegseg"
+    },
+    "S63": {
+        "flair": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P3/T1/P3_T1_FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P3/T1/P3_T1_T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P3/T1/P3_T1_T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg Dataset/train/P3/T1/P3_T1_MASK.nii.gz",
+        "dataset": "mslegseg"
+    },
+    "S64": {
+        "flair": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P3/T2/P3_T2_FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P3/T2/P3_T2_T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P3/T2/P3_T2_T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg Dataset/train/P3/T2/P3_T2_MASK.nii.gz",
+        "dataset": "mslegseg"
+    },
+    "S65": {
+        "flair": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P3/T3/P3_T3_FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P3/T3/P3_T3_T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P3/T3/P3_T3_T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg Dataset/train/P3/T3/P3_T3_MASK.nii.gz",
+        "dataset": "mslegseg"
+    },
+    "S66": {
+        "flair": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P3/T4/P3_T4_FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P3/T4/P3_T4_T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P3/T4/P3_T4_T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg Dataset/train/P3/T4/P3_T4_MASK.nii.gz",
+        "dataset": "mslegseg"
+    },
+    "S67": {
+        "flair": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P30/T1/P30_T1_FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P30/T1/P30_T1_T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P30/T1/P30_T1_T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg Dataset/train/P30/T1/P30_T1_MASK.nii.gz",
+        "dataset": "mslegseg"
+    },
+    "S68": {
+        "flair": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P31/T1/P31_T1_FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P31/T1/P31_T1_T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P31/T1/P31_T1_T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg Dataset/train/P31/T1/P31_T1_MASK.nii.gz",
+        "dataset": "mslegseg"
+    },
+    "S69": {
+        "flair": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P31/T2/P31_T2_FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P31/T2/P31_T2_T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P31/T2/P31_T2_T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg Dataset/train/P31/T2/P31_T2_MASK.nii.gz",
+        "dataset": "mslegseg"
+    },
+    "S70": {
+        "flair": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P32/T1/P32_T1_FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P32/T1/P32_T1_T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P32/T1/P32_T1_T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg Dataset/train/P32/T1/P32_T1_MASK.nii.gz",
+        "dataset": "mslegseg"
+    },
+    "S71": {
+        "flair": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P33/T1/P33_T1_FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P33/T1/P33_T1_T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P33/T1/P33_T1_T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg Dataset/train/P33/T1/P33_T1_MASK.nii.gz",
+        "dataset": "mslegseg"
+    },
+    "S72": {
+        "flair": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P33/T2/P33_T2_FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P33/T2/P33_T2_T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P33/T2/P33_T2_T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg Dataset/train/P33/T2/P33_T2_MASK.nii.gz",
+        "dataset": "mslegseg"
+    },
+    "S73": {
+        "flair": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P34/T1/P34_T1_FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P34/T1/P34_T1_T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P34/T1/P34_T1_T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg Dataset/train/P34/T1/P34_T1_MASK.nii.gz",
+        "dataset": "mslegseg"
+    },
+    "S74": {
+        "flair": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P35/T1/P35_T1_FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P35/T1/P35_T1_T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P35/T1/P35_T1_T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg Dataset/train/P35/T1/P35_T1_MASK.nii.gz",
+        "dataset": "mslegseg"
+    },
+    "S75": {
+        "flair": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P36/T1/P36_T1_FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P36/T1/P36_T1_T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P36/T1/P36_T1_T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg Dataset/train/P36/T1/P36_T1_MASK.nii.gz",
+        "dataset": "mslegseg"
+    },
+    "S76": {
+        "flair": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P37/T1/P37_T1_FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P37/T1/P37_T1_T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P37/T1/P37_T1_T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg Dataset/train/P37/T1/P37_T1_MASK.nii.gz",
+        "dataset": "mslegseg"
+    },
+    "S77": {
+        "flair": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P38/T1/P38_T1_FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P38/T1/P38_T1_T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P38/T1/P38_T1_T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg Dataset/train/P38/T1/P38_T1_MASK.nii.gz",
+        "dataset": "mslegseg"
+    },
+    "S78": {
+        "flair": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P39/T1/P39_T1_FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P39/T1/P39_T1_T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P39/T1/P39_T1_T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg Dataset/train/P39/T1/P39_T1_MASK.nii.gz",
+        "dataset": "mslegseg"
+    },
+    "S79": {
+        "flair": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P4/T1/P4_T1_FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P4/T1/P4_T1_T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P4/T1/P4_T1_T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg Dataset/train/P4/T1/P4_T1_MASK.nii.gz",
+        "dataset": "mslegseg"
+    },
+    "S80": {
+        "flair": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P4/T2/P4_T2_FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P4/T2/P4_T2_T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P4/T2/P4_T2_T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg Dataset/train/P4/T2/P4_T2_MASK.nii.gz",
+        "dataset": "mslegseg"
+    },
+    "S81": {
+        "flair": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P4/T3/P4_T3_FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P4/T3/P4_T3_T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P4/T3/P4_T3_T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg Dataset/train/P4/T3/P4_T3_MASK.nii.gz",
+        "dataset": "mslegseg"
+    },
+    "S82": {
+        "flair": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P40/T1/P40_T1_FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P40/T1/P40_T1_T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P40/T1/P40_T1_T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg Dataset/train/P40/T1/P40_T1_MASK.nii.gz",
+        "dataset": "mslegseg"
+    },
+    "S83": {
+        "flair": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P41/T1/P41_T1_FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P41/T1/P41_T1_T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P41/T1/P41_T1_T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg Dataset/train/P41/T1/P41_T1_MASK.nii.gz",
+        "dataset": "mslegseg"
+    },
+    "S84": {
+        "flair": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P42/T1/P42_T1_FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P42/T1/P42_T1_T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P42/T1/P42_T1_T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg Dataset/train/P42/T1/P42_T1_MASK.nii.gz",
+        "dataset": "mslegseg"
+    },
+    "S85": {
+        "flair": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P43/T1/P43_T1_FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P43/T1/P43_T1_T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P43/T1/P43_T1_T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg Dataset/train/P43/T1/P43_T1_MASK.nii.gz",
+        "dataset": "mslegseg"
+    },
+    "S86": {
+        "flair": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P44/T1/P44_T1_FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P44/T1/P44_T1_T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P44/T1/P44_T1_T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg Dataset/train/P44/T1/P44_T1_MASK.nii.gz",
+        "dataset": "mslegseg"
+    },
+    "S87": {
+        "flair": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P45/T1/P45_T1_FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P45/T1/P45_T1_T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P45/T1/P45_T1_T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg Dataset/train/P45/T1/P45_T1_MASK.nii.gz",
+        "dataset": "mslegseg"
+    },
+    "S88": {
+        "flair": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P46/T1/P46_T1_FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P46/T1/P46_T1_T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P46/T1/P46_T1_T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg Dataset/train/P46/T1/P46_T1_MASK.nii.gz",
+        "dataset": "mslegseg"
+    },
+    "S89": {
+        "flair": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P47/T1/P47_T1_FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P47/T1/P47_T1_T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P47/T1/P47_T1_T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg Dataset/train/P47/T1/P47_T1_MASK.nii.gz",
+        "dataset": "mslegseg"
+    },
+    "S90": {
+        "flair": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P48/T1/P48_T1_FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P48/T1/P48_T1_T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P48/T1/P48_T1_T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg Dataset/train/P48/T1/P48_T1_MASK.nii.gz",
+        "dataset": "mslegseg"
+    },
+    "S91": {
+        "flair": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P49/T1/P49_T1_FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P49/T1/P49_T1_T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P49/T1/P49_T1_T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg Dataset/train/P49/T1/P49_T1_MASK.nii.gz",
+        "dataset": "mslegseg"
+    },
+    "S92": {
+        "flair": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P49/T2/P49_T2_FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P49/T2/P49_T2_T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P49/T2/P49_T2_T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg Dataset/train/P49/T2/P49_T2_MASK.nii.gz",
+        "dataset": "mslegseg"
+    },
+    "S93": {
+        "flair": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P5/T1/P5_T1_FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P5/T1/P5_T1_T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P5/T1/P5_T1_T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg Dataset/train/P5/T1/P5_T1_MASK.nii.gz",
+        "dataset": "mslegseg"
+    },
+    "S94": {
+        "flair": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P5/T2/P5_T2_FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P5/T2/P5_T2_T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P5/T2/P5_T2_T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg Dataset/train/P5/T2/P5_T2_MASK.nii.gz",
+        "dataset": "mslegseg"
+    },
+    "S95": {
+        "flair": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P50/T1/P50_T1_FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P50/T1/P50_T1_T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P50/T1/P50_T1_T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg Dataset/train/P50/T1/P50_T1_MASK.nii.gz",
+        "dataset": "mslegseg"
+    },
+    "S96": {
+        "flair": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P50/T2/P50_T2_FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P50/T2/P50_T2_T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P50/T2/P50_T2_T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg Dataset/train/P50/T2/P50_T2_MASK.nii.gz",
+        "dataset": "mslegseg"
+    },
+    "S97": {
+        "flair": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P51/T1/P51_T1_FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P51/T1/P51_T1_T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P51/T1/P51_T1_T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg Dataset/train/P51/T1/P51_T1_MASK.nii.gz",
+        "dataset": "mslegseg"
+    },
+    "S98": {
+        "flair": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P51/T2/P51_T2_FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P51/T2/P51_T2_T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P51/T2/P51_T2_T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg Dataset/train/P51/T2/P51_T2_MASK.nii.gz",
+        "dataset": "mslegseg"
+    },
+    "S99": {
+        "flair": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P52/T1/P52_T1_FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P52/T1/P52_T1_T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P52/T1/P52_T1_T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg Dataset/train/P52/T1/P52_T1_MASK.nii.gz",
+        "dataset": "mslegseg"
+    },
+    "S100": {
+        "flair": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P52/T2/P52_T2_FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P52/T2/P52_T2_T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P52/T2/P52_T2_T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg Dataset/train/P52/T2/P52_T2_MASK.nii.gz",
+        "dataset": "mslegseg"
+    },
+    "S101": {
+        "flair": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P53/T1/P53_T1_FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P53/T1/P53_T1_T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P53/T1/P53_T1_T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg Dataset/train/P53/T1/P53_T1_MASK.nii.gz",
+        "dataset": "mslegseg"
+    },
+    "S102": {
+        "flair": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P53/T2/P53_T2_FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P53/T2/P53_T2_T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P53/T2/P53_T2_T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg Dataset/train/P53/T2/P53_T2_MASK.nii.gz",
+        "dataset": "mslegseg"
+    },
+    "S103": {
+        "flair": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P54/T1/P54_T1_FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P54/T1/P54_T1_T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P54/T1/P54_T1_T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg Dataset/test/P54/P54_MASK.nii.gz",
+        "dataset": "mslegseg"
+    },
+    "S104": {
+        "flair": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P55/T1/P55_T1_FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P55/T1/P55_T1_T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P55/T1/P55_T1_T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg Dataset/test/P55/P55_MASK.nii.gz",
+        "dataset": "mslegseg"
+    },
+    "S105": {
+        "flair": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P56/T1/P56_T1_FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P56/T1/P56_T1_T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P56/T1/P56_T1_T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg Dataset/test/P56/P56_MASK.nii.gz",
+        "dataset": "mslegseg"
+    },
+    "S106": {
+        "flair": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P57/T1/P57_T1_FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P57/T1/P57_T1_T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P57/T1/P57_T1_T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg Dataset/test/P57/P57_MASK.nii.gz",
+        "dataset": "mslegseg"
+    },
+    "S107": {
+        "flair": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P58/T1/P58_T1_FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P58/T1/P58_T1_T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P58/T1/P58_T1_T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg Dataset/test/P58/P58_MASK.nii.gz",
+        "dataset": "mslegseg"
+    },
+    "S108": {
+        "flair": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P59/T1/P59_T1_FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P59/T1/P59_T1_T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P59/T1/P59_T1_T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg Dataset/test/P59/P59_MASK.nii.gz",
+        "dataset": "mslegseg"
+    },
+    "S109": {
+        "flair": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P6/T1/P6_T1_FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P6/T1/P6_T1_T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P6/T1/P6_T1_T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg Dataset/train/P6/T1/P6_T1_MASK.nii.gz",
+        "dataset": "mslegseg"
+    },
+    "S110": {
+        "flair": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P6/T2/P6_T2_FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P6/T2/P6_T2_T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P6/T2/P6_T2_T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg Dataset/train/P6/T2/P6_T2_MASK.nii.gz",
+        "dataset": "mslegseg"
+    },
+    "S111": {
+        "flair": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P6/T3/P6_T3_FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P6/T3/P6_T3_T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P6/T3/P6_T3_T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg Dataset/train/P6/T3/P6_T3_MASK.nii.gz",
+        "dataset": "mslegseg"
+    },
+    "S112": {
+        "flair": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P60/T1/P60_T1_FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P60/T1/P60_T1_T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P60/T1/P60_T1_T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg Dataset/test/P60/P60_MASK.nii.gz",
+        "dataset": "mslegseg"
+    },
+    "S113": {
+        "flair": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P61/T1/P61_T1_FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P61/T1/P61_T1_T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P61/T1/P61_T1_T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg Dataset/test/P61/P61_MASK.nii.gz",
+        "dataset": "mslegseg"
+    },
+    "S114": {
+        "flair": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P62/T1/P62_T1_FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P62/T1/P62_T1_T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P62/T1/P62_T1_T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg Dataset/test/P62/P62_MASK.nii.gz",
+        "dataset": "mslegseg"
+    },
+    "S115": {
+        "flair": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P63/T1/P63_T1_FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P63/T1/P63_T1_T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P63/T1/P63_T1_T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg Dataset/test/P63/P63_MASK.nii.gz",
+        "dataset": "mslegseg"
+    },
+    "S116": {
+        "flair": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P64/T1/P64_T1_FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P64/T1/P64_T1_T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P64/T1/P64_T1_T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg Dataset/test/P64/P64_MASK.nii.gz",
+        "dataset": "mslegseg"
+    },
+    "S117": {
+        "flair": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P65/T1/P65_T1_FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P65/T1/P65_T1_T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P65/T1/P65_T1_T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg Dataset/test/P65/P65_MASK.nii.gz",
+        "dataset": "mslegseg"
+    },
+    "S118": {
+        "flair": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P66/T1/P66_T1_FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P66/T1/P66_T1_T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P66/T1/P66_T1_T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg Dataset/test/P66/P66_MASK.nii.gz",
+        "dataset": "mslegseg"
+    },
+    "S119": {
+        "flair": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P67/T1/P67_T1_FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P67/T1/P67_T1_T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P67/T1/P67_T1_T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg Dataset/test/P67/P67_MASK.nii.gz",
+        "dataset": "mslegseg"
+    },
+    "S120": {
+        "flair": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P68/T1/P68_T1_FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P68/T1/P68_T1_T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P68/T1/P68_T1_T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg Dataset/test/P68/P68_MASK.nii.gz",
+        "dataset": "mslegseg"
+    },
+    "S121": {
+        "flair": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P69/T1/P69_T1_FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P69/T1/P69_T1_T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P69/T1/P69_T1_T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg Dataset/test/P69/P69_MASK.nii.gz",
+        "dataset": "mslegseg"
+    },
+    "S122": {
+        "flair": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P7/T1/P7_T1_FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P7/T1/P7_T1_T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P7/T1/P7_T1_T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg Dataset/train/P7/T1/P7_T1_MASK.nii.gz",
+        "dataset": "mslegseg"
+    },
+    "S123": {
+        "flair": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P7/T2/P7_T2_FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P7/T2/P7_T2_T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P7/T2/P7_T2_T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg Dataset/train/P7/T2/P7_T2_MASK.nii.gz",
+        "dataset": "mslegseg"
+    },
+    "S124": {
+        "flair": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P70/T1/P70_T1_FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P70/T1/P70_T1_T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P70/T1/P70_T1_T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg Dataset/test/P70/P70_MASK.nii.gz",
+        "dataset": "mslegseg"
+    },
+    "S125": {
+        "flair": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P71/T1/P71_T1_FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P71/T1/P71_T1_T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P71/T1/P71_T1_T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg Dataset/test/P71/P71_MASK.nii.gz",
+        "dataset": "mslegseg"
+    },
+    "S126": {
+        "flair": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P72/T1/P72_T1_FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P72/T1/P72_T1_T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P72/T1/P72_T1_T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg Dataset/test/P72/P72_MASK.nii.gz",
+        "dataset": "mslegseg"
+    },
+    "S127": {
+        "flair": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P73/T1/P73_T1_FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P73/T1/P73_T1_T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P73/T1/P73_T1_T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg Dataset/test/P73/P73_MASK.nii.gz",
+        "dataset": "mslegseg"
+    },
+    "S128": {
+        "flair": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P74/T1/P74_T1_FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P74/T1/P74_T1_T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P74/T1/P74_T1_T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg Dataset/test/P74/P74_MASK.nii.gz",
+        "dataset": "mslegseg"
+    },
+    "S129": {
+        "flair": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P75/T1/P75_T1_FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P75/T1/P75_T1_T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P75/T1/P75_T1_T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg Dataset/test/P75/P75_MASK.nii.gz",
+        "dataset": "mslegseg"
+    },
+    "S130": {
+        "flair": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P8/T1/P8_T1_FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P8/T1/P8_T1_T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P8/T1/P8_T1_T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg Dataset/train/P8/T1/P8_T1_MASK.nii.gz",
+        "dataset": "mslegseg"
+    },
+    "S131": {
+        "flair": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P8/T2/P8_T2_FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P8/T2/P8_T2_T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P8/T2/P8_T2_T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg Dataset/train/P8/T2/P8_T2_MASK.nii.gz",
+        "dataset": "mslegseg"
+    },
+    "S132": {
+        "flair": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P9/T1/P9_T1_FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P9/T1/P9_T1_T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P9/T1/P9_T1_T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg Dataset/train/P9/T1/P9_T1_MASK.nii.gz",
+        "dataset": "mslegseg"
+    },
+    "S133": {
+        "flair": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P9/T2/P9_T2_FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P9/T2/P9_T2_T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P9/T2/P9_T2_T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg Dataset/train/P9/T2/P9_T2_MASK.nii.gz",
+        "dataset": "mslegseg"
+    },
+    "S134": {
+        "flair": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P9/T3/P9_T3_FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P9/T3/P9_T3_T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg_RAW/P9/T3/P9_T3_T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MSLegSeg/MSLegSeg Dataset/train/P9/T3/P9_T3_MASK.nii.gz",
+        "dataset": "mslegseg"
+    },
+    "S135": {
+        "flair": "/home/darshan/MS/data/RAW/MICCAI2016/Training/Center_01/Patient_05/Raw_Data/FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MICCAI2016/Training/Center_01/Patient_05/Raw_Data/T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MICCAI2016/Training/Center_01/Patient_05/Raw_Data/T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MICCAI2016/Training/Center_01/Patient_05/Masks/ManualSegmentation_1.nii.gz",
+        "dataset": "miccai"
+    },
+    "S136": {
+        "flair": "/home/darshan/MS/data/RAW/MICCAI2016/Training/Center_01/Patient_03/Raw_Data/FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MICCAI2016/Training/Center_01/Patient_03/Raw_Data/T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MICCAI2016/Training/Center_01/Patient_03/Raw_Data/T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MICCAI2016/Training/Center_01/Patient_03/Masks/ManualSegmentation_1.nii.gz",
+        "dataset": "miccai"
+    },
+    "S137": {
+        "flair": "/home/darshan/MS/data/RAW/MICCAI2016/Training/Center_01/Patient_04/Raw_Data/FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MICCAI2016/Training/Center_01/Patient_04/Raw_Data/T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MICCAI2016/Training/Center_01/Patient_04/Raw_Data/T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MICCAI2016/Training/Center_01/Patient_04/Masks/ManualSegmentation_1.nii.gz",
+        "dataset": "miccai"
+    },
+    "S138": {
+        "flair": "/home/darshan/MS/data/RAW/MICCAI2016/Training/Center_01/Patient_02/Raw_Data/FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MICCAI2016/Training/Center_01/Patient_02/Raw_Data/T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MICCAI2016/Training/Center_01/Patient_02/Raw_Data/T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MICCAI2016/Training/Center_01/Patient_02/Masks/ManualSegmentation_1.nii.gz",
+        "dataset": "miccai"
+    },
+    "S139": {
+        "flair": "/home/darshan/MS/data/RAW/MICCAI2016/Training/Center_01/Patient_01/Raw_Data/FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MICCAI2016/Training/Center_01/Patient_01/Raw_Data/T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MICCAI2016/Training/Center_01/Patient_01/Raw_Data/T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MICCAI2016/Training/Center_01/Patient_01/Masks/ManualSegmentation_1.nii.gz",
+        "dataset": "miccai"
+    },
+    "S140": {
+        "flair": "/home/darshan/MS/data/RAW/MICCAI2016/Training/Center_07/Patient_05/Raw_Data/FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MICCAI2016/Training/Center_07/Patient_05/Raw_Data/T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MICCAI2016/Training/Center_07/Patient_05/Raw_Data/T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MICCAI2016/Training/Center_07/Patient_05/Masks/ManualSegmentation_1.nii.gz",
+        "dataset": "miccai"
+    },
+    "S141": {
+        "flair": "/home/darshan/MS/data/RAW/MICCAI2016/Training/Center_07/Patient_03/Raw_Data/FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MICCAI2016/Training/Center_07/Patient_03/Raw_Data/T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MICCAI2016/Training/Center_07/Patient_03/Raw_Data/T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MICCAI2016/Training/Center_07/Patient_03/Masks/ManualSegmentation_1.nii.gz",
+        "dataset": "miccai"
+    },
+    "S142": {
+        "flair": "/home/darshan/MS/data/RAW/MICCAI2016/Training/Center_07/Patient_04/Raw_Data/FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MICCAI2016/Training/Center_07/Patient_04/Raw_Data/T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MICCAI2016/Training/Center_07/Patient_04/Raw_Data/T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MICCAI2016/Training/Center_07/Patient_04/Masks/ManualSegmentation_1.nii.gz",
+        "dataset": "miccai"
+    },
+    "S143": {
+        "flair": "/home/darshan/MS/data/RAW/MICCAI2016/Training/Center_07/Patient_02/Raw_Data/FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MICCAI2016/Training/Center_07/Patient_02/Raw_Data/T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MICCAI2016/Training/Center_07/Patient_02/Raw_Data/T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MICCAI2016/Training/Center_07/Patient_02/Masks/ManualSegmentation_1.nii.gz",
+        "dataset": "miccai"
+    },
+    "S144": {
+        "flair": "/home/darshan/MS/data/RAW/MICCAI2016/Training/Center_07/Patient_01/Raw_Data/FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MICCAI2016/Training/Center_07/Patient_01/Raw_Data/T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MICCAI2016/Training/Center_07/Patient_01/Raw_Data/T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MICCAI2016/Training/Center_07/Patient_01/Masks/ManualSegmentation_1.nii.gz",
+        "dataset": "miccai"
+    },
+    "S145": {
+        "flair": "/home/darshan/MS/data/RAW/MICCAI2016/Training/Center_08/Patient_05/Raw_Data/FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MICCAI2016/Training/Center_08/Patient_05/Raw_Data/T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MICCAI2016/Training/Center_08/Patient_05/Raw_Data/T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MICCAI2016/Training/Center_08/Patient_05/Masks/ManualSegmentation_1.nii.gz",
+        "dataset": "miccai"
+    },
+    "S146": {
+        "flair": "/home/darshan/MS/data/RAW/MICCAI2016/Training/Center_08/Patient_03/Raw_Data/FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MICCAI2016/Training/Center_08/Patient_03/Raw_Data/T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MICCAI2016/Training/Center_08/Patient_03/Raw_Data/T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MICCAI2016/Training/Center_08/Patient_03/Masks/ManualSegmentation_1.nii.gz",
+        "dataset": "miccai"
+    },
+    "S147": {
+        "flair": "/home/darshan/MS/data/RAW/MICCAI2016/Training/Center_08/Patient_04/Raw_Data/FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MICCAI2016/Training/Center_08/Patient_04/Raw_Data/T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MICCAI2016/Training/Center_08/Patient_04/Raw_Data/T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MICCAI2016/Training/Center_08/Patient_04/Masks/ManualSegmentation_1.nii.gz",
+        "dataset": "miccai"
+    },
+    "S148": {
+        "flair": "/home/darshan/MS/data/RAW/MICCAI2016/Training/Center_08/Patient_02/Raw_Data/FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MICCAI2016/Training/Center_08/Patient_02/Raw_Data/T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MICCAI2016/Training/Center_08/Patient_02/Raw_Data/T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MICCAI2016/Training/Center_08/Patient_02/Masks/ManualSegmentation_1.nii.gz",
+        "dataset": "miccai"
+    },
+    "S149": {
+        "flair": "/home/darshan/MS/data/RAW/MICCAI2016/Training/Center_08/Patient_01/Raw_Data/FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MICCAI2016/Training/Center_08/Patient_01/Raw_Data/T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MICCAI2016/Training/Center_08/Patient_01/Raw_Data/T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MICCAI2016/Training/Center_08/Patient_01/Masks/ManualSegmentation_1.nii.gz",
+        "dataset": "miccai"
+    },
+    "S150": {
+        "flair": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_01/Patient_05/Raw_Data/FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_01/Patient_05/Raw_Data/T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_01/Patient_05/Raw_Data/T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_01/Patient_05/Masks/ManualSegmentation_1.nii.gz",
+        "dataset": "miccai"
+    },
+    "S151": {
+        "flair": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_01/Patient_08/Raw_Data/FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_01/Patient_08/Raw_Data/T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_01/Patient_08/Raw_Data/T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_01/Patient_08/Masks/ManualSegmentation_1.nii.gz",
+        "dataset": "miccai"
+    },
+    "S152": {
+        "flair": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_01/Patient_10/Raw_Data/FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_01/Patient_10/Raw_Data/T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_01/Patient_10/Raw_Data/T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_01/Patient_10/Masks/ManualSegmentation_1.nii.gz",
+        "dataset": "miccai"
+    },
+    "S153": {
+        "flair": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_01/Patient_03/Raw_Data/FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_01/Patient_03/Raw_Data/T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_01/Patient_03/Raw_Data/T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_01/Patient_03/Masks/ManualSegmentation_1.nii.gz",
+        "dataset": "miccai"
+    },
+    "S154": {
+        "flair": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_01/Patient_04/Raw_Data/FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_01/Patient_04/Raw_Data/T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_01/Patient_04/Raw_Data/T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_01/Patient_04/Masks/ManualSegmentation_1.nii.gz",
+        "dataset": "miccai"
+    },
+    "S155": {
+        "flair": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_01/Patient_02/Raw_Data/FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_01/Patient_02/Raw_Data/T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_01/Patient_02/Raw_Data/T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_01/Patient_02/Masks/ManualSegmentation_1.nii.gz",
+        "dataset": "miccai"
+    },
+    "S156": {
+        "flair": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_01/Patient_09/Raw_Data/FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_01/Patient_09/Raw_Data/T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_01/Patient_09/Raw_Data/T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_01/Patient_09/Masks/ManualSegmentation_1.nii.gz",
+        "dataset": "miccai"
+    },
+    "S157": {
+        "flair": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_01/Patient_07/Raw_Data/FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_01/Patient_07/Raw_Data/T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_01/Patient_07/Raw_Data/T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_01/Patient_07/Masks/ManualSegmentation_1.nii.gz",
+        "dataset": "miccai"
+    },
+    "S158": {
+        "flair": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_01/Patient_01/Raw_Data/FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_01/Patient_01/Raw_Data/T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_01/Patient_01/Raw_Data/T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_01/Patient_01/Masks/ManualSegmentation_1.nii.gz",
+        "dataset": "miccai"
+    },
+    "S159": {
+        "flair": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_01/Patient_06/Raw_Data/FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_01/Patient_06/Raw_Data/T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_01/Patient_06/Raw_Data/T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_01/Patient_06/Masks/ManualSegmentation_1.nii.gz",
+        "dataset": "miccai"
+    },
+    "S160": {
+        "flair": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_03/Patient_05/Raw_Data/FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_03/Patient_05/Raw_Data/T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_03/Patient_05/Raw_Data/T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_03/Patient_05/Masks/ManualSegmentation_1.nii.gz",
+        "dataset": "miccai"
+    },
+    "S161": {
+        "flair": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_03/Patient_08/Raw_Data/FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_03/Patient_08/Raw_Data/T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_03/Patient_08/Raw_Data/T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_03/Patient_08/Masks/ManualSegmentation_1.nii.gz",
+        "dataset": "miccai"
+    },
+    "S162": {
+        "flair": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_03/Patient_03/Raw_Data/FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_03/Patient_03/Raw_Data/T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_03/Patient_03/Raw_Data/T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_03/Patient_03/Masks/ManualSegmentation_1.nii.gz",
+        "dataset": "miccai"
+    },
+    "S163": {
+        "flair": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_03/Patient_04/Raw_Data/FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_03/Patient_04/Raw_Data/T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_03/Patient_04/Raw_Data/T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_03/Patient_04/Masks/ManualSegmentation_1.nii.gz",
+        "dataset": "miccai"
+    },
+    "S164": {
+        "flair": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_03/Patient_02/Raw_Data/FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_03/Patient_02/Raw_Data/T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_03/Patient_02/Raw_Data/T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_03/Patient_02/Masks/ManualSegmentation_1.nii.gz",
+        "dataset": "miccai"
+    },
+    "S165": {
+        "flair": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_03/Patient_07/Raw_Data/FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_03/Patient_07/Raw_Data/T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_03/Patient_07/Raw_Data/T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_03/Patient_07/Masks/ManualSegmentation_1.nii.gz",
+        "dataset": "miccai"
+    },
+    "S166": {
+        "flair": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_03/Patient_01/Raw_Data/FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_03/Patient_01/Raw_Data/T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_03/Patient_01/Raw_Data/T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_03/Patient_01/Masks/ManualSegmentation_1.nii.gz",
+        "dataset": "miccai"
+    },
+    "S167": {
+        "flair": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_03/Patient_06/Raw_Data/FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_03/Patient_06/Raw_Data/T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_03/Patient_06/Raw_Data/T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_03/Patient_06/Masks/ManualSegmentation_1.nii.gz",
+        "dataset": "miccai"
+    },
+    "S168": {
+        "flair": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_07/Patient_05/Raw_Data/FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_07/Patient_05/Raw_Data/T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_07/Patient_05/Raw_Data/T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_07/Patient_05/Masks/ManualSegmentation_1.nii.gz",
+        "dataset": "miccai"
+    },
+    "S169": {
+        "flair": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_07/Patient_08/Raw_Data/FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_07/Patient_08/Raw_Data/T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_07/Patient_08/Raw_Data/T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_07/Patient_08/Masks/ManualSegmentation_1.nii.gz",
+        "dataset": "miccai"
+    },
+    "S170": {
+        "flair": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_07/Patient_10/Raw_Data/FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_07/Patient_10/Raw_Data/T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_07/Patient_10/Raw_Data/T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_07/Patient_10/Masks/ManualSegmentation_1.nii.gz",
+        "dataset": "miccai"
+    },
+    "S171": {
+        "flair": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_07/Patient_03/Raw_Data/FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_07/Patient_03/Raw_Data/T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_07/Patient_03/Raw_Data/T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_07/Patient_03/Masks/ManualSegmentation_1.nii.gz",
+        "dataset": "miccai"
+    },
+    "S172": {
+        "flair": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_07/Patient_04/Raw_Data/FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_07/Patient_04/Raw_Data/T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_07/Patient_04/Raw_Data/T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_07/Patient_04/Masks/ManualSegmentation_1.nii.gz",
+        "dataset": "miccai"
+    },
+    "S173": {
+        "flair": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_07/Patient_02/Raw_Data/FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_07/Patient_02/Raw_Data/T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_07/Patient_02/Raw_Data/T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_07/Patient_02/Masks/ManualSegmentation_1.nii.gz",
+        "dataset": "miccai"
+    },
+    "S174": {
+        "flair": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_07/Patient_09/Raw_Data/FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_07/Patient_09/Raw_Data/T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_07/Patient_09/Raw_Data/T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_07/Patient_09/Masks/ManualSegmentation_1.nii.gz",
+        "dataset": "miccai"
+    },
+    "S175": {
+        "flair": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_07/Patient_07/Raw_Data/FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_07/Patient_07/Raw_Data/T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_07/Patient_07/Raw_Data/T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_07/Patient_07/Masks/ManualSegmentation_1.nii.gz",
+        "dataset": "miccai"
+    },
+    "S176": {
+        "flair": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_07/Patient_01/Raw_Data/FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_07/Patient_01/Raw_Data/T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_07/Patient_01/Raw_Data/T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_07/Patient_01/Masks/ManualSegmentation_1.nii.gz",
+        "dataset": "miccai"
+    },
+    "S177": {
+        "flair": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_07/Patient_06/Raw_Data/FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_07/Patient_06/Raw_Data/T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_07/Patient_06/Raw_Data/T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_07/Patient_06/Masks/ManualSegmentation_1.nii.gz",
+        "dataset": "miccai"
+    },
+    "S178": {
+        "flair": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_08/Patient_05/Raw_Data/FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_08/Patient_05/Raw_Data/T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_08/Patient_05/Raw_Data/T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_08/Patient_05/Masks/ManualSegmentation_1.nii.gz",
+        "dataset": "miccai"
+    },
+    "S179": {
+        "flair": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_08/Patient_08/Raw_Data/FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_08/Patient_08/Raw_Data/T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_08/Patient_08/Raw_Data/T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_08/Patient_08/Masks/ManualSegmentation_1.nii.gz",
+        "dataset": "miccai"
+    },
+    "S180": {
+        "flair": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_08/Patient_10/Raw_Data/FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_08/Patient_10/Raw_Data/T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_08/Patient_10/Raw_Data/T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_08/Patient_10/Masks/ManualSegmentation_1.nii.gz",
+        "dataset": "miccai"
+    },
+    "S181": {
+        "flair": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_08/Patient_03/Raw_Data/FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_08/Patient_03/Raw_Data/T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_08/Patient_03/Raw_Data/T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_08/Patient_03/Masks/ManualSegmentation_1.nii.gz",
+        "dataset": "miccai"
+    },
+    "S182": {
+        "flair": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_08/Patient_04/Raw_Data/FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_08/Patient_04/Raw_Data/T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_08/Patient_04/Raw_Data/T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_08/Patient_04/Masks/ManualSegmentation_1.nii.gz",
+        "dataset": "miccai"
+    },
+    "S183": {
+        "flair": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_08/Patient_02/Raw_Data/FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_08/Patient_02/Raw_Data/T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_08/Patient_02/Raw_Data/T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_08/Patient_02/Masks/ManualSegmentation_1.nii.gz",
+        "dataset": "miccai"
+    },
+    "S184": {
+        "flair": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_08/Patient_09/Raw_Data/FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_08/Patient_09/Raw_Data/T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_08/Patient_09/Raw_Data/T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_08/Patient_09/Masks/ManualSegmentation_1.nii.gz",
+        "dataset": "miccai"
+    },
+    "S185": {
+        "flair": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_08/Patient_07/Raw_Data/FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_08/Patient_07/Raw_Data/T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_08/Patient_07/Raw_Data/T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_08/Patient_07/Masks/ManualSegmentation_1.nii.gz",
+        "dataset": "miccai"
+    },
+    "S186": {
+        "flair": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_08/Patient_01/Raw_Data/FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_08/Patient_01/Raw_Data/T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_08/Patient_01/Raw_Data/T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_08/Patient_01/Masks/ManualSegmentation_1.nii.gz",
+        "dataset": "miccai"
+    },
+    "S187": {
+        "flair": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_08/Patient_06/Raw_Data/FLAIR.nii.gz",
+        "t1": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_08/Patient_06/Raw_Data/T1.nii.gz",
+        "t2": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_08/Patient_06/Raw_Data/T2.nii.gz",
+        "mask": "/home/darshan/MS/data/RAW/MICCAI2016/Testing/Center_08/Patient_06/Masks/ManualSegmentation_1.nii.gz",
+        "dataset": "miccai"
+    }
+}
