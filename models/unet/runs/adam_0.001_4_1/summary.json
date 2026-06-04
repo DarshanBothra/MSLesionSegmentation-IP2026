@@ -1,0 +1,392 @@
+{
+  "run_id": "adam_0.001_4_1",
+  "lr": 0.001,
+  "optimizer": "adam",
+  "lr_schedule": "fixed",
+  "skip_blank_ratio": 0.95,
+  "epochs_trained": 100,
+  "val_split": {
+    "best_dice_slice_avg": 0.6206,
+    "best_iou_slice_avg": 0.6206,
+    "mean_3d_dice": 0.0,
+    "mean_3d_iou": 0.0,
+    "pooled_3d_dice": 0.0,
+    "pooled_3d_iou": 0.0
+  },
+  "test_split": {
+    "slice_dice": 0.5695,
+    "slice_iou": 0.5695,
+    "mean_3d_dice": 0.0,
+    "mean_3d_iou": 0.0,
+    "pooled_3d_dice": 0.0,
+    "pooled_3d_iou": 0.0
+  },
+  "validation_confusion_matrix": {
+    "TP": 0,
+    "TN": 129796432,
+    "FP": 0,
+    "FN": 182144,
+    "mean_3d_dice": 0.0,
+    "mean_3d_iou": 0.0,
+    "pooled_3d_dice": 0.0,
+    "pooled_3d_iou": 0.0,
+    "subjects": [
+      {
+        "subject_id": "S92",
+        "TP": 0,
+        "TN": 7213269,
+        "FP": 0,
+        "FN": 7763,
+        "dice_3d": 0.0,
+        "iou_3d": 0.0
+      },
+      {
+        "subject_id": "S177",
+        "TP": 0,
+        "TN": 7217240,
+        "FP": 0,
+        "FN": 3792,
+        "dice_3d": 0.0,
+        "iou_3d": 0.0
+      },
+      {
+        "subject_id": "S84",
+        "TP": 0,
+        "TN": 7178444,
+        "FP": 0,
+        "FN": 42588,
+        "dice_3d": 0.0,
+        "iou_3d": 0.0
+      },
+      {
+        "subject_id": "S134",
+        "TP": 0,
+        "TN": 7217696,
+        "FP": 0,
+        "FN": 3336,
+        "dice_3d": 0.0,
+        "iou_3d": 0.0
+      },
+      {
+        "subject_id": "S73",
+        "TP": 0,
+        "TN": 7217646,
+        "FP": 0,
+        "FN": 3386,
+        "dice_3d": 0.0,
+        "iou_3d": 0.0
+      },
+      {
+        "subject_id": "S178",
+        "TP": 0,
+        "TN": 7220885,
+        "FP": 0,
+        "FN": 147,
+        "dice_3d": 0.0,
+        "iou_3d": 0.0
+      },
+      {
+        "subject_id": "S88",
+        "TP": 0,
+        "TN": 7214815,
+        "FP": 0,
+        "FN": 6217,
+        "dice_3d": 0.0,
+        "iou_3d": 0.0
+      },
+      {
+        "subject_id": "S135",
+        "TP": 0,
+        "TN": 7183627,
+        "FP": 0,
+        "FN": 37405,
+        "dice_3d": 0.0,
+        "iou_3d": 0.0
+      },
+      {
+        "subject_id": "S10",
+        "TP": 0,
+        "TN": 7215768,
+        "FP": 0,
+        "FN": 5264,
+        "dice_3d": 0.0,
+        "iou_3d": 0.0
+      },
+      {
+        "subject_id": "S163",
+        "TP": 0,
+        "TN": 7219046,
+        "FP": 0,
+        "FN": 1986,
+        "dice_3d": 0.0,
+        "iou_3d": 0.0
+      },
+      {
+        "subject_id": "S66",
+        "TP": 0,
+        "TN": 7219137,
+        "FP": 0,
+        "FN": 1895,
+        "dice_3d": 0.0,
+        "iou_3d": 0.0
+      },
+      {
+        "subject_id": "S33",
+        "TP": 0,
+        "TN": 7210764,
+        "FP": 0,
+        "FN": 10268,
+        "dice_3d": 0.0,
+        "iou_3d": 0.0
+      },
+      {
+        "subject_id": "S15",
+        "TP": 0,
+        "TN": 7219082,
+        "FP": 0,
+        "FN": 1950,
+        "dice_3d": 0.0,
+        "iou_3d": 0.0
+      },
+      {
+        "subject_id": "S27",
+        "TP": 0,
+        "TN": 7217817,
+        "FP": 0,
+        "FN": 3215,
+        "dice_3d": 0.0,
+        "iou_3d": 0.0
+      },
+      {
+        "subject_id": "S90",
+        "TP": 0,
+        "TN": 7215270,
+        "FP": 0,
+        "FN": 5762,
+        "dice_3d": 0.0,
+        "iou_3d": 0.0
+      },
+      {
+        "subject_id": "S144",
+        "TP": 0,
+        "TN": 7218560,
+        "FP": 0,
+        "FN": 2472,
+        "dice_3d": 0.0,
+        "iou_3d": 0.0
+      },
+      {
+        "subject_id": "S6",
+        "TP": 0,
+        "TN": 7189627,
+        "FP": 0,
+        "FN": 31405,
+        "dice_3d": 0.0,
+        "iou_3d": 0.0
+      },
+      {
+        "subject_id": "S97",
+        "TP": 0,
+        "TN": 7207739,
+        "FP": 0,
+        "FN": 13293,
+        "dice_3d": 0.0,
+        "iou_3d": 0.0
+      }
+    ]
+  },
+  "test_confusion_matrix": {
+    "TP": 0,
+    "TN": 144073116,
+    "FP": 0,
+    "FN": 347524,
+    "mean_3d_dice": 0.0,
+    "mean_3d_iou": 0.0,
+    "pooled_3d_dice": 0.0,
+    "pooled_3d_iou": 0.0,
+    "subjects": [
+      {
+        "subject_id": "S7",
+        "TP": 0,
+        "TN": 7189538,
+        "FP": 0,
+        "FN": 31494,
+        "dice_3d": 0.0,
+        "iou_3d": 0.0
+      },
+      {
+        "subject_id": "S47",
+        "TP": 0,
+        "TN": 7218409,
+        "FP": 0,
+        "FN": 2623,
+        "dice_3d": 0.0,
+        "iou_3d": 0.0
+      },
+      {
+        "subject_id": "S152",
+        "TP": 0,
+        "TN": 7213193,
+        "FP": 0,
+        "FN": 7839,
+        "dice_3d": 0.0,
+        "iou_3d": 0.0
+      },
+      {
+        "subject_id": "S149",
+        "TP": 0,
+        "TN": 7209629,
+        "FP": 0,
+        "FN": 11403,
+        "dice_3d": 0.0,
+        "iou_3d": 0.0
+      },
+      {
+        "subject_id": "S12",
+        "TP": 0,
+        "TN": 7215856,
+        "FP": 0,
+        "FN": 5176,
+        "dice_3d": 0.0,
+        "iou_3d": 0.0
+      },
+      {
+        "subject_id": "S105",
+        "TP": 0,
+        "TN": 7219278,
+        "FP": 0,
+        "FN": 1754,
+        "dice_3d": 0.0,
+        "iou_3d": 0.0
+      },
+      {
+        "subject_id": "S106",
+        "TP": 0,
+        "TN": 7178934,
+        "FP": 0,
+        "FN": 42098,
+        "dice_3d": 0.0,
+        "iou_3d": 0.0
+      },
+      {
+        "subject_id": "S28",
+        "TP": 0,
+        "TN": 7191487,
+        "FP": 0,
+        "FN": 29545,
+        "dice_3d": 0.0,
+        "iou_3d": 0.0
+      },
+      {
+        "subject_id": "S67",
+        "TP": 0,
+        "TN": 7218919,
+        "FP": 0,
+        "FN": 2113,
+        "dice_3d": 0.0,
+        "iou_3d": 0.0
+      },
+      {
+        "subject_id": "S119",
+        "TP": 0,
+        "TN": 7197603,
+        "FP": 0,
+        "FN": 23429,
+        "dice_3d": 0.0,
+        "iou_3d": 0.0
+      },
+      {
+        "subject_id": "S56",
+        "TP": 0,
+        "TN": 7212870,
+        "FP": 0,
+        "FN": 8162,
+        "dice_3d": 0.0,
+        "iou_3d": 0.0
+      },
+      {
+        "subject_id": "S87",
+        "TP": 0,
+        "TN": 7213642,
+        "FP": 0,
+        "FN": 7390,
+        "dice_3d": 0.0,
+        "iou_3d": 0.0
+      },
+      {
+        "subject_id": "S122",
+        "TP": 0,
+        "TN": 7193042,
+        "FP": 0,
+        "FN": 27990,
+        "dice_3d": 0.0,
+        "iou_3d": 0.0
+      },
+      {
+        "subject_id": "S130",
+        "TP": 0,
+        "TN": 7218969,
+        "FP": 0,
+        "FN": 2063,
+        "dice_3d": 0.0,
+        "iou_3d": 0.0
+      },
+      {
+        "subject_id": "S150",
+        "TP": 0,
+        "TN": 7204124,
+        "FP": 0,
+        "FN": 16908,
+        "dice_3d": 0.0,
+        "iou_3d": 0.0
+      },
+      {
+        "subject_id": "S155",
+        "TP": 0,
+        "TN": 7183514,
+        "FP": 0,
+        "FN": 37518,
+        "dice_3d": 0.0,
+        "iou_3d": 0.0
+      },
+      {
+        "subject_id": "S162",
+        "TP": 0,
+        "TN": 7218817,
+        "FP": 0,
+        "FN": 2215,
+        "dice_3d": 0.0,
+        "iou_3d": 0.0
+      },
+      {
+        "subject_id": "S104",
+        "TP": 0,
+        "TN": 7215823,
+        "FP": 0,
+        "FN": 5209,
+        "dice_3d": 0.0,
+        "iou_3d": 0.0
+      },
+      {
+        "subject_id": "S124",
+        "TP": 0,
+        "TN": 7211309,
+        "FP": 0,
+        "FN": 9723,
+        "dice_3d": 0.0,
+        "iou_3d": 0.0
+      },
+      {
+        "subject_id": "S78",
+        "TP": 0,
+        "TN": 7148160,
+        "FP": 0,
+        "FN": 72872,
+        "dice_3d": 0.0,
+        "iou_3d": 0.0
+      }
+    ]
+  },
+  "checkpoint": "/home/darshan/MS/models/unet/runs/adam_0.001_4_1/best_model.h5",
+  "training_log": "/home/darshan/MS/models/unet/runs/adam_0.001_4_1/training_log.csv"
+}
