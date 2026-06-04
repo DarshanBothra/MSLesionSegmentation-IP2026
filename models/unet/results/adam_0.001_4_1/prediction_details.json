@@ -1,11 +1,11 @@
 {
-  "subject_id": "S27",
+  "subject_id": "S70",
   "dice": 0.0,
   "iou": 0.0,
   "confusion_matrix": {
     "TP": 0,
-    "TN": 7217817,
+    "TN": 7218558,
     "FP": 0,
-    "FN": 3215
+    "FN": 2474
   }
 }
