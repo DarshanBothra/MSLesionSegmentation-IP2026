@@ -163,10 +163,12 @@ def n4bias_correction(input_path):
         ants.image_write(corrected_img, output_path)
 
     print(f"N4 bias correction complete! Saved samples to {os.path.dirname(modalities['T1'])}")
-    input_path = {}
+    output_path = {}
     for mode in modalities:
-        input_path[mode.lower()] = modalities[mode]
-    return input_path
+        output_path[mode.lower()] = modalities[mode]
+    if "mask" in input_path:
+        output_path["mask"] = input_path["mask"]
+    return output_path
 
 def z_score_normalize(input_path):
     t1_path = input_path["t1"]

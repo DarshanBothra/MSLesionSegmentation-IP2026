@@ -1,0 +1,32 @@
+{
+  "run_id": "adam_1e-05_4_1",
+  "lr": 1e-05,
+  "optimizer": "adam",
+  "lr_schedule": "fixed",
+  "skip_blank_ratio": 0.975,
+  "epochs_trained": 100,
+  "val_split": {
+    "best_dice": 0.6498,
+    "best_iou": 0.637
+  },
+  "test_split": {
+    "loss": 0.9131,
+    "accuracy": 0.9985,
+    "dice_score": 0.6182,
+    "iou_score": 0.5905
+  },
+  "validation_confusion_matrix": {
+    "TP": 36154,
+    "TN": 214482620,
+    "FP": 31293,
+    "FN": 145869
+  },
+  "test_confusion_matrix": {
+    "TP": 101715,
+    "TN": 238082805,
+    "FP": 120901,
+    "FN": 245619
+  },
+  "checkpoint": "/home/darshan/MS/models/unetpp/runs/adam_1e-05_4_1/best_model.h5",
+  "training_log": "/home/darshan/MS/models/unetpp/runs/adam_1e-05_4_1/training_log.csv"
+}
