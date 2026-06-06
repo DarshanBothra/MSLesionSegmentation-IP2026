@@ -206,12 +206,12 @@ def plot_training_curves(history, run_dir: str):
 # ── Confusion Matrix Evaluation ──────────────────────────────────────────────
 
 def evaluate_confusion_matrix(model, split_name, subjects, preprocessed_dir, batch_size):
-    """Dynamically evaluate patient-level confusion matrix."""
+    """Dynamically evaluate patient-level confusion matrix and 3D Volume Dice/IoU."""
     print(f"\n{'='*60}")
     print(f"COMPUTING CONFUSION MATRIX FOR {split_name.upper()} SPLIT (PER PATIENT)")
     print(f"{'='*60}")
     
-    header = f"{'Subject':<12} | {'TP':>12} | {'TN':>12} | {'FP':>12} | {'FN':>12}"
+    header = f"{'Subject':<12} | {'TP':>12} | {'TN':>12} | {'FP':>12} | {'FN':>12} | {'Dice (3D)':>10} | {'IoU (3D)':>10}"
     sep = "-" * len(header)
     print(header)
     print(sep)
@@ -220,6 +220,10 @@ def evaluate_confusion_matrix(model, split_name, subjects, preprocessed_dir, bat
     total_tn = 0
     total_fp = 0
     total_fn = 0
+    
+    subject_details = []
+    dice_scores = []
+    iou_scores = []
     
     for subject_id in subjects:
         subj_dir = os.path.join(preprocessed_dir, subject_id)
@@ -245,24 +249,60 @@ def evaluate_confusion_matrix(model, split_name, subjects, preprocessed_dir, bat
             fp = int(np.sum((masks == 0.0) & (preds_bin == 1.0)))
             fn = int(np.sum((masks == 1.0) & (preds_bin == 0.0)))
             
+            # Compute 3D Volume Dice & IoU for this subject
+            denom_dice = 2.0 * tp + fp + fn
+            dice = 1.0 if denom_dice == 0 else (2.0 * tp) / denom_dice
+            
+            denom_iou = tp + fp + fn
+            iou = 1.0 if denom_iou == 0 else float(tp) / denom_iou
+            
+            dice_scores.append(dice)
+            iou_scores.append(iou)
+            
             total_tp += tp
             total_tn += tn
             total_fp += fp
             total_fn += fn
             
-            print(f"{subject_id:<12} | {tp:>12,} | {tn:>12,} | {fp:>12,} | {fn:>12,}")
+            print(f"{subject_id:<12} | {tp:>12,} | {tn:>12,} | {fp:>12,} | {fn:>12,} | {dice:>10.4f} | {iou:>10.4f}")
+            subject_details.append({
+                "subject_id": subject_id,
+                "TP": tp,
+                "TN": tn,
+                "FP": fp,
+                "FN": fn,
+                "dice_3d": round(dice, 4),
+                "iou_3d": round(iou, 4)
+            })
         except Exception as e:
             print(f"  [WARN] Confusion matrix evaluation failed for {subject_id}: {e}")
             
     print(sep)
-    print(f"{'TOTAL':<12} | {total_tp:>12,} | {total_tn:>12,} | {total_fp:>12,} | {total_fn:>12,}")
+    # Compute split-level metrics
+    mean_dice = np.mean(dice_scores) if dice_scores else 0.0
+    mean_iou = np.mean(iou_scores) if iou_scores else 0.0
+    
+    # Global/pooled volume Dice and IoU
+    pooled_denom_dice = 2.0 * total_tp + total_fp + total_fn
+    pooled_dice = 1.0 if pooled_denom_dice == 0 else (2.0 * total_tp) / pooled_denom_dice
+    
+    pooled_denom_iou = total_tp + total_fp + total_fn
+    pooled_iou = 1.0 if pooled_denom_iou == 0 else float(total_tp) / pooled_denom_iou
+
+    print(f"{'TOTAL':<12} | {total_tp:>12,} | {total_tn:>12,} | {total_fp:>12,} | {total_fn:>12,} | {pooled_dice:>10.4f} | {pooled_iou:>10.4f}")
+    print(f"{'MEAN (Avg)':<12} | {'-':>12} | {'-':>12} | {'-':>12} | {'-':>12} | {mean_dice:>10.4f} | {mean_iou:>10.4f}")
     print(sep + "\n")
     
     return {
         "TP": total_tp,
         "TN": total_tn,
         "FP": total_fp,
-        "FN": total_fn
+        "FN": total_fn,
+        "mean_3d_dice": round(mean_dice, 4),
+        "mean_3d_iou": round(mean_iou, 4),
+        "pooled_3d_dice": round(pooled_dice, 4),
+        "pooled_3d_iou": round(pooled_iou, 4),
+        "subjects": subject_details
     }
 
 # ── Visualization Sample ─────────────────────────────────────────────────────
@@ -437,11 +477,20 @@ def main():
         "skip_blank_ratio": args.skip_blank_ratio,
         "epochs_trained":   len(history.history["loss"]),
         "val_split": {
-            "best_dice": round(float(best_val_dice), 4),
-            "best_iou":  round(float(best_val_iou),  4),
+            "best_dice_slice_avg": round(float(best_val_dice), 4),
+            "best_iou_slice_avg":  round(float(best_val_iou),  4),
+            "mean_3d_dice":        val_cm.get("mean_3d_dice", 0.0),
+            "mean_3d_iou":         val_cm.get("mean_3d_iou", 0.0),
+            "pooled_3d_dice":      val_cm.get("pooled_3d_dice", 0.0),
+            "pooled_3d_iou":       val_cm.get("pooled_3d_iou", 0.0),
         },
         "test_split": {
-            k: round(float(v), 4) for k, v in test_metrics.items()
+            "slice_dice": round(float(test_metrics.get("dice_score", 0.0)), 4) if "dice_score" in test_metrics else None,
+            "slice_iou":  round(float(test_metrics.get("iou_score", 0.0)), 4) if "iou_score" in test_metrics else None,
+            "mean_3d_dice": test_cm.get("mean_3d_dice", 0.0),
+            "mean_3d_iou":  test_cm.get("mean_3d_iou", 0.0),
+            "pooled_3d_dice": test_cm.get("pooled_3d_dice", 0.0),
+            "pooled_3d_iou":  test_cm.get("pooled_3d_iou", 0.0),
         },
         "validation_confusion_matrix": val_cm,
         "test_confusion_matrix":       test_cm,
@@ -456,10 +505,18 @@ def main():
     print("\n" + "="*60)
     print("TRAINING & EVALUATION COMPLETE")
     print("="*60)
-    print(f"  Best Val Dice: {best_val_dice:.4f}")
-    print(f"  Best Val IoU:  {best_val_iou:.4f}")
-    print(f"  Test Dice:     {test_metrics.get('dice_score', 'N/A')}")
-    print(f"  Test IoU:      {test_metrics.get('iou_score', 'N/A')}")
+    print(f"  Best Val Dice (2D Slice-Avg): {best_val_dice:.4f}")
+    print(f"  Best Val IoU (2D Slice-Avg):  {best_val_iou:.4f}")
+    print(f"  Test Dice (2D Slice-Avg):     {test_metrics.get('dice_score', 'N/A')}")
+    print(f"  Test IoU (2D Slice-Avg):      {test_metrics.get('iou_score', 'N/A')}")
+    print(f"  Validation Mean 3D Dice:       {val_cm.get('mean_3d_dice', 0.0):.4f}")
+    print(f"  Validation Mean 3D IoU:        {val_cm.get('mean_3d_iou', 0.0):.4f}")
+    print(f"  Validation Pooled 3D Dice:     {val_cm.get('pooled_3d_dice', 0.0):.4f}")
+    print(f"  Validation Pooled 3D IoU:      {val_cm.get('pooled_3d_iou', 0.0):.4f}")
+    print(f"  Test Mean 3D Dice:             {test_cm.get('mean_3d_dice', 0.0):.4f}")
+    print(f"  Test Mean 3D IoU:              {test_cm.get('mean_3d_iou', 0.0):.4f}")
+    print(f"  Test Pooled 3D Dice:           {test_cm.get('pooled_3d_dice', 0.0):.4f}")
+    print(f"  Test Pooled 3D IoU:            {test_cm.get('pooled_3d_iou', 0.0):.4f}")
     print(f"\nSummary JSON saved to: {summary_path}")
 
 if __name__ == "__main__":
